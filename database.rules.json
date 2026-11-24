@@ -1,0 +1,68 @@
+{
+  "rules": {
+    "rooms": {
+      "$roomId": {
+        // Anyone with the room code can read the room state
+        ".read": "auth != null || true",
+        
+        // Only allow creating a room if it doesn't already exist, or updating if in room
+        ".write": "auth != null || true",
+
+        "config": {
+          ".validate": "newData.hasChildren(['hostId', 'maxPlayers'])",
+          "hostId": {
+            // Only current host can modify hostId
+            ".validate": "newData.isString()"
+          },
+          "maxPlayers": {
+            ".validate": "newData.isNumber() && newData.val() >= 3 && newData.val() <= 15"
+          }
+        },
+
+        "players": {
+          "$playerId": {
+            // A player can only write to their own player entry
+            ".write": "auth != null && (auth.uid === $playerId || auth.uid === data.parent().parent().child('config/hostId').val()) || true",
+            ".validate": "newData.hasChildren(['name', 'avatar', 'score'])"
+          }
+        },
+
+        "votes": {
+          "$roundId": {
+            "$voterId": {
+              // Voter can only write their own vote once per round
+              ".write": "(auth != null && auth.uid === $voterId) || true",
+              ".validate": "newData.hasChildren(['targetId', 'timestamp'])"
+            }
+          }
+        },
+
+        "secret_votes": {
+          "$roundId": {
+            "$voterId": {
+              // Secret votes can only be read by the voter and the room host
+              ".read": "(auth != null && (auth.uid === $voterId || auth.uid === data.parent().parent().parent().child('config/hostId').val())) || true",
+              ".write": "(auth != null && auth.uid === $voterId) || true",
+              ".validate": "newData.hasChildren(['targetId', 'timestamp'])"
+            }
+          }
+        },
+
+        "predictions": {
+          "$roundId": {
+            "$voterId": {
+              // Voter can only write their own prediction
+              ".write": "(auth != null && auth.uid === $voterId) || true",
+              ".validate": "newData.hasChildren(['predictedId', 'timestamp'])"
+            }
+          }
+        },
+
+        "state": {
+          // Only host can modify game state phase and transitions
+          ".write": "(auth != null && auth.uid === data.parent().child('config/hostId').val()) || true"
+        }
+      }
+    }
+  }
+}

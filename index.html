@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>WHO'S THE PROBLEM? 😂 | Real-Time Multiplayer Roasting Party Game</title>
+  <meta name="description" content="Who's The Problem? Genuinely hilarious anonymous voting party game for groups of 3–15 friends. Real-time online multiplayer, 330+ original questions, and premium Jackbox-style aesthetics.">
+  <meta name="theme-color" content="#0a071b">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Background Ambient Floating Bubbles -->
+  <div id="ambient-bg"></div>
+
+  <!-- App Container -->
+  <div class="app-container">
+    
+    <!-- Top Navigation Bar -->
+    <header class="app-header">
+      <div class="brand-logo" id="nav-brand" style="cursor: pointer;">
+        <span class="brand-icon">😂</span>
+        <span class="brand-title">Who's The Problem?</span>
+      </div>
+
+      <div class="header-actions">
+        <!-- Room code pill (visible when in room) -->
+        <div class="header-room-badge" id="header-room-badge" title="Click to copy room code" style="display: none;">
+          <span>ROOM:</span> <span id="header-room-code">------</span> 📋
+        </div>
+
+        <!-- Connection status indicator -->
+        <div class="header-status-badge" id="header-status-badge" title="Network Connection Status & Cloud Sync Settings">
+          <span class="status-dot"></span>
+          <span id="header-status-text">Online</span>
+        </div>
+
+        <!-- Random Question Wheel button -->
+        <button class="icon-btn" id="btn-open-wheel" title="Spin Random Question Wheel">
+          🎡
+        </button>
+
+        <!-- How to play button -->
+        <button class="icon-btn" id="btn-how-to-play-header" title="How To Play & Rules">
+          ❓
+        </button>
+
+        <!-- Sound Mute/Unmute Toggle -->
+        <button class="icon-btn" id="btn-sound-toggle" title="Toggle Sound Effects">
+          🔊
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Area (Screen Router) -->
+    <main class="content-wrapper">
+
+      <!-- ========================================================
+           SCREEN 1: HOME PAGE
+           ======================================================== -->
+      <section id="screen-home" class="game-screen active">
+        <div class="hero-section">
+          <div class="hero-tag">
+            <span>🔥 #1 Real-Time Multiplayer Party Game for Friends</span>
+          </div>
+          
+          <h1 class="hero-title">WHO'S THE PROBLEM?</h1>
+          
+          <p class="hero-tagline">
+            Everyone is innocent until the votes are revealed.
+            <span>Anonymous voting. Friendly roasting. Real-time online play across cities.</span>
+          </p>
+
+          <div class="hero-actions">
+            <button class="btn btn-primary btn-large" id="btn-open-create-room">
+              <span>👑</span> Create Room
+            </button>
+            <button class="btn btn-secondary btn-large" id="btn-open-join-room">
+              <span>🚀</span> Join Room
+            </button>
+            <button class="btn btn-accent btn-large" id="btn-quick-play">
+              <span>⚡</span> Quick Demo (Bot Party)
+            </button>
+          </div>
+
+          <!-- Quick Code Entry Bar -->
+          <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 0.5rem; max-width: 360px; margin-left: auto; margin-right: auto;">
+            <input type="text" id="home-quick-code" class="form-input room-code-input" placeholder="ROOM CODE" maxlength="6" style="text-align: center; font-weight: 900; letter-spacing: 3px; text-transform: uppercase;">
+            <button class="btn btn-outline" id="btn-home-quick-join" style="padding: 0 1.25rem;">
+              Join
+            </button>
+          </div>
+        </div>
+
+        <!-- Highlights Row -->
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <div class="highlight-icon">🎭</div>
+            <h3 class="highlight-title">3 to 15 Players</h3>
+            <p class="highlight-desc">Perfect for small circles, college dorms, and large wild party groups worldwide.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🗳️</div>
+            <h3 class="highlight-title">100% Anonymous</h3>
+            <p class="highlight-desc">Confidential secret ballots! No one will ever know who voted for whom.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">⚡</div>
+            <h3 class="highlight-title">Real Online Multiplayer</h3>
+            <p class="highlight-desc">Play seamlessly from different cities on phones, tablets, or laptops with real backend sync.</p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🏆</div>
+            <h3 class="highlight-title">330+ Hilarious Questions</h3>
+            <p class="highlight-desc">College Chaos, Drama Kings, Foodie Crimes, Late Night Vibes & Friendly Roasts.</p>
+          </div>
+        </div>
+
+        <!-- Category Showcase Carousel -->
+        <div class="category-showcase-container">
+          <div class="section-header" style="text-align: left; display: flex; justify-content: space-between; align-items: flex-end;">
+            <div>
+              <h2 class="section-title">Explore Question Categories 🎪</h2>
+              <p class="section-subtitle">330+ handcrafted, relatable, friendly-roast questions across 8 themes.</p>
+            </div>
+            <button class="btn btn-outline" id="btn-spin-wheel-banner" style="font-size: 0.85rem; padding: 0.5rem 1rem;">
+              🎡 Spin Question Wheel
+            </button>
+          </div>
+
+          <div class="category-carousel" id="category-carousel-list">
+            <!-- Dynamically populated via JS -->
+          </div>
+        </div>
+
+        <!-- How To Play Section -->
+        <div class="how-to-play-section">
+          <div class="section-header">
+            <h2 class="section-title">How To Play</h2>
+            <p class="section-subtitle">Super easy 4-step guide. No app install needed.</p>
+          </div>
+
+          <div class="steps-grid">
+            <div class="step-card">
+              <span class="step-badge">1</span>
+              <div class="step-icon">📱</div>
+              <h4 class="step-title">Create or Join</h4>
+              <p class="step-desc">Host creates a private room and shares the 6-character code or 1-tap invite link.</p>
+            </div>
+            <div class="step-card">
+              <span class="step-badge">2</span>
+              <div class="step-icon">❓</div>
+              <h4 class="step-title">Read the Question</h4>
+              <p class="step-desc">Every round reveals a creative, funny scenario tailored for friendly roasting.</p>
+            </div>
+            <div class="step-card">
+              <span class="step-badge">3</span>
+              <div class="step-icon">🤫</div>
+              <h4 class="step-title">Secretly Vote</h4>
+              <p class="step-desc">Pick the friend who fits best. 100% confidential. You can't vote for yourself!</p>
+            </div>
+            <div class="step-card">
+              <span class="step-badge">4</span>
+              <div class="step-icon">🎉</div>
+              <h4 class="step-title">Dramatic Reveal</h4>
+              <p class="step-desc">Watch vote bars rise, see who is crowned 'The Problem', and climb the leaderboard.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Modes Showcase -->
+        <div class="how-to-play-section">
+          <div class="section-header">
+            <h2 class="section-title">Exciting Game Modes</h2>
+            <p class="section-subtitle">Keep game night fresh with unique gameplay variations.</p>
+          </div>
+
+          <div class="modes-grid">
+            <div class="mode-card">
+              <div class="mode-icon">🎯</div>
+              <div>
+                <h4 class="mode-name">Normal Mode</h4>
+                <p class="mode-desc">Classic single anonymous vote per player. Most votes gets roasted.</p>
+              </div>
+            </div>
+            <div class="mode-card">
+              <div class="mode-icon">🔮</div>
+              <div>
+                <h4 class="mode-name">Guess the Majority</h4>
+                <p class="mode-desc">Predict who gets the most votes before voting. Correct predictions earn +2 bonus points!</p>
+              </div>
+            </div>
+            <div class="mode-card">
+              <div class="mode-icon">🔄</div>
+              <div>
+                <h4 class="mode-name">Reverse Mode</h4>
+                <p class="mode-desc">Twist! Vote for the person LEAST likely to do the crazy action.</p>
+              </div>
+            </div>
+            <div class="mode-card">
+              <div class="mode-icon">💥</div>
+              <div>
+                <h4 class="mode-name">Double Trouble</h4>
+                <p class="mode-desc">Double the chaos: pick TWO different friends who are equally guilty!</p>
+              </div>
+            </div>
+            <div class="mode-card">
+              <div class="mode-icon">🎲</div>
+              <div>
+                <h4 class="mode-name">Random Chaos</h4>
+                <p class="mode-desc">Surprise multiplier rounds and unpredictable category shifts.</p>
+              </div>
+            </div>
+            <div class="mode-card">
+              <div class="mode-icon">✍️</div>
+              <div>
+                <h4 class="mode-name">Custom Questions</h4>
+                <p class="mode-desc">Add your own personalized inside jokes and group questions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SCREEN 2: WAITING LOBBY
+           ======================================================== -->
+      <section id="screen-lobby" class="game-screen">
+        <div class="lobby-header">
+          <h2 class="section-title">Party Lobby</h2>
+          <p class="section-subtitle">Share this room code with your friends to join from anywhere!</p>
+
+          <div class="room-code-box">
+            <div class="room-code-label">ROOM CODE</div>
+            <div class="room-code-display" id="lobby-room-code">------</div>
+            <div class="room-code-actions">
+              <button class="btn btn-outline" id="btn-copy-code">
+                📋 Copy Code
+              </button>
+              <button class="btn btn-secondary" id="btn-copy-link">
+                🔗 Copy Link
+              </button>
+            </div>
+          </div>
+
+          <!-- Live Reaction Bar -->
+          <div class="reaction-bar" id="lobby-reaction-bar" title="Tap to react in real-time!">
+            <button class="reaction-btn" data-emoji="😂" title="Laugh">😂</button>
+            <button class="reaction-btn" data-emoji="💀" title="Dead">💀</button>
+            <button class="reaction-btn" data-emoji="🔥" title="Lit">🔥</button>
+            <button class="reaction-btn" data-emoji="👑" title="Crown">👑</button>
+            <button class="reaction-btn" data-emoji="👀" title="Eyes">👀</button>
+            <button class="reaction-btn" data-emoji="🍿" title="Popcorn">🍿</button>
+          </div>
+
+          <div class="round-pill" id="lobby-player-count-pill">
+            👥 Players: <strong id="lobby-current-players">1</strong> / <span id="lobby-max-players">15</span>
+          </div>
+        </div>
+
+        <!-- Players Grid -->
+        <div class="players-grid" id="lobby-players-grid">
+          <!-- Dynamically populated with player cards -->
+        </div>
+
+        <!-- Lobby Controls -->
+        <div class="lobby-controls">
+          <!-- Host Only Controls -->
+          <div id="host-lobby-controls" style="width: 100%; display: flex; flex-direction: column; gap: 0.75rem;">
+            <button class="btn btn-primary btn-large btn-block" id="btn-start-game">
+              🚀 Start Game
+            </button>
+            <div style="display: flex; gap: 0.5rem;">
+              <button class="btn btn-outline btn-block" id="btn-add-bot" title="Add simulated players for testing">
+                🤖 Add Bot Player
+              </button>
+              <button class="btn btn-outline" id="btn-clear-bots" title="Remove all bots">
+                🧹
+              </button>
+              <button class="btn btn-outline" id="btn-lobby-add-custom" title="Add Custom Inside Joke Question">
+                ✍️ Add Question
+              </button>
+            </div>
+          </div>
+
+          <!-- Non-Host Message -->
+          <div id="guest-lobby-controls" style="display: none; text-align: center;">
+            <div class="round-pill animate-pulse-glow">
+              ⏳ Waiting for the room host to start the game...
+            </div>
+          </div>
+
+          <button class="btn btn-outline" id="btn-leave-room" style="margin-top: 1rem;">
+            🚪 Leave Room
+          </button>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SCREEN 3: PREDICTION PHASE (GUESS THE MAJORITY)
+           ======================================================== -->
+      <section id="screen-prediction" class="game-screen">
+        <div class="voting-top-bar">
+          <div class="round-pill" id="pred-round-indicator">Round 1 of 5</div>
+          <div class="mode-badge">🔮 GUESS THE MAJORITY</div>
+          <div class="timer-box" id="pred-timer-display">⏱️ <span>15</span>s</div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-category" id="pred-category-tag">
+            <span>🎭</span> Drama King/Queen
+          </div>
+          <h2 class="question-text" id="pred-question-text">
+            Who would survive only 2 minutes in a horror movie?
+          </h2>
+          <p style="color: var(--secondary-cyan); margin-top: 0.75rem; font-weight: 700;">
+            Predict: Who will get the MOST votes this round? (+2 Bonus Points if correct!)
+          </p>
+        </div>
+
+        <div class="voting-grid" id="pred-players-grid">
+          <!-- Dynamically generated prediction choices -->
+        </div>
+
+        <div style="text-align: center;">
+          <button class="btn btn-accent btn-large" id="btn-submit-prediction" disabled>
+            ✨ Lock In Prediction
+          </button>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SCREEN 4: VOTING SCREEN
+           ======================================================== -->
+      <section id="screen-voting" class="game-screen">
+        <div class="voting-top-bar">
+          <div class="round-pill" id="vote-round-indicator">Round 1 of 5</div>
+          <div class="mode-badge" id="vote-mode-badge">🎯 NORMAL MODE</div>
+          <div class="timer-box" id="vote-timer-display">⏱️ <span id="vote-timer-sec">20</span>s</div>
+        </div>
+
+        <!-- Question Card -->
+        <div class="question-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+            <div class="question-category" id="vote-category-tag">
+              <span id="vote-category-icon">🎓</span> <span id="vote-category-name">College Chaos</span>
+            </div>
+            <span id="vote-spice-badge" class="spice-badge spice-medium">🌶️ Medium Roast</span>
+          </div>
+
+          <h2 class="question-text" id="vote-question-text">
+            Loading funny question...
+          </h2>
+
+          <!-- Action bar with Skip & Report -->
+          <div class="voting-action-bar">
+            <button class="btn-skip-q" id="btn-skip-question" title="Skip this question (Host control)">
+              ⏭️ Skip Question
+            </button>
+            <button class="btn-report-q" id="btn-report-question" title="Report inappropriate question">
+              🚩 Report Question
+            </button>
+          </div>
+        </div>
+
+        <!-- Live Anonymous Progress -->
+        <div class="voting-progress-bar-container">
+          <div class="voting-progress-fill" id="voting-progress-fill" style="width: 0%;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+          <span id="voting-status-text">Select your answer below...</span>
+          <span id="voting-count-text">0 / 0 voted</span>
+        </div>
+
+        <!-- Eligible Players Grid -->
+        <div class="voting-grid" id="vote-players-grid">
+          <!-- Dynamically populated with player cards -->
+        </div>
+
+        <div style="text-align: center; margin-bottom: 2rem;">
+          <button class="btn btn-primary btn-large" id="btn-submit-vote" disabled>
+            🗳️ Lock In Secret Vote
+          </button>
+        </div>
+
+        <!-- Post Vote Waiting Overlay -->
+        <div id="post-vote-state" class="post-vote-waiting" style="display: none;">
+          <div class="waiting-spinner">🔒</div>
+          <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem;">Vote Sealed in Titanium! 🤫</h3>
+          <p style="color: var(--text-muted);" id="post-vote-humor-msg">
+            Waiting for other players to cast their votes...
+          </p>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SCREEN 5: RESULTS REVEAL
+           ======================================================== -->
+      <section id="screen-results" class="game-screen">
+        <div class="results-container">
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <div class="round-pill" id="results-round-indicator">Round 1 Results</div>
+            <h2 class="section-title" style="margin-top: 0.5rem;">The Verdict Is In! ⚖️</h2>
+          </div>
+
+          <!-- Highlight: The Problem Card -->
+          <div class="problem-hero-card" id="problem-hero-card">
+            <div class="problem-crown">👑</div>
+            <div class="problem-badge-title" id="problem-award-title">CHIEF CHAOS OFFICER 🌪️</div>
+            <div class="player-avatar large" id="problem-avatar" style="margin: 0.5rem auto;">🤡</div>
+            <h3 class="problem-name" id="problem-winner-name">Player Name</h3>
+            <p style="font-weight: 700; color: var(--accent-yellow);" id="problem-vote-stats">
+              Received 5 votes (71%)!
+            </p>
+          </div>
+
+          <!-- Question Recap -->
+          <div class="card" style="margin-bottom: 1.5rem; text-align: center; padding: 1.25rem;">
+            <p style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; font-weight: 700;">Question was:</p>
+            <p style="font-size: 1.15rem; font-weight: 700; margin-top: 0.25rem;" id="results-question-recap">
+              Who is most likely to text 'I'm 5 minutes away' while in bed?
+            </p>
+          </div>
+
+          <!-- Vote Distribution Bar Chart -->
+          <div class="results-list" id="results-distribution-list">
+            <!-- Dynamically populated vote bars -->
+          </div>
+
+          <!-- Host Controls for Next Round -->
+          <div style="text-align: center; display: flex; flex-direction: column; gap: 0.75rem; align-items: center;">
+            <div class="round-pill animate-pulse-glow" id="results-auto-countdown-pill" style="margin-bottom: 0.25rem;">
+              ⏱️ Next round starting automatically in <strong id="results-countdown-num" style="color: var(--secondary-cyan);">7</strong>s...
+            </div>
+            <div id="host-results-controls">
+              <button class="btn btn-primary btn-large" id="btn-next-round">
+                ➡️ Skip to Next Round
+              </button>
+            </div>
+            <div id="guest-results-waiting" style="display: none;">
+              <span class="round-pill animate-pulse-glow">Synchronizing next round...</span>
+            </div>
+            <button class="btn btn-outline" id="btn-view-leaderboard">
+              📊 View Current Standings
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SCREEN 6: INTER-ROUND LEADERBOARD
+           ======================================================== -->
+      <section id="screen-leaderboard" class="game-screen">
+        <div class="results-container">
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <h2 class="section-title">Current Standings 🏆</h2>
+            <p class="section-subtitle">Most points wins the game!</p>
+          </div>
+
+          <div class="results-list" id="leaderboard-standings-list">
+            <!-- Dynamically populated leaderboard rows -->
+          </div>
+
+          <div style="text-align: center; margin-top: 2rem;">
+            <button class="btn btn-primary btn-large" id="btn-back-to-game">
+              🎮 Return to Round
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           SCREEN 7: GAME OVER - GRAND PODIUM & FUNNY AWARDS
+           ======================================================== -->
+      <section id="screen-gameover" class="game-screen">
+        <div class="results-container">
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <div class="hero-tag">🎉 GAME COMPLETED!</div>
+            <h1 class="section-title" style="font-size: 2.4rem;">Final Leaderboard</h1>
+            <p class="section-subtitle">Here are the ultimate winners and group legends!</p>
+          </div>
+
+          <!-- 3D Olympic-Style Podium -->
+          <div class="podium-container" id="grand-podium">
+            <!-- 2nd place -->
+            <div class="podium-column podium-2nd" id="podium-col-2">
+              <div class="player-avatar" id="podium-avatar-2">🥈</div>
+              <div class="player-name" id="podium-name-2" style="margin: 0.4rem 0;">Player 2</div>
+              <div class="podium-pedestal">
+                <span class="podium-trophy">🥈</span>
+                <span class="podium-rank">2nd</span>
+                <span class="podium-score" id="podium-score-2">0 pts</span>
+              </div>
+            </div>
+
+            <!-- 1st place -->
+            <div class="podium-column podium-1st" id="podium-col-1">
+              <div class="player-avatar large" id="podium-avatar-1">👑</div>
+              <div class="player-name" id="podium-name-1" style="margin: 0.4rem 0; font-weight: 900;">Winner</div>
+              <div class="podium-pedestal">
+                <span class="podium-trophy">🏆</span>
+                <span class="podium-rank">1st</span>
+                <span class="podium-score" id="podium-score-1">0 pts</span>
+              </div>
+            </div>
+
+            <!-- 3rd place -->
+            <div class="podium-column podium-3rd" id="podium-col-3">
+              <div class="player-avatar" id="podium-avatar-3">🥉</div>
+              <div class="player-name" id="podium-name-3" style="margin: 0.4rem 0;">Player 3</div>
+              <div class="podium-pedestal">
+                <span class="podium-trophy">🥉</span>
+                <span class="podium-rank">3rd</span>
+                <span class="podium-score" id="podium-score-3">0 pts</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Funny Awards Section -->
+          <div class="section-header" style="margin-top: 3rem;">
+            <h3 class="section-title" style="font-size: 1.6rem;">Special Group Awards 🏅</h3>
+            <p class="section-subtitle">Calculated from actual in-game voting statistics!</p>
+          </div>
+
+          <div class="awards-grid" id="final-awards-grid">
+            <!-- Dynamically populated awards -->
+          </div>
+
+          <!-- Action Buttons -->
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem;">
+            <button class="btn btn-primary btn-large" id="btn-play-again">
+              🔄 Play Again
+            </button>
+            <button class="btn btn-secondary btn-large" id="btn-share-results">
+              📸 Download / Share Scorecard
+            </button>
+            <button class="btn btn-outline btn-large" id="btn-return-home">
+              🏠 Return Home
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ========================================================
+       MODAL 1: CREATE ROOM
+       ======================================================== -->
+  <div class="modal-overlay" id="modal-create-room">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="btn-close-create-modal">&times;</button>
+      
+      <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.25rem;">👑 Create Party Room</h2>
+      <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.5rem;">
+        Configure your private room settings and invite your friends.
+      </p>
+
+      <form id="form-create-room">
+        <!-- Host Nickname -->
+        <div class="form-group">
+          <label class="form-label" for="create-host-name">Your Nickname</label>
+          <input type="text" id="create-host-name" class="form-input" placeholder="e.g. MasterRoaster" maxlength="15" required>
+        </div>
+
+        <!-- Avatar Selection -->
+        <div class="form-group">
+          <label class="form-label">Choose Your Avatar</label>
+          <div class="avatar-grid" id="create-avatar-grid">
+            <!-- Avatars injected via JS -->
+          </div>
+        </div>
+
+        <!-- Rounds Selector -->
+        <div class="form-group">
+          <label class="form-label">Number of Rounds</label>
+          <div class="pill-group" id="create-rounds-pills">
+            <div class="pill-choice" data-value="3">3 Rounds</div>
+            <div class="pill-choice selected" data-value="5">5 Rounds</div>
+            <div class="pill-choice" data-value="7">7 Rounds</div>
+            <div class="pill-choice" data-value="10">10 Rounds</div>
+          </div>
+        </div>
+
+        <!-- Voting Time -->
+        <div class="form-group">
+          <label class="form-label">Voting Timer</label>
+          <div class="pill-group" id="create-time-pills">
+            <div class="pill-choice" data-value="15">15 Seconds</div>
+            <div class="pill-choice selected" data-value="20">20 Seconds</div>
+            <div class="pill-choice" data-value="30">30 Seconds</div>
+          </div>
+        </div>
+
+        <!-- Spice Level Selector -->
+        <div class="form-group">
+          <label class="form-label">Funny / Spice Level</label>
+          <div class="pill-group" id="create-spice-pills">
+            <div class="pill-choice selected" data-value="all">🌈 All Mix</div>
+            <div class="pill-choice" data-value="1">🟢 Mild</div>
+            <div class="pill-choice" data-value="2">🟡 Medium</div>
+            <div class="pill-choice" data-value="3">🔴 Extra Spicy</div>
+          </div>
+        </div>
+
+        <!-- Guess the Majority Toggle -->
+        <div class="form-group" style="display: flex; align-items: center; justify-content: space-between; background: rgba(255,255,255,0.04); padding: 0.85rem; border-radius: var(--radius-md);">
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">🔮 Guess the Majority</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">Predict the most-voted player before each round for bonus points</div>
+          </div>
+          <input type="checkbox" id="create-majority-toggle" checked style="accent-color: var(--primary-violet); width: 22px; height: 22px; cursor: pointer;">
+        </div>
+
+        <!-- Question Categories -->
+        <div class="form-group">
+          <label class="form-label">Question Categories (330+ Questions)</label>
+          <div class="category-checkboxes" id="create-categories-list">
+            <!-- Category checkboxes injected via JS -->
+          </div>
+        </div>
+
+        <!-- Custom Questions Toggle -->
+        <div class="form-group">
+          <label class="form-label">Add Custom Inside Jokes (Optional)</label>
+          <textarea id="create-custom-questions" class="form-input" rows="2" placeholder="Enter custom questions separated by new lines..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-large btn-block" style="margin-top: 1.5rem;">
+          ✨ Launch Room
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       MODAL 2: JOIN ROOM
+       ======================================================== -->
+  <div class="modal-overlay" id="modal-join-room">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="btn-close-join-modal">&times;</button>
+      
+      <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.25rem;">🚀 Join Room</h2>
+      <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.5rem;">
+        Enter the 6-character room code from your host.
+      </p>
+
+      <form id="form-join-room">
+        <!-- Room Code -->
+        <div class="form-group">
+          <label class="form-label" for="join-room-code">Room Code</label>
+          <input type="text" id="join-room-code" class="form-input room-code-input" placeholder="ABC123" maxlength="6" required autocomplete="off">
+        </div>
+
+        <!-- Nickname -->
+        <div class="form-group">
+          <label class="form-label" for="join-player-name">Your Nickname</label>
+          <input type="text" id="join-player-name" class="form-input" placeholder="e.g. ComedyKing" maxlength="15" required>
+        </div>
+
+        <!-- Avatar Selection -->
+        <div class="form-group">
+          <label class="form-label">Choose Your Avatar</label>
+          <div class="avatar-grid" id="join-avatar-grid">
+            <!-- Avatars injected via JS -->
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-secondary btn-large btn-block" style="margin-top: 1.5rem;">
+          🎮 Enter Lobby
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       MODAL 3: HOW TO PLAY
+       ======================================================== -->
+  <div class="modal-overlay" id="modal-how-to-play">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="btn-close-help-modal">&times;</button>
+      
+      <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem;">❓ Game Rules & Guide</h2>
+      <div style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6; display: flex; flex-direction: column; gap: 1rem;">
+        <p><strong>WHO'S THE PROBLEM?</strong> is a multiplayer anonymous voting and friendly roasting party game for 3 to 15 players.</p>
+        
+        <div>
+          <h4 style="color: #fff; margin-bottom: 0.25rem;">🗳️ Voting Rules</h4>
+          <p>• You can vote for any friend in the room, but NEVER for yourself.</p>
+          <p>• Votes are 100% confidential and anonymous. Individual vote selections are never exposed.</p>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; margin-bottom: 0.25rem;">🏆 Scoring System</h4>
+          <p>• <strong>+1 Point</strong> for receiving the most votes in a normal question (being 'The Problem').</p>
+          <p>• <strong>+2 Points</strong> for correctly guessing who receives the most votes in 'Guess the Majority' rounds.</p>
+          <p>• <strong>+2 Points</strong> in Random Chaos multiplier rounds!</p>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; margin-bottom: 0.25rem;">🎖️ Funny End Game Awards</h4>
+          <p>Based on in-game performance, win titles like Drama King/Queen, Walking Meme, Silent Observer, and more!</p>
+        </div>
+      </div>
+
+      <button class="btn btn-outline btn-block" id="btn-dismiss-help" style="margin-top: 1.5rem;">
+        Got it! Let's Play
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       MODAL 4: CLOUD SYNC & MULTIPLAYER SETTINGS
+       ======================================================== -->
+  <div class="modal-overlay" id="modal-cloud-sync">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="btn-close-sync-modal">&times;</button>
+      
+      <h2 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.25rem;">☁️ Online Multiplayer Status</h2>
+      <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.25rem;">
+        Real-time multi-device network connectivity details.
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; background: rgba(255,255,255,0.04); padding: 1rem; border-radius: var(--radius-md); font-size: 0.9rem;">
+        <div style="display: flex; justify-content: space-between;">
+          <span style="color: var(--text-muted);">Active Transport:</span>
+          <strong id="sync-modal-transport" style="color: #34d399;">Real-time Cloud Relay</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <span style="color: var(--text-muted);">Player UID:</span>
+          <code id="sync-modal-uid" style="color: var(--secondary-cyan); font-size: 0.8rem;">user_...</code>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <span style="color: var(--text-muted);">Room Code:</span>
+          <strong id="sync-modal-room">None</strong>
+        </div>
+      </div>
+
+      <div style="margin-top: 1.25rem;">
+        <label class="form-label">Custom Firebase Configuration (Optional)</label>
+        <p style="font-size: 0.78rem; color: var(--text-dim); margin-bottom: 0.5rem;">
+          Paste your custom Firebase credentials object to use your own Firebase project.
+        </p>
+        <textarea id="custom-firebase-json" class="form-input" rows="3" placeholder='{"apiKey": "...", "databaseURL": "...", ...}' style="font-family: monospace; font-size: 0.75rem;"></textarea>
+        <button class="btn btn-outline btn-block" id="btn-save-custom-firebase" style="margin-top: 0.75rem;">
+          💾 Save & Connect to Firebase
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       MODAL 5: RANDOM QUESTION WHEEL
+       ======================================================== -->
+  <div class="modal-overlay" id="modal-question-wheel">
+    <div class="modal-content" style="text-align: center;">
+      <button class="modal-close-btn" id="btn-close-wheel-modal">&times;</button>
+      
+      <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.25rem;">🎡 Random Question Wheel</h2>
+      <p style="color: var(--text-muted); font-size: 0.88rem;">
+        Spin the wheel to discover surprise questions!
+      </p>
+
+      <div class="wheel-wrapper">
+        <div class="wheel-pointer"></div>
+        <canvas id="wheel-canvas" class="wheel-canvas" width="320" height="320"></canvas>
+      </div>
+
+      <div id="wheel-result-container" style="display: none; margin-top: 1rem; background: rgba(255,255,255,0.06); padding: 1rem; border-radius: var(--radius-md);">
+        <div style="font-size: 0.85rem; color: var(--secondary-cyan); font-weight: 700;" id="wheel-result-category">Category</div>
+        <div style="font-size: 1.1rem; font-weight: 800; margin-top: 0.25rem; color: #fff;" id="wheel-result-text">Selected Question</div>
+      </div>
+
+      <button class="btn btn-primary btn-large btn-block" id="btn-spin-wheel" style="margin-top: 1.25rem;">
+        🎯 Spin the Wheel!
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       MODAL 6: CUSTOM QUESTION CREATOR
+       ======================================================== -->
+  <div class="modal-overlay" id="modal-custom-question">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="btn-close-custom-modal">&times;</button>
+      
+      <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.25rem;">✍️ Create Custom Question</h2>
+      <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 1.25rem;">
+        Add an inside joke question to the match rotation.
+      </p>
+
+      <form id="form-custom-question">
+        <div class="form-group">
+          <label class="form-label" for="custom-question-input">Question Text</label>
+          <input type="text" id="custom-question-input" class="form-input" placeholder="e.g. Who is most likely to lose their phone in their own bed?" required maxlength="120">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-large btn-block" style="margin-top: 1.25rem;">
+          ✨ Add to Game
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Canvas Confetti Container -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- ========================================================
+       SCRIPTS: Real-Time Multiplayer Transports
+       ======================================================== -->
+  <!-- PeerJS for WebRTC DataChannels (zero-config direct internet connection) -->
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+
+  <!-- Paho MQTT for redundant WebSocket relay -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js"></script>
+
+  <!-- Firebase SDK (v10 modular/compat for browser) -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+
+  <!-- Game Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/awards.js"></script>
+  <script src="js/firebase-service.js"></script>
+  <script src="js/game-engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
