@@ -1221,33 +1221,56 @@ class AppController {
     const tagBannerEl = document.getElementById('problem-tag-banner');
     const scorePillEl = document.getElementById('problem-score-pill');
 
-    if (mostVotedId && roomData.players[mostVotedId]) {
+    // Build a comprehensive player lookup from both roomData.players AND playersList
+    // (guards against race conditions where MQTT delivers state before players update)
+    const allPlayers = { ...roomData.players };
+    playersList.forEach(p => { if (!allPlayers[p.id]) allPlayers[p.id] = p; });
+
+    const totalVotes = Object.values(voteTally).reduce((a, b) => a + b, 0);
+    const isTie = state.tiedWinners && state.tiedWinners.length > 1;
+    const pointIncrement = state.mode === 'random_chaos' ? 2 : 1;
+
+    if (mostVotedId && allPlayers[mostVotedId]) {
       heroCard.style.display = 'block';
-      const problemPlayer = roomData.players[mostVotedId];
+      const problemPlayer = allPlayers[mostVotedId];
       const votesReceived = voteTally[mostVotedId] || 0;
-      const totalVotes = Object.values(voteTally).reduce((a, b) => a + b, 0);
       const pct = totalVotes > 0 ? Math.round((votesReceived / totalVotes) * 100) : 0;
-      const isTie = state.tiedWinners && state.tiedWinners.length > 1;
 
       if (isTie) {
-        if (tagBannerEl) tagBannerEl.textContent = "🤝 IT'S A TIE - ROUND WINNERS! 🤝";
-        const tiedNames = state.tiedWinners.map(id => roomData.players[id]?.name || 'Player').join(' & ');
-        const tiedAvatars = state.tiedWinners.map(id => roomData.players[id]?.avatar || '👑').join(' ');
+        if (tagBannerEl) tagBannerEl.textContent = "🤝 IT'S A TIE — ROUND WINNERS! 🤝";
+        const tiedVotes = voteTally[mostVotedId] || 0; // all tied players have same count
+        const tiedNames = state.tiedWinners.map(id => allPlayers[id]?.name || 'Player').join(' & ');
+        const tiedAvatars = state.tiedWinners.map(id => allPlayers[id]?.avatar || '👑').join(' ');
         document.getElementById('problem-winner-name').textContent = tiedNames;
         document.getElementById('problem-avatar').textContent = tiedAvatars;
+        const tiedPct = totalVotes > 0 ? Math.round((tiedVotes / totalVotes) * 100) : 0;
+        document.getElementById('problem-vote-stats').textContent =
+          `Each received ${tiedVotes} vote${tiedVotes === 1 ? '' : 's'} (${tiedPct}%)!`;
       } else {
         if (tagBannerEl) tagBannerEl.textContent = "👑 ROUND WINNER 👑";
         document.getElementById('problem-winner-name').textContent = problemPlayer.name;
-        document.getElementById('problem-avatar').textContent = problemPlayer.avatar;
+        document.getElementById('problem-avatar').textContent = problemPlayer.avatar || '🤡';
+        document.getElementById('problem-vote-stats').textContent =
+          `Received ${votesReceived} vote${votesReceived === 1 ? '' : 's'} (${pct}%)!`;
       }
 
       const title = state.problemTitle || "CHIEF CHAOS OFFICER 🌪️";
       document.getElementById('problem-award-title').textContent = title;
-      document.getElementById('problem-vote-stats').textContent = `Majority Choice with ${votesReceived} vote${votesReceived === 1 ? '' : 's'} (${pct}%)!`;
-      
+
       if (scorePillEl) {
-        scorePillEl.textContent = `+1 Point Awarded • Total: ${problemPlayer.score || 0} pts`;
+        scorePillEl.textContent = `+${pointIncrement} Point${pointIncrement > 1 ? 's' : ''} Awarded • Total: ${problemPlayer.score || 0} pts`;
       }
+    } else if (mostVotedId && !allPlayers[mostVotedId]) {
+      // Player data not yet synced — show a loading state so card stays visible
+      heroCard.style.display = 'block';
+      if (tagBannerEl) tagBannerEl.textContent = "👑 ROUND WINNER 👑";
+      document.getElementById('problem-winner-name').textContent = '...';
+      document.getElementById('problem-avatar').textContent = '👑';
+      const votesReceived = voteTally[mostVotedId] || 0;
+      const pct = totalVotes > 0 ? Math.round((votesReceived / totalVotes) * 100) : 0;
+      document.getElementById('problem-vote-stats').textContent =
+        `Received ${votesReceived} vote${votesReceived === 1 ? '' : 's'} (${pct}%)!`;
+      if (scorePillEl) scorePillEl.textContent = `+${pointIncrement} Point${pointIncrement > 1 ? 's' : ''} Awarded`;
     } else {
       heroCard.style.display = 'none';
     }

@@ -280,7 +280,7 @@ class GameEngine {
     const assignedTitle = titles[Math.floor(Math.random() * titles.length)];
 
     // Update state to reveal results with vote tallies (CONFIDENTIAL: individual votes are never revealed)
-    const resultDurationSec = 6; // 6 seconds automatic transition to next round
+    const resultDurationSec = 10; // 10 seconds automatic transition to next round (long enough to read winner's name)
     const stateUpdate = {
       phase: 'results',
       revealStep: 1,
