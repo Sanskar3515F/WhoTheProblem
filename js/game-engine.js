@@ -62,13 +62,11 @@ class GameEngine {
     const mode = this.determineRoundMode(roundNumber);
     this.currentMode = mode;
 
-    // If 'Guess the Majority' is enabled in room config, start with prediction phase
-    const hasPrediction = this.roomData.config.enableGuessMajority && mode !== 'reverse';
-    const nextPhase = hasPrediction ? 'prediction' : 'voting';
-    const duration = hasPrediction ? 15 : (this.roomData.config.votingTimeSec || 20);
+    // Direct Majority Rules Voting Phase (No redundant prediction phase)
+    const duration = this.roomData.config.votingTimeSec || 20;
 
     const stateUpdate = {
-      phase: nextPhase,
+      phase: 'voting',
       currentRound: roundNumber,
       currentQuestion: question,
       mode: mode,
@@ -250,21 +248,11 @@ class GameEngine {
     const winningTargets = isReverse ? leastVotedPlayers : mostVotedPlayers;
     const pointIncrement = roundMode === 'random_chaos' ? 2 : 1;
 
-    // +1 Point (or +2 in chaos) for being The Problem
+    // Majority Rules: The name with the most votes wins directly in that round
     winningTargets.forEach(pid => {
       if (players[pid]) {
         players[pid].score = (players[pid].score || 0) + pointIncrement;
         players[pid].stats.timesProblem = (players[pid].stats.timesProblem || 0) + 1;
-      }
-    });
-
-    // +2 points for correctly predicting the majority
-    Object.entries(roundPredictions).forEach(([voterId, pred]) => {
-      if (mostVotedPlayers.includes(pred.predictedId)) {
-        if (players[voterId]) {
-          players[voterId].score = (players[voterId].score || 0) + 2;
-          players[voterId].stats.correctPredictions = (players[voterId].stats.correctPredictions || 0) + 1;
-        }
       }
     });
 
@@ -292,7 +280,7 @@ class GameEngine {
     const assignedTitle = titles[Math.floor(Math.random() * titles.length)];
 
     // Update state to reveal results with vote tallies (CONFIDENTIAL: individual votes are never revealed)
-    const resultDurationSec = 7; // 7 seconds auto-transition
+    const resultDurationSec = 6; // 6 seconds automatic transition to next round
     const stateUpdate = {
       phase: 'results',
       revealStep: 1,

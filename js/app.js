@@ -304,6 +304,10 @@ class AppController {
 
     // Results screen actions
     document.getElementById('btn-next-round').addEventListener('click', () => {
+      if (this.autoNextRoundTimer) {
+        clearTimeout(this.autoNextRoundTimer);
+        this.autoNextRoundTimer = null;
+      }
       window.gameEngine.nextRoundOrFinish();
     });
 
@@ -668,7 +672,7 @@ class AppController {
     const selectedSpiceEl = document.querySelector('#create-spice-pills .pill-choice.selected');
     const spiceLevel = selectedSpiceEl?.dataset.value || 'all';
 
-    const guessMajority = document.getElementById('create-majority-toggle').checked;
+    const guessMajority = false; // Pure direct majority rules (No redundant prediction phase)
 
     const checkedCategories = Array.from(
       document.querySelectorAll('#create-categories-list input[type="checkbox"]:checked')
@@ -762,7 +766,7 @@ class AppController {
       rounds: 5,
       timerSec: 15,
       spiceLevel: 'all',
-      guessMajority: true,
+      guessMajority: false,
       categories: ['college_chaos', 'friend_group_roast', 'drama_king_queen', 'foodie_crimes']
     };
 
@@ -877,12 +881,30 @@ class AppController {
         setTimeout(() => {
           if (window.soundEngine) window.soundEngine.playBrassHit();
           if (window.visualEffects) window.visualEffects.fireConfetti(70);
-        }, 1200);
+        }, 1000);
 
-        // Automatic transition to next round or podium!
-        const resultTimerEnd = roomData.state.timerEnd || (Date.now() + 7000);
+        // Guaranteed Automatic transition to next round (6 seconds)
+        const resultTimerEnd = roomData.state.timerEnd || (Date.now() + 6000);
+        
+        if (this.autoNextRoundTimer) {
+          clearTimeout(this.autoNextRoundTimer);
+          this.autoNextRoundTimer = null;
+        }
+
+        // Host authoritative timer
+        if (window.gameEngine.isHost()) {
+          const delayMs = Math.max(800, resultTimerEnd - Date.now());
+          this.autoNextRoundTimer = setTimeout(() => {
+            if (window.gameEngine.isHost() && window.gameEngine.roomData?.state?.phase === 'results') {
+              console.info("Results countdown finished: auto-starting next round!");
+              window.gameEngine.nextRoundOrFinish();
+            }
+          }, delayMs);
+        }
+
+        // Visual countdown on results screen
         this.startTimerCountdown(resultTimerEnd, () => {
-          if (window.gameEngine.isHost()) {
+          if (window.gameEngine.isHost() && window.gameEngine.roomData?.state?.phase === 'results') {
             window.gameEngine.nextRoundOrFinish();
           }
         });
@@ -1114,9 +1136,14 @@ class AppController {
       document.getElementById('post-vote-state').style.display = 'block';
     }
 
-    // Auto-advance if everyone voted
-    if (totalVoted >= totalPlayers && window.gameEngine.isHost()) {
-      window.gameEngine.advanceToResults();
+    // Auto-advance directly to results as soon as everyone voted
+    if (totalVoted >= totalPlayers && window.gameEngine.isHost() && !roomData.state.scoresCalculated) {
+      if (this.autoAdvanceVotingTimer) clearTimeout(this.autoAdvanceVotingTimer);
+      this.autoAdvanceVotingTimer = setTimeout(() => {
+        if (window.gameEngine.isHost() && window.gameEngine.roomData?.state?.phase === 'voting' && !window.gameEngine.roomData?.state?.scoresCalculated) {
+          window.gameEngine.advanceToResults();
+        }
+      }, 500);
     }
   }
 
