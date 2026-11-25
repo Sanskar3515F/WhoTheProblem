@@ -29,6 +29,16 @@
   --text-dim: #64748b;
   --text-glow: 0 0 20px rgba(168, 85, 247, 0.4);
 
+  /* Consistent Typographic Scale (7 core steps) */
+  --font-size-xs: 0.75rem;    /* 12px - badges, micro-copy */
+  --font-size-sm: 0.875rem;   /* 14px - secondary labels, subtext */
+  --font-size-base: 1rem;     /* 16px - body, inputs, standard buttons */
+  --font-size-lg: 1.125rem;   /* 18px - card titles, large labels */
+  --font-size-xl: 1.25rem;    /* 20px - subheadings */
+  --font-size-2xl: 1.5rem;    /* 24px - modal titles, section headers */
+  --font-size-3xl: 2rem;      /* 32px - major headers */
+  --font-size-hero: clamp(2.25rem, 6vw, 4rem); /* hero banner */
+
   /* Shadows */
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.4);

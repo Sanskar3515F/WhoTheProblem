@@ -150,6 +150,19 @@ class AppController {
       this.openModal('modal-question-wheel');
     });
 
+    const carouselEl = document.getElementById('category-carousel-list');
+    const prevBtn = document.getElementById('btn-carousel-prev');
+    const nextBtn = document.getElementById('btn-carousel-next');
+
+    if (carouselEl && prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        carouselEl.scrollBy({ left: -300, behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', () => {
+        carouselEl.scrollBy({ left: 300, behavior: 'smooth' });
+      });
+    }
+
     document.getElementById('btn-close-wheel-modal').addEventListener('click', () => {
       this.closeModal('modal-question-wheel');
     });
