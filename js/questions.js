@@ -1,67 +1,66 @@
 /**
  * WHO'S THE PROBLEM? 😂 - Master Question Database (330+ Hilarious Questions)
- * Handcrafted, original, witty, friendly-roast questions across 8 rich categories:
- * 1. College Chaos (🎓)
- * 2. Friend Group Roast (🤡)
- * 3. Drama King/Queen (👑)
- * 4. Social Media Addict (📱)
- * 5. Future Predictions (🔮)
- * 6. Random Chaos (🌪️)
- * 7. Late Night Vibes (🌙)
- * 8. Foodie Crimes (🍕)
+ * Savage, authentic, relatable Hinglish and Marathiglish friendly-roast questions across 8 categories:
+ * 1. College Chaos & Rada (🎓)
+ * 2. Group Ka Asli Namoona (🤡)
+ * 3. Drama Queen & Overacting (👑)
+ * 4. Insta Ke Kide & Reelbaaz (📱)
+ * 5. Aage Jaake Kya Kand Karega (🔮)
+ * 6. Full Toofan & Dimaag Ka Dahi (🌪️)
+ * 7. 3 AM Bakchodi & Raat Ke Kide (🌙)
+ * 8. Foodie Chor & Tapri Criminals (🍕)
  *
- * All questions are suitable for boys and girls playing together, relatable to college
- * and young adult friend groups, with zero sensitive/appearance-shaming content.
+ * Designed specifically for Indian college gangs, hostelites, tapri squads and friend circles.
  */
 
 const QUESTION_CATEGORIES = [
   {
     "id": "college_chaos",
-    "name": "College Chaos",
+    "name": "College Chaos & Rada 🎓",
     "icon": "🎓",
-    "description": "Bunking, exams, professors, attendance & hostel life"
+    "description": "Proxy attendance, exam se 5 min pehle rona, tapri bunk & viva panics"
   },
   {
     "id": "friend_group_roast",
-    "name": "Friend Group Roast",
+    "name": "Group Ka Asli Namoona 🤡",
     "icon": "🤡",
-    "description": "Lies, delayed replies, late arrivals & inside jokes"
+    "description": "'2 min me aalo', bill ke time gayab, faltu advice & double dholki"
   },
   {
     "id": "drama_king_queen",
-    "name": "Drama King/Queen",
+    "name": "Drama Queen & Overacting 👑",
     "icon": "👑",
-    "description": "Oscar-worthy reactions, gasps, crying & high drama"
+    "description": "Chhoti baat pe 3-season Netflix series, Oscar acting & fake crying"
   },
   {
     "id": "social_media_addict",
-    "name": "Social Media Addict",
+    "name": "Insta Ke Kide & Reelbaaz 📱",
     "icon": "📱",
-    "description": "100 selfies, reels, stalking, aesthetic drinks & screen time"
+    "description": "100 selfies, cringe reel banger, aesthetic photo chya naavaat rada"
   },
   {
     "id": "future_predictions",
-    "name": "Future Predictions",
+    "name": "Aage Jaake Kya Kand Karega 🔮",
     "icon": "🔮",
-    "description": "Viral fame, weird businesses, fortune & eccentric lifestyles"
+    "description": "Achanak viral hona, MLM scam me fasna & fake start-up founder"
   },
   {
     "id": "random_chaos",
-    "name": "Random Chaos",
+    "name": "Full Toofan & Dimaag Ka Dahi 🌪️",
     "icon": "🌪️",
-    "description": "GPS arguments, deserted islands & unhinged daily moments"
+    "description": "Google Maps se ladai, police dekhke shaanpana & random kand"
   },
   {
     "id": "late_night_vibes",
-    "name": "Late Night Vibes",
+    "name": "3 AM Bakchodi & Raat Ke Kide 🌙",
     "icon": "🌙",
-    "description": "3 AM ramen, deep lore, 2 AM impulse buys & existential thoughts"
+    "description": "Raat ko 3 baje Maggi, ex ko drunk call, deep philosophical shaanpana"
   },
   {
     "id": "foodie_crimes",
-    "name": "Foodie Crimes",
+    "name": "Foodie Chor & Tapri Criminals 🍕",
     "icon": "🍕",
-    "description": "Fry thieves, ketchup crimes, weird cravings & burger surgery"
+    "description": "Dost ke fries chori, 'ek bite de na re bhau', bill splitting natak"
   }
 ];
 
@@ -69,4369 +68,4541 @@ const QUESTION_DATABASE = [
   {
     "id": "col_1",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
+    "categoryName": "College Chaos & Rada 🎓",
     "icon": "🎓",
     "spiceLevel": 1,
-    "text": "Who comes to college only to get attendance and immediately vanishes into thin air?",
+    "text": "Who comes to college sirf proxy lagwane ke liye aur attendance milte hi hawa me gayab ho jata hai?",
     "tags": [
-      "attendance",
-      "college",
-      "bunking"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_2",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "😴",
-    "spiceLevel": 1,
-    "text": "Who would fall dead asleep in the first 4 minutes of a 9 AM lecture?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 2,
+    "text": "Arey bhau, 9 AM lecture chya pehlya 3 min madhye bench var dole laavun ghorknara kon?",
     "tags": [
-      "sleep",
-      "lecture",
-      "morning"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_3",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "📚",
-    "spiceLevel": 2,
-    "text": "Who asks for exam notes exactly five minutes before the paper starts?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 3,
+    "text": "Exam ke 5 minute pehle pure class ke saamne haath jodke 'Bhai thoda padha de na' bolke rone wala?",
     "tags": [
-      "exam",
-      "notes",
-      "panic"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_4",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🚪",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
     "spiceLevel": 1,
-    "text": "Who would confidently walk into the wrong lecture hall, sit for 20 minutes, and not notice?",
+    "text": "Assignment sabse pehle maangta hai lekin submit karte waqt apna naam likhna bhool jata hai?",
     "tags": [
-      "wrong_class",
-      "confusion"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_5",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🍎",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
     "spiceLevel": 2,
-    "text": "Who would become the professor's favorite pet for absolutely no explainable reason?",
+    "text": "Who would accidentally enter the wrong classroom, sit through the entire 1-hour lecture and take notes seriously?",
     "tags": [
-      "professor",
-      "favorite",
-      "roast"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_6",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "👥",
-    "spiceLevel": 2,
-    "text": "Who does zero work in a group project but gives the opening speech like the CEO of the team?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 3,
+    "text": "Professor ke aage buttering karke faltu me group ka monitor banne wala chamcha kon?",
     "tags": [
-      "group_project",
-      "freeloader"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_7",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🍜",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
     "spiceLevel": 1,
-    "text": "Who spends more money at the campus canteen than their entire semester tuition?",
+    "text": "Viva examiner ke saamne blank face banakar aisi kahani sunata hai jiska syllabus se door-door tak naata nahi?",
     "tags": [
-      "canteen",
-      "food",
-      "money"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_8",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🎒",
-    "spiceLevel": 1,
-    "text": "Who carries a backpack with literally just a single dying pen and zero notebooks?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 2,
+    "text": "Arey shaanpana baaga, class bunk karke tapri var cutting chai peetana HOD chya samor pakadla janara kon?",
     "tags": [
-      "backpack",
-      "unprepared"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_9",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "📑",
-    "spiceLevel": 2,
-    "text": "Who writes an entire 10-page assignment 45 minutes before the midnight deadline?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 3,
+    "text": "Group project me 0% contribution deke PPT ke front slide pe sabse bada naam daalne wala?",
     "tags": [
-      "procrastination",
-      "deadline",
-      "assignment"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_10",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🏃‍♂️",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
     "spiceLevel": 1,
-    "text": "Who sprints across campus like an Olympic athlete just to avoid making eye contact with a professor?",
+    "text": "Who pretends to listen very seriously in lecture while calculating '75% attendance sathi aani kiti bunk maaraave lagel'?",
     "tags": [
-      "professor",
-      "running",
-      "dodge"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_11",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🎤",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
     "spiceLevel": 2,
-    "text": "Who would sweat profusely and forget their own name during a simple 2-minute class presentation?",
+    "text": "Exam hall me bagal wale se pencil, eraser, scale, yaha tak ki calculator bhi maangne wala bhikari?",
     "tags": [
-      "presentation",
-      "stagefright"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_12",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🤫",
-    "spiceLevel": 1,
-    "text": "Who whispers so loudly during a silent exam that the entire hall hears what question they are stuck on?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 3,
+    "text": "Ek raat pehle 'Bhai maine toh kuch nahi padha' bolke result ke din 9.5 CGPA laane wala snake 🐍?",
     "tags": [
-      "exam",
-      "whisper",
-      "loud"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_13",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "📝",
-    "spiceLevel": 2,
-    "text": "Who borrows a pen on the first day of the semester and somehow still has it three years later?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 1,
+    "text": "Practical lab me beaker ya test tube todke chupke se doosre ke table pe rakhne wala shaatir chor?",
     "tags": [
-      "pen",
-      "theft",
-      "campus"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_14",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "📖",
-    "spiceLevel": 1,
-    "text": "Who buys an expensive textbook, leaves the plastic wrapper on, and sells it back at a 90% loss?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 2,
+    "text": "Hostel ke mess ka khana dekhke aisi shakal banata hai jaise poisonous injection de diya ho?",
     "tags": [
-      "textbook",
-      "money",
-      "waste"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_15",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🥱",
-    "spiceLevel": 1,
-    "text": "Who goes to the campus library specifically to find a quiet desk to take a 3-hour nap?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 3,
+    "text": "Who sets 15 alarms from 6:00 AM to 8:30 AM but still wakes up directly at 11:30 AM?",
     "tags": [
-      "library",
-      "nap",
-      "sleep"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_16",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🚗",
-    "spiceLevel": 2,
-    "text": "Who would convince the whole group to bunk a crucial lecture to go eat roadside snacks?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 1,
+    "text": "College fest me volunteer ka tag pehenke poore campus me celebrity jaise ghoomne wala overacting star?",
     "tags": [
-      "bunk",
-      "snacks",
-      "instigator"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_17",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🤔",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
     "spiceLevel": 2,
-    "text": "Who raises their hand to ask a complicated question with 30 seconds left in class while everyone is packing up?",
+    "text": "Exam me ek simple answer ko 4 page tak khinchne ke liye purani Bollywood movie ki story likhne wala?",
     "tags": [
-      "annoying",
-      "lecture",
-      "traitor"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_18",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "☕",
-    "spiceLevel": 1,
-    "text": "Who walks into the classroom 35 minutes late carrying an iced latte and zero shame?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 3,
+    "text": "Sir jab 'Attendance time over' bolte hain tab back bench se achanak zinda hoke 'Present Sir!' chillane wala?",
     "tags": [
-      "late",
-      "iced_coffee",
-      "confidence"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_19",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "📉",
-    "spiceLevel": 2,
-    "text": "Who calculates the exact minimum percentage of attendance needed down to three decimal places?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 1,
+    "text": "Who asks the professor doubts at 4:59 PM when the lecture was supposed to end at 5:00 PM?",
     "tags": [
-      "attendance",
-      "math",
-      "slacker"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_20",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "📊",
-    "spiceLevel": 1,
-    "text": "Who claims 'I failed that exam so badly' and then gets the highest score in the entire batch?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 2,
+    "text": "Assignment ka xerox nikalte waqt dost ke assignment pe apna naam pen se overwrite karne wala jugaadu?",
     "tags": [
-      "exam",
-      "liar",
-      "topper"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_21",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "💻",
-    "spiceLevel": 1,
-    "text": "Who opens their laptop in the front row and casually plays games or online shops the entire period?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 3,
+    "text": "Arey bhau, college uniform ya ID card ghar pe bhool ke gatekeeper shi 'Arey uncle, ઓળખtoy ka mala' bolnara kon?",
     "tags": [
-      "laptop",
-      "gaming",
-      "shopping"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_22",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🔍",
-    "spiceLevel": 2,
-    "text": "Who leaves an exam hall after 20 minutes because 'staring at the paper won't magically reveal the answers'?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 1,
+    "text": "Exam shuru hone ke 10 min baad aake bolta hai 'Bhai questions dekhke lag raha hai paper out of syllabus hai'?",
     "tags": [
-      "exam",
-      "early_exit",
-      "defeat"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_23",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🖨️",
-    "spiceLevel": 1,
-    "text": "Who gets into an emotional physical argument with the college photocopy machine before an exam?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 2,
+    "text": "Canteen me 20 rupaye ki Maggi ke liye 45 minute tak ladai karne wala freeloader?",
     "tags": [
-      "printer",
-      "photocopy",
-      "rage"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_24",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "📱",
-    "spiceLevel": 1,
-    "text": "Who accidentally lets their phone blare a loud ringtone or alarm in the dead silence of the exam hall?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 3,
+    "text": "Who claims 'Kal se pakka library jaake padhai karunga' but ends up smoking chai at tapri the entire day?",
     "tags": [
-      "phone",
-      "alarm",
-      "embarrassing"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_25",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🤝",
-    "spiceLevel": 2,
-    "text": "Who promises 'let's study together tonight' and then distracts the group with gossip for six hours straight?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 1,
+    "text": "Class me phone silent pe na rakhke full volume pe Reels scroll karte pakde jaane wala legend?",
     "tags": [
-      "study_session",
-      "distraction",
-      "gossip"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_26",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🪑",
-    "spiceLevel": 1,
-    "text": "Who claims a specific back-bench seat on day one and acts like they have legal property rights to it?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 2,
+    "text": "HOD room ke bahar aisi innocent shakal banata hai jaise mandir ka pandit ho?",
     "tags": [
-      "backbench",
-      "territory"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_27",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🕵️",
-    "spiceLevel": 2,
-    "text": "Who knows every single rumor and breakup on campus before the people involved even know?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 3,
+    "text": "Viva me jab professor bolta hai 'Tell me anything you know', bolta hai 'Sir aapka subject bohot interesting hai'?",
     "tags": [
-      "gossip",
-      "detective",
-      "campus"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_28",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "💡",
-    "spiceLevel": 2,
-    "text": "Who tries to explain an exam answer they clearly don't know with 4 pages of dramatic philosophical fluff?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 1,
+    "text": "College ground pe cricket match me pehli ball pe out hoke bolta hai 'Trial ball tha re bhau!'?",
     "tags": [
-      "exam",
-      "bs",
-      "writing"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_29",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "⏰",
-    "spiceLevel": 1,
-    "text": "Who sets six alarms for a 10 AM class, wakes up at 1:45 PM, and says 'well, day is basically ruined'?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 2,
+    "text": "Who asks for previous year question papers 2 hours before the exam in the WhatsApp group?",
     "tags": [
-      "alarms",
-      "overslept",
-      "relatable"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_30",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🎉",
-    "spiceLevel": 2,
-    "text": "Who volunteers to organize the college festival just so they can get an official pass to skip all classes?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 3,
+    "text": "Class crush ko impress karne ke liye front bench pe baithke bekaar sawal poochne wala simp?",
     "tags": [
-      "fest",
-      "excuses",
-      "mastermind"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_31",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🥪",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
     "spiceLevel": 1,
-    "text": "Who would sneak an entire hot meal into a strict lecture hall and eat it silently behind a notebook?",
+    "text": "Hostel room me bina knock kare aake bolta hai 'Bhai tere paas Maggi ka masala bacha hai kya'?",
     "tags": [
-      "food",
-      "sneaky",
-      "lecture"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_32",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🧯",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
     "spiceLevel": 2,
-    "text": "Who would accidentally cause a minor chemical evacuation during a standard 30-minute chemistry lab?",
+    "text": "Who borrows a pen in 1st semester and still hasn't returned it in final year?",
     "tags": [
-      "lab",
-      "science",
-      "hazard"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_33",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🏷️",
-    "spiceLevel": 2,
-    "text": "Who wears their college student ID lanyard around their neck in public like it's a high-end designer necklace?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 3,
+    "text": "Online class me mic on chhodke ghar ki saari ladaiyan poore batch ko sunane wala namoona?",
     "tags": [
-      "id_card",
-      "fashion",
-      "nerd"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_34",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🤯",
-    "spiceLevel": 2,
-    "text": "Who stares blankly at the blackboard for 60 straight minutes and only understands the date written at the top?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 1,
+    "text": "Industrial visit me factory ghoomne ke bajaye bus me baithke antakshari khelne wala group leader?",
     "tags": [
-      "confused",
-      "lecture",
-      "math"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_35",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "💬",
-    "spiceLevel": 1,
-    "text": "Who accidentally replies to the official college announcement group with an unhinged meme?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 2,
+    "text": "Who calculates passing marks on the back of the question paper in the first 10 minutes of the exam?",
     "tags": [
-      "whatsapp",
-      "group",
-      "mishap"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_36",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🤷‍♂️",
-    "spiceLevel": 1,
-    "text": "Who asks 'Wait, what chapter are we on?' in the 14th week of the semester?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 3,
+    "text": "College sports day pe 100m race me pehle 20 meter bhagke bolta hai 'Arey hamstring pull zhaala re'?",
     "tags": [
-      "lost",
-      "clueless",
-      "semester"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_37",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🧃",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
     "spiceLevel": 1,
-    "text": "Who would loudly slurp the last drop of their juice box while the professor is having an intense monologue?",
+    "text": "Professor jab question poochta hai tab achanak bench ke neeche gir gaya pen dhoondhne ka drama karne wala?",
     "tags": [
-      "juice",
-      "loud",
-      "awkward"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_38",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🛌",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
     "spiceLevel": 2,
-    "text": "Who has attended a college morning Zoom lecture completely from underneath their cozy bed blanket?",
+    "text": "Arey bhau, semester exam nantar 'Paper ekdam rada gela re' bolun shevati topper ban'nara kon?",
     "tags": [
-      "zoom",
-      "online_class",
-      "bed"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_39",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🧼",
-    "spiceLevel": 2,
-    "text": "Who borrows someone else's lab coat, gets blue ink all over it, and returns it saying 'it was like that'?",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 3,
+    "text": "College bus me seat reserve karne ke liye apna rumaal ya bag phenkne wala desi traveller?",
     "tags": [
-      "lab_coat",
-      "borrow",
-      "denial"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_40",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🎯",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
     "spiceLevel": 1,
-    "text": "Who marks proxy attendance for three friends at the exact same time and gets caught immediately?",
+    "text": "Hostel ke room me induction stove pe chai banate waqt poore floor ka MCB trip karwane wala scientist?",
     "tags": [
-      "proxy",
-      "attendance",
-      "busted"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_41",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "📋",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
     "spiceLevel": 2,
-    "text": "Who copies an assignment so directly that they accidentally copy the other person's name and roll number?",
+    "text": "Internal assessment me 1 mark badhwane ke liye faculty ke cabin ke 15 chakkar kaatne wala fighter?",
     "tags": [
-      "cheating",
-      "copy",
-      "blunder"
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "col_42",
     "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🥳",
+    "categoryName": "College Chaos & Rada 🎓",
+    "icon": "🎓",
+    "spiceLevel": 3,
+    "text": "Who sleeps through the college farewell speech and wakes up only when snacks are being distributed?",
+    "tags": [
+      "college_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_1",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 1,
-    "text": "Who starts celebrating the end of exams two full weeks before exams actually finish?",
+    "text": "Who texts 'Bhai bas 2 minute me pohach raha hu' while still lying under the blanket naked in bed?",
     "tags": [
-      "celebrate",
-      "exams",
-      "premature"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "col_43",
-    "category": "college_chaos",
-    "categoryName": "College Chaos",
-    "icon": "🏃‍♀️",
-    "spiceLevel": 1,
-    "text": "Who can sprint from the campus gate to the third-floor classroom in 42 seconds flat when late?",
-    "tags": [
-      "speed",
-      "late",
-      "stamina"
-    ]
-  },
-  {
-    "id": "fgr_1",
+    "id": "fri_2",
     "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🧠",
-    "spiceLevel": 2,
-    "text": "Who gives two hours of elite relationship advice but makes the absolute worst personal life choices?",
-    "tags": [
-      "advice",
-      "hypocrite",
-      "love"
-    ]
-  },
-  {
-    "id": "fgr_2",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "📱",
-    "spiceLevel": 2,
-    "text": "Who is constantly active on Instagram and TikTok but takes 18 business hours to reply to the group chat?",
-    "tags": [
-      "ghosting",
-      "replies",
-      "texting"
-    ]
-  },
-  {
-    "id": "fgr_3",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🚪",
-    "spiceLevel": 1,
-    "text": "Who would enter a room, stand in the center looking confused, and completely forget why they came in?",
-    "tags": [
-      "forgetful",
-      "brain_fog"
-    ]
-  },
-  {
-    "id": "fgr_4",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🗺️",
-    "spiceLevel": 2,
-    "text": "Who can turn a simple 10-minute coffee hangout into a complicated 4-hour logistical nightmare?",
-    "tags": [
-      "plans",
-      "complicated",
-      "overthinking"
-    ]
-  },
-  {
-    "id": "fgr_5",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🚗",
-    "spiceLevel": 2,
-    "text": "Who texts 'I'm five minutes away, start walking' while they are literally still wearing a bath towel?",
-    "tags": [
-      "late",
-      "liar",
-      "punctuality"
-    ]
-  },
-  {
-    "id": "fgr_6",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🍟",
-    "spiceLevel": 1,
-    "text": "Who insists 'I'm not hungry at all' and then systematically consumes half of everyone else's fries?",
-    "tags": [
-      "fries",
-      "food_thief",
-      "classic"
-    ]
-  },
-  {
-    "id": "fgr_7",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🎧",
-    "spiceLevel": 1,
-    "text": "Who holds the group hostage in the car with their chaotic, unhinged music playlist?",
-    "tags": [
-      "aux_cord",
-      "music",
-      "car"
-    ]
-  },
-  {
-    "id": "fgr_8",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🔋",
-    "spiceLevel": 1,
-    "text": "Who permanently walks around with 2% phone battery and asks for an iPhone charger wherever they go?",
-    "tags": [
-      "battery",
-      "charger",
-      "unprepared"
-    ]
-  },
-  {
-    "id": "fgr_9",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🤷‍♂️",
-    "spiceLevel": 1,
-    "text": "Who always answers 'I don't care, anything is fine' when picking dinner, and then hates every suggestion?",
-    "tags": [
-      "indecisive",
-      "food",
-      "annoying"
-    ]
-  },
-  {
-    "id": "fgr_10",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "💸",
-    "spiceLevel": 2,
-    "text": "Who 'forgets their wallet' or has an 'app payment glitch' right when the restaurant bill arrives?",
-    "tags": [
-      "bill",
-      "cheap",
-      "moocher"
-    ]
-  },
-  {
-    "id": "fgr_11",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🧳",
-    "spiceLevel": 1,
-    "text": "Who packs three full suitcases, seven pairs of shoes, and a hair diffuser for an overnight trip?",
-    "tags": [
-      "packing",
-      "overprepared",
-      "travel"
-    ]
-  },
-  {
-    "id": "fgr_12",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "😴",
-    "spiceLevel": 1,
-    "text": "Who begs everyone to watch a specific movie and passes out asleep within the first 6 minutes?",
-    "tags": [
-      "movie_night",
-      "sleep",
-      "betrayal"
-    ]
-  },
-  {
-    "id": "fgr_13",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🗣️",
-    "spiceLevel": 2,
-    "text": "Who starts telling a dramatic story, gets sidetracked by 4 irrelevant subplots, and never finishes the point?",
-    "tags": [
-      "storyteller",
-      "rambling",
-      "distracted"
-    ]
-  },
-  {
-    "id": "fgr_14",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "👗",
-    "spiceLevel": 2,
-    "text": "Who 'borrows' a jacket or hoodie and incorporates it permanently into their own everyday wardrobe?",
-    "tags": [
-      "clothes",
-      "borrow",
-      "hoodie_thief"
-    ]
-  },
-  {
-    "id": "fgr_15",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "😂",
-    "spiceLevel": 1,
-    "text": "Who starts laughing hysterically at their own joke before they even manage to say the punchline?",
-    "tags": [
-      "laughter",
-      "giggles",
-      "corny"
-    ]
-  },
-  {
-    "id": "fgr_16",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🏎️",
-    "spiceLevel": 2,
-    "text": "Who makes everyone in the passenger seat grab the ceiling handle and pray for their lives while driving?",
-    "tags": [
-      "driving",
-      "reckless",
-      "fear"
-    ]
-  },
-  {
-    "id": "fgr_17",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🎤",
-    "spiceLevel": 1,
-    "text": "Who sends 4-minute unbroken audio voice notes instead of typing a simple three-word text?",
-    "tags": [
-      "voice_note",
-      "podcast",
-      "audio"
-    ]
-  },
-  {
-    "id": "fgr_18",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "📦",
-    "spiceLevel": 1,
-    "text": "Who has unopened Amazon and courier delivery boxes sitting by their room door from two weeks ago?",
-    "tags": [
-      "packages",
-      "lazy",
-      "shopping"
-    ]
-  },
-  {
-    "id": "fgr_19",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
     "icon": "🤡",
     "spiceLevel": 2,
-    "text": "Who claims 'I'm staying home to save money this month' and goes out partying the very next evening?",
+    "text": "Cafe me bill aate hi achanak 'Arey mera phone call aa raha hai' bolke washroom me bhaagne wala kanjoos?",
     "tags": [
-      "budget",
-      "liar",
-      "partying"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "fgr_20",
+    "id": "fri_3",
     "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🔑",
-    "spiceLevel": 1,
-    "text": "Who has had to ask someone to help them look for the glasses or sunglasses resting right on their head?",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 3,
+    "text": "Life me sabko gyaan deta hai lekin khud ki life me full raita faila rakha hai?",
     "tags": [
-      "sunglasses",
-      "blind",
-      "oblivious"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "fgr_21",
+    "id": "fri_4",
     "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🎳",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 1,
-    "text": "Who gets uncontrollably competitive over casual board games and treats Monopoly like high-stakes poker?",
+    "text": "WhatsApp pe 24 ghante online rehta hai lekin group ke urgent message ka reply 3 din baad deta hai?",
     "tags": [
-      "competitive",
-      "board_games",
-      "rage"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "fgr_22",
+    "id": "fri_5",
     "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "💅",
-    "spiceLevel": 2,
-    "text": "Who takes 45 minutes to get dressed only to wear almost the exact same black t-shirt and jeans?",
-    "tags": [
-      "outfit",
-      "getting_ready",
-      "slow"
-    ]
-  },
-  {
-    "id": "fgr_23",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🤐",
-    "spiceLevel": 2,
-    "text": "Who says 'promise not to tell anyone' and tells the entire secret to three other people by nightfall?",
-    "tags": [
-      "secrets",
-      "spill_tea",
-      "blabbermouth"
-    ]
-  },
-  {
-    "id": "fgr_24",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "☕",
-    "spiceLevel": 1,
-    "text": "Who makes their entire personality about their coffee order and cannot talk like a human before it?",
-    "tags": [
-      "coffee",
-      "personality",
-      "snob"
-    ]
-  },
-  {
-    "id": "fgr_25",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "📸",
-    "spiceLevel": 1,
-    "text": "Who will make everyone redo a group photo 14 times because their hair was tilted 2 degrees to the left?",
-    "tags": [
-      "photos",
-      "perfectionist",
-      "retake"
-    ]
-  },
-  {
-    "id": "fgr_26",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🛒",
-    "spiceLevel": 1,
-    "text": "Who walks into a convenience store for a bottle of water and comes out with $40 of totally random snacks?",
-    "tags": [
-      "snacks",
-      "impulse",
-      "store"
-    ]
-  },
-  {
-    "id": "fgr_27",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🍕",
-    "spiceLevel": 1,
-    "text": "Who stares into an open refrigerator full of groceries for 5 minutes and says 'there is literally no food'?",
-    "tags": [
-      "fridge",
-      "dramatic",
-      "hungry"
-    ]
-  },
-  {
-    "id": "fgr_28",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🍿",
-    "spiceLevel": 1,
-    "text": "Who finishes their entire movie popcorn tub before the opening credits of the movie even roll?",
-    "tags": [
-      "popcorn",
-      "movie",
-      "eater"
-    ]
-  },
-  {
-    "id": "fgr_29",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🛑",
-    "spiceLevel": 2,
-    "text": "Who is the absolute first friend to cancel weekend plans the second it looks slightly cloudy outside?",
-    "tags": [
-      "flaker",
-      "cancelling",
-      "lazy"
-    ]
-  },
-  {
-    "id": "fgr_30",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🔥",
-    "spiceLevel": 2,
-    "text": "Who drops an explosive controversial take into the group chat, says 'anyway goodnight', and goes to sleep?",
-    "tags": [
-      "chaos",
-      "groupchat",
-      "instigator"
-    ]
-  },
-  {
-    "id": "fgr_31",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🕶️",
-    "spiceLevel": 1,
-    "text": "Who acts completely unfazed by things that should terrify them, but screams at a harmless moth?",
-    "tags": [
-      "phobia",
-      "bugs",
-      "funny"
-    ]
-  },
-  {
-    "id": "fgr_32",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🥗",
-    "spiceLevel": 1,
-    "text": "Who announces 'I am starting my healthy fitness era tomorrow' every single Sunday evening without fail?",
-    "tags": [
-      "diet",
-      "gym",
-      "sunday"
-    ]
-  },
-  {
-    "id": "fgr_33",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "💡",
-    "spiceLevel": 2,
-    "text": "Who acts like an intellectual philosopher after drinking one single sip of energy drink?",
-    "tags": [
-      "philosopher",
-      "energy_drink",
-      "deep"
-    ]
-  },
-  {
-    "id": "fgr_34",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "👀",
-    "spiceLevel": 1,
-    "text": "Who cannot keep eye contact during a serious conversation without cracking a stupid smile?",
-    "tags": [
-      "smile",
-      "awkward",
-      "giggles"
-    ]
-  },
-  {
-    "id": "fgr_35",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🎉",
-    "spiceLevel": 2,
-    "text": "Who plans their entire birthday month celebration six full months in advance?",
-    "tags": [
-      "birthday",
-      "attention",
-      "celebration"
-    ]
-  },
-  {
-    "id": "fgr_36",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "📱",
-    "spiceLevel": 1,
-    "text": "Who drops their phone directly onto their own face while lying in bed at least twice a week?",
-    "tags": [
-      "phone",
-      "bed",
-      "clumsy"
-    ]
-  },
-  {
-    "id": "fgr_37",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🚶",
-    "spiceLevel": 1,
-    "text": "Who walks at a speed that forces everyone else in the friend group to either jog or completely drag behind?",
-    "tags": [
-      "walking",
-      "speed",
-      "pacing"
-    ]
-  },
-  {
-    "id": "fgr_38",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🧙‍♂️",
-    "spiceLevel": 2,
-    "text": "Who randomly adopts a bizarre new aesthetic or hobby for 10 days and acts like it's their true calling?",
-    "tags": [
-      "phases",
-      "hobby",
-      "aesthetic"
-    ]
-  },
-  {
-    "id": "fgr_39",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🧼",
-    "spiceLevel": 2,
-    "text": "Who leaves one microscopic sip of milk or juice in the carton so they don't have to throw it in the trash?",
-    "tags": [
-      "carton",
-      "lazy",
-      "petty"
-    ]
-  },
-  {
-    "id": "fgr_40",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "💬",
-    "spiceLevel": 2,
-    "text": "Who deletes their sent messages in the group chat if nobody reacts to them within 3 minutes?",
-    "tags": [
-      "unsend",
-      "insecure",
-      "chat"
-    ]
-  },
-  {
-    "id": "fgr_41",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🧁",
-    "spiceLevel": 1,
-    "text": "Who buys a gym membership in January, goes twice, and spends the next 11 months paying for guilt?",
-    "tags": [
-      "gym",
-      "subscription",
-      "wasted"
-    ]
-  },
-  {
-    "id": "fgr_42",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🤝",
-    "spiceLevel": 1,
-    "text": "Who makes best friends with a random stranger in the restaurant restroom within 90 seconds?",
-    "tags": [
-      "extrovert",
-      "restroom",
-      "friendly"
-    ]
-  },
-  {
-    "id": "fgr_43",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🚗",
-    "spiceLevel": 2,
-    "text": "Who turns down the car stereo volume specifically so they can 'see better' when parallel parking?",
-    "tags": [
-      "driving",
-      "stereo",
-      "parking"
-    ]
-  },
-  {
-    "id": "fgr_44",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🏖️",
-    "spiceLevel": 1,
-    "text": "Who plans a group vacation with a color-coded Excel spreadsheet and gets mad when people wake up at 9:05 AM?",
-    "tags": [
-      "vacation",
-      "planner",
-      "micromanage"
-    ]
-  },
-  {
-    "id": "fgr_45",
-    "category": "friend_group_roast",
-    "categoryName": "Friend Group Roast",
-    "icon": "🏆",
-    "spiceLevel": 2,
-    "text": "Who is definitely going to bring up their victory in this party game at dinner three months from now?",
-    "tags": [
-      "bragging",
-      "game_night",
-      "winner"
-    ]
-  },
-  {
-    "id": "dkq_1",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🏆",
-    "spiceLevel": 2,
-    "text": "Who deserves an international Oscar for overacting in everyday, minor inconveniences?",
-    "tags": [
-      "oscar",
-      "overacting",
-      "drama"
-    ]
-  },
-  {
-    "id": "dkq_2",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🎬",
-    "spiceLevel": 2,
-    "text": "Who turns a small disagreement about where to eat into a three-season emotional Netflix drama?",
-    "tags": [
-      "netflix",
-      "drama",
-      "exaggeration"
-    ]
-  },
-  {
-    "id": "dkq_3",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🚪",
-    "spiceLevel": 1,
-    "text": "Who would make a dramatic slow-motion entrance even when walking into a totally empty room?",
-    "tags": [
-      "entrance",
-      "main_character",
-      "flair"
-    ]
-  },
-  {
-    "id": "dkq_4",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🩹",
-    "spiceLevel": 1,
-    "text": "Who treats a tiny paper cut like they require an immediate emergency airlift to intensive care?",
-    "tags": [
-      "papercut",
-      "overreaction",
-      "medical"
-    ]
-  },
-  {
-    "id": "dkq_5",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🌧️",
-    "spiceLevel": 1,
-    "text": "Who stares out of the passenger car window during light drizzle like they are in a melancholic music video?",
-    "tags": [
-      "rain",
-      "music_video",
-      "melodrama"
-    ]
-  },
-  {
-    "id": "dkq_6",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "💬",
-    "spiceLevel": 2,
-    "text": "Who sends 'We need to talk...' and then goes completely silent for two hours while everyone panics?",
-    "tags": [
-      "panic",
-      "text",
-      "cliffhanger"
-    ]
-  },
-  {
-    "id": "dkq_7",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "😤",
-    "spiceLevel": 2,
-    "text": "Who sighs loudly enough to rattle windowpanes just so someone asks 'What's wrong?'",
-    "tags": [
-      "sigh",
-      "attention",
-      "subtle"
-    ]
-  },
-  {
-    "id": "dkq_8",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🎭",
-    "spiceLevel": 2,
-    "text": "Who delivers everyday gossip like they are narrating a high-stakes Shakespearean tragedy?",
-    "tags": [
-      "shakespeare",
-      "gossip",
-      "narrator"
-    ]
-  },
-  {
-    "id": "dkq_9",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "💔",
-    "spiceLevel": 2,
-    "text": "Who claims 'My life is completely ruined forever' when their favorite cafe is out of oat milk?",
-    "tags": [
-      "oat_milk",
-      "ruined",
-      "hyperbole"
-    ]
-  },
-  {
-    "id": "dkq_10",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "👑",
-    "spiceLevel": 2,
-    "text": "Who acts like the main character in a movie while everyone else is just unpaid background extras?",
-    "tags": [
-      "main_character",
-      "ego",
-      "spotlight"
-    ]
-  },
-  {
-    "id": "dkq_11",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "📦",
-    "spiceLevel": 1,
-    "text": "Who threatens to pack their bags and move to a remote Scottish lighthouse whenever they have a mild bad day?",
-    "tags": [
-      "lighthouse",
-      "runaway",
-      "extreme"
-    ]
-  },
-  {
-    "id": "dkq_12",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "💅",
-    "spiceLevel": 1,
-    "text": "Who says 'I literally despise drama' right before unleashing 45 minutes of unfiltered drama on the group?",
-    "tags": [
-      "hypocrite",
-      "tea",
-      "gossip"
-    ]
-  },
-  {
-    "id": "dkq_13",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🕶️",
-    "spiceLevel": 1,
-    "text": "Who wears dark sunglasses indoors and expects people to treat them like an incognito international celebrity?",
-    "tags": [
-      "sunglasses",
-      "celebrity",
-      "pretense"
-    ]
-  },
-  {
-    "id": "dkq_14",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "📴",
-    "spiceLevel": 2,
-    "text": "Who posts a cryptic black screen with the caption 'Do not contact me' and checks views every 40 seconds?",
-    "tags": [
-      "cryptic",
-      "attention",
-      "story"
-    ]
-  },
-  {
-    "id": "dkq_15",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🚪",
-    "spiceLevel": 2,
-    "text": "Who leaves a WhatsApp group chat in a dramatic huff just waiting for someone to privately beg them to rejoin?",
-    "tags": [
-      "left_group",
-      "ragequit",
-      "pettiness"
-    ]
-  },
-  {
-    "id": "dkq_16",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🍕",
-    "spiceLevel": 1,
-    "text": "Who acts like their heart was personally shattered into a thousand pieces when their food delivery is 7 minutes late?",
-    "tags": [
-      "delivery",
-      "food",
-      "heartbreak"
-    ]
-  },
-  {
-    "id": "dkq_17",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🎤",
-    "spiceLevel": 2,
-    "text": "Who turns a casual dinner speech into an emotional farewell monologue where people are about to cry?",
-    "tags": [
-      "monologue",
-      "speech",
-      "intensity"
-    ]
-  },
-  {
-    "id": "dkq_18",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🧼",
-    "spiceLevel": 1,
-    "text": "Who will throw themselves face-down onto the sofa like a Victorian royal with a sudden fainting spell?",
-    "tags": [
-      "victorian",
-      "fainting",
-      "sofa"
-    ]
-  },
-  {
-    "id": "dkq_19",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🧯",
-    "spiceLevel": 2,
-    "text": "Who manages to find an offense in a compliment that was 100% genuine and kind?",
-    "tags": [
-      "offended",
-      "twist",
-      "drama"
-    ]
-  },
-  {
-    "id": "dkq_20",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "⚡",
-    "spiceLevel": 2,
-    "text": "Who responds to a minor mistake with 'No it's fine, I'm used to nobody caring about my feelings'?",
-    "tags": [
-      "guilt_trip",
-      "passive_aggressive",
-      "pro"
-    ]
-  },
-  {
-    "id": "dkq_21",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🍿",
-    "spiceLevel": 1,
-    "text": "Who gets physically excited and grabs snacks the second they sense two other friends are having beef?",
-    "tags": [
-      "tea",
-      "spectator",
-      "popcorn"
-    ]
-  },
-  {
-    "id": "dkq_22",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "📯",
-    "spiceLevel": 2,
-    "text": "Who sends 24 consecutive one-word text messages instead of typing one normal paragraph?",
-    "tags": [
-      "spam",
-      "notifications",
-      "chaotic"
-    ]
-  },
-  {
-    "id": "dkq_23",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🕯️",
-    "spiceLevel": 1,
-    "text": "Who sets up moody room lighting, lights candles, and puts on sad violin music over a mild inconvenience?",
-    "tags": [
-      "aesthetic",
-      "candles",
-      "sad"
-    ]
-  },
-  {
-    "id": "dkq_24",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "📜",
-    "spiceLevel": 2,
-    "text": "Who keeps receipts and screenshots of group arguments from 2021 just to bring them up in debate?",
-    "tags": [
-      "receipts",
-      "screenshots",
-      "petty"
-    ]
-  },
-  {
-    "id": "dkq_25",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "👗",
-    "spiceLevel": 1,
-    "text": "Who will refuse to attend an event because 'someone else might wear a vaguely similar shade of blue'?",
-    "tags": [
-      "outfit",
-      "clash",
-      "fussy"
-    ]
-  },
-  {
-    "id": "dkq_26",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🔥",
-    "spiceLevel": 2,
-    "text": "Who creates an imaginary crisis in their head during the shower and comes out genuinely mad at a friend?",
-    "tags": [
-      "shower_thoughts",
-      "imaginary",
-      "anger"
-    ]
-  },
-  {
-    "id": "dkq_27",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🛑",
-    "spiceLevel": 2,
-    "text": "Who would fake an ankle sprain to get out of helping a friend carry furniture up the stairs?",
-    "tags": [
-      "excuses",
-      "injury",
-      "moving"
-    ]
-  },
-  {
-    "id": "dkq_28",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🎧",
-    "spiceLevel": 1,
-    "text": "Who abruptly puts noise-canceling headphones on during a debate and dramatically closes their eyes?",
-    "tags": [
-      "shutdown",
-      "headphones",
-      "exit"
-    ]
-  },
-  {
-    "id": "dkq_29",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🧊",
-    "spiceLevel": 2,
-    "text": "Who gives the ice-cold silent treatment and makes everyone play detective to figure out what happened?",
-    "tags": [
-      "silent_treatment",
-      "clueless",
-      "cold"
-    ]
-  },
-  {
-    "id": "dkq_30",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "📸",
-    "spiceLevel": 1,
-    "text": "Who takes a candid selfie looking pensive and writes a deeply philosophical caption about betrayal?",
-    "tags": [
-      "caption",
-      "selfie",
-      "betrayal"
-    ]
-  },
-  {
-    "id": "dkq_31",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🧳",
-    "spiceLevel": 2,
-    "text": "Who says 'I'm cutting everyone off and starting a fresh life' and is back in the group chat by 8 PM?",
-    "tags": [
-      "cut_off",
-      "comeback",
-      "predictable"
-    ]
-  },
-  {
-    "id": "dkq_32",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "☕",
-    "spiceLevel": 1,
-    "text": "Who stirs their tea slowly while making intense, judging eye contact like a villain in an anime?",
-    "tags": [
-      "villain",
-      "tea",
-      "glare"
-    ]
-  },
-  {
-    "id": "dkq_33",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🎬",
-    "spiceLevel": 2,
-    "text": "Who narrates their own everyday thoughts out loud like they have a live studio audience watching?",
-    "tags": [
-      "audience",
-      "narrate",
-      "loud"
-    ]
-  },
-  {
-    "id": "dkq_34",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🔍",
-    "spiceLevel": 2,
-    "text": "Who analyzes the punctuation in a text message ('they used a period, they definitely hate me')?",
-    "tags": [
-      "overthinking",
-      "punctuation",
-      "texts"
-    ]
-  },
-  {
-    "id": "dkq_35",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🎉",
-    "spiceLevel": 1,
-    "text": "Who has to be personally invited three times to a party before they agree to show up?",
-    "tags": [
-      "hard_to_get",
-      "invitation",
-      "royal"
-    ]
-  },
-  {
-    "id": "dkq_36",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🍔",
-    "spiceLevel": 1,
-    "text": "Who inspects a fast food burger like a forensic scientist looking for microscopic imperfections?",
-    "tags": [
-      "picky",
-      "inspection",
-      "food"
-    ]
-  },
-  {
-    "id": "dkq_37",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🪞",
-    "spiceLevel": 1,
-    "text": "Who checks their reflection in store windows, parked car windows, and soup spoons when walking?",
-    "tags": [
-      "reflection",
-      "vanity",
-      "spoons"
-    ]
-  },
-  {
-    "id": "dkq_38",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "💡",
-    "spiceLevel": 2,
-    "text": "Who claims they had a premonition or spiritual vision about something completely obvious?",
-    "tags": [
-      "psychic",
-      "premonition",
-      "obvious"
-    ]
-  },
-  {
-    "id": "dkq_39",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "💔",
-    "spiceLevel": 2,
-    "text": "Who holds a grudge for 8 months over someone forgetting to save them a bite of garlic bread?",
-    "tags": [
-      "grudge",
-      "garlic_bread",
-      "petty"
-    ]
-  },
-  {
-    "id": "dkq_40",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "⚡",
-    "spiceLevel": 2,
-    "text": "Who walks out of an argument with a dramatic spin and hair-flip like they just won a courtroom trial?",
-    "tags": [
-      "courtroom",
-      "hair_flip",
-      "exit"
-    ]
-  },
-  {
-    "id": "dkq_41",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "🤒",
-    "spiceLevel": 1,
-    "text": "Who googles a mild headache and convinces themselves they have 48 hours to live?",
-    "tags": [
-      "webmd",
-      "hypochondriac",
-      "panic"
-    ]
-  },
-  {
-    "id": "dkq_42",
-    "category": "drama_king_queen",
-    "categoryName": "Drama King/Queen",
-    "icon": "👑",
-    "spiceLevel": 2,
-    "text": "Who would wear a literal glittering crown to a casual backyard barbeque without a hint of irony?",
-    "tags": [
-      "crown",
-      "barbeque",
-      "royalty"
-    ]
-  },
-  {
-    "id": "sma_1",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "📱",
-    "spiceLevel": 1,
-    "text": "Who checks Instagram every two minutes even when they literally just closed the app?",
-    "tags": [
-      "instagram",
-      "addiction",
-      "muscle_memory"
-    ]
-  },
-  {
-    "id": "sma_2",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "📸",
-    "spiceLevel": 1,
-    "text": "Who takes 100 selfies with slightly different head angles and uploads literally zero of them?",
-    "tags": [
-      "selfies",
-      "indecisive",
-      "camera_roll"
-    ]
-  },
-  {
-    "id": "sma_3",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
+    "categoryName": "Group Ka Asli Namoona 🤡",
     "icon": "🤡",
     "spiceLevel": 2,
-    "text": "Who would accidentally trip in public and end up becoming a viral meme on Twitter overnight?",
+    "text": "Arey bhau, room madhye aalyanantar 5 min ubha rahun vicharto 'Arey mi ithe kashasathi aaloto'?",
     "tags": [
-      "viral",
-      "meme",
-      "clumsy"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_4",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🍝",
+    "id": "fri_6",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 3,
+    "text": "Ek simple Goa ya Lonavala plan ko itna complicate kar deta hai ki end me sab ghar pe baithke ludo khelte hain?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_7",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 1,
-    "text": "Who refuses to let anyone touch their hot food until they have staged a 12-shot aesthetic photoshoot?",
+    "text": "Who borrows ₹100 for 'emergency auto' and conveniently develops temporary memory loss the next day?",
     "tags": [
-      "food_photo",
-      "cold_food",
-      "aesthetic"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_5",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "👀",
+    "id": "fri_8",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 2,
-    "text": "Who accidentally liked someone's vacation photo from 2016 while deep in 3 AM stalker mode?",
+    "text": "Apne birthday pe group ko aisi sasti tapri pe le jaata hai jaha samosa bhi half-plate milta hai?",
     "tags": [
-      "stalking",
-      "accidental_like",
-      "nightmare"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_6",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "📊",
+    "id": "fri_9",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 3,
+    "text": "Dost ke phone me aisi gandi photos aur screenshots store karke rakhta hai jo leak ho gayi toh jail ho jaye?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_10",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 1,
+    "text": "Who says 'Bhai tu jaanta nahi mera connection kaha tak hai' but local bus me ticket ke liye ladta hai?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_11",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 2,
-    "text": "Who deletes an Instagram post within 14 minutes if it doesn't hit their desired like ratio?",
+    "text": "Group me jab koi ladai hoti hai, side me baithke popcorn khane wala neutral aag-lagau?",
     "tags": [
-      "likes",
-      "validation",
-      "delete"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_7",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🕵️‍♀️",
+    "id": "fri_12",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 3,
+    "text": "Arey shaanpana, 4 dostancha plan aslyavar achanak crush cha message aala ki 'Mala thoda kaam ahe' bolun palaat?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_13",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 1,
+    "text": "Who flexes an iPhone on 12-month EMI but hotspot hamesha doosre friend se maangta hai?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_14",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 2,
-    "text": "Who could find a stranger's ex's cousin's dog's birthday within 4 minutes using pure social media stalking?",
+    "text": "Ek secret batane ke baad bolta hai 'Bhai kisi ko mat batana', aur 10 min me poore college ko pata chal jata hai?",
     "tags": [
-      "fbi",
-      "stalker",
-      "detective"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_8",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🎵",
+    "id": "fri_15",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 3,
+    "text": "Who takes 45 minutes to get ready just to go to the nearby tapri for a 10 rupee chai?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_16",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 1,
-    "text": "Who knows every single viral TikTok dance and performs it unconsciously in public queues?",
+    "text": "Group voice call pe aake bolta hai 'Bhai sunn ek baat batata hu' aur fir 10 second chup hoke gayab ho jata hai?",
     "tags": [
-      "tiktok",
-      "dance",
-      "unconscious"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_9",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "💅",
+    "id": "fri_17",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 2,
-    "text": "Who has a 'Finsta' or secret burner account with more wild activity than their main account?",
+    "text": "Har situation me 'Arey meri maano toh...' bolke aisi advice deta hai jisse seedha nuksan hota hai?",
     "tags": [
-      "finsta",
-      "burner",
-      "secrets"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_10",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "💬",
+    "id": "fri_18",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 3,
+    "text": "Who always loses their bike keys, wallet, or phone inside their own pocket?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_19",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 1,
-    "text": "Who communicates almost exclusively in reels, memes, and TikTok links with zero actual words?",
+    "text": "Dost ki naye jacket ya joote pehenke 'Bhai 2 din me deta hu' bolke 6 mahine tak apna bana leta hai?",
     "tags": [
-      "reels",
-      "memes",
-      "communication"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_11",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "✈️",
-    "spiceLevel": 1,
-    "text": "Who goes to a scenic view or concert and watches the entire magical event through their tiny phone screen?",
-    "tags": [
-      "concert",
-      "recording",
-      "screen"
-    ]
-  },
-  {
-    "id": "sma_12",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "☕",
-    "spiceLevel": 1,
-    "text": "Who only orders food or drinks based strictly on how visually aesthetic it will look on their story?",
-    "tags": [
-      "aesthetic",
-      "drinks",
-      "shallow"
-    ]
-  },
-  {
-    "id": "sma_13",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "📉",
-    "spiceLevel": 1,
-    "text": "Who checks who viewed their Instagram story 40 times a day in chronological order?",
-    "tags": [
-      "story_views",
-      "stalking",
-      "obsession"
-    ]
-  },
-  {
-    "id": "sma_14",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🔋",
-    "spiceLevel": 1,
-    "text": "Who experiences physical chest tightness when entering a cafe that has no public Wi-Fi?",
-    "tags": [
-      "wifi",
-      "panic",
-      "disconnection"
-    ]
-  },
-  {
-    "id": "sma_15",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "💡",
+    "id": "fri_20",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 2,
-    "text": "Who writes deep inspirational philosophical quotes under a picture that is 98% just their face?",
+    "text": "Arey bhau, group photo madhye fakt swatahcha face changla aala ki baaki saglyanchi aisi-taisi karun upload karnara?",
     "tags": [
-      "caption",
-      "selfie",
-      "cringe"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_16",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🪞",
+    "id": "fri_21",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 3,
+    "text": "Who starts an argument with 'Technically speaking...' when nobody asked for a technical breakdown?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_22",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 1,
-    "text": "Who cannot walk past a restroom mirror without taking an obligatory flash mirror selfie?",
+    "text": "Group chat me ek lamba emotional paragraph bhejke 5 second baad 'Delete for Everyone' karne wala attention seeker?",
     "tags": [
-      "mirror_selfie",
-      "restroom",
-      "habit"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_17",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🗣️",
+    "id": "fri_23",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 2,
-    "text": "Who starts real-life conversations with 'Did you see that TikTok about...' at least 8 times an hour?",
+    "text": "Dost ki bike maangke aisi chalata hai jaise Dhoom 4 ki audition chal rahi ho?",
     "tags": [
-      "tiktok",
-      "conversation",
-      "repeater"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_18",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🎬",
+    "id": "fri_24",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 3,
+    "text": "Who pretends to be asleep in the car just to avoid paying for the highway toll or parking ticket?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_25",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 1,
+    "text": "Har doosre hafte 'Bhai is baar pakka gym chalu' bolke 1 din me creatine aur protein shake ka dabba khareedta hai?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_26",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 2,
-    "text": "Who has spent 45 minutes recording a 'get ready with me' video and ended up late to the actual event?",
+    "text": "Who laughs so loudly at their own unfunny joke that everybody else just stares in pure silence?",
     "tags": [
-      "grwm",
-      "late",
-      "influencer"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_19",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🔍",
+    "id": "fri_27",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 3,
+    "text": "Chhoti si cold ya sardi hone pe aisi shakal banata hai jaise will likhne ka time aa gaya ho?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_28",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 1,
-    "text": "Who zooms into the reflection in someone's sunglasses in a photo to figure out who took the picture?",
+    "text": "Who always says 'Arey bhai tu chal na, main piche se aata hu' and literally never shows up?",
     "tags": [
-      "fbi",
-      "reflection",
-      "investigator"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_20",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "📴",
-    "spiceLevel": 1,
-    "text": "Who announces a 'social media detox' and returns to posting 11 stories within 18 hours?",
-    "tags": [
-      "detox",
-      "failed",
-      "relapse"
-    ]
-  },
-  {
-    "id": "sma_21",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🎂",
+    "id": "fri_29",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 2,
-    "text": "Who posts a birthday wish for a friend with a picture where the friend looks terrible but they look stunning?",
+    "text": "Dost ke ghar aake unke fridge ka inspection unki mummy se pehle karne wala bhukkad?",
     "tags": [
-      "birthday_post",
-      "selfish",
-      "petty"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_22",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🏷️",
+    "id": "fri_30",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 3,
+    "text": "Who would start fake crying just to get the last slice of pizza in the group?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_31",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 1,
-    "text": "Who tags 14 different micro-influencer brands in a post hoping for free PR packages?",
+    "text": "Arey bhau, 'Mi drink nahi karat re' bolun party madhye saglyat jaast chakna aani biryani sampavnara kon?",
     "tags": [
-      "tagging",
-      "influencer",
-      "freebies"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_23",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "😴",
-    "spiceLevel": 1,
-    "text": "Who says 'one more video before bed' at 11 PM and looks up to see the sunrise at 5:30 AM?",
-    "tags": [
-      "doomscroll",
-      "sleep",
-      "tiktok"
-    ]
-  },
-  {
-    "id": "sma_24",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "💃",
+    "id": "fri_32",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 2,
-    "text": "Who would force their friends to record 15 takes of a trendy street dance in the middle of a crowded mall?",
+    "text": "Who would accidentally forward a screenshot of the chat to the exact same person they were gossiping about?",
     "tags": [
-      "public",
-      "embarrassing",
-      "takes"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_25",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "📦",
+    "id": "fri_33",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 3,
+    "text": "Har plan me 'Budget tight hai yaar' bolta hai aur agle din naye branded sneakers pehenke aata hai?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_34",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 1,
-    "text": "Who unboxes everything they buy on camera like they have a million subscribers watching?",
+    "text": "Who says 'Chal thoda ghoom ke aate hain' and takes you on a 4-hour aimless bike tour with 0.2 liters petrol?",
     "tags": [
-      "unboxing",
-      "haul",
-      "delusion"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_26",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "⚡",
+    "id": "fri_35",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 2,
-    "text": "Who has their screen-time report at a terrifying 9+ hours a day and just laughs about it?",
+    "text": "Dost ke phone ka password crack karke unke WhatsApp chats scroll karne wala private detective?",
     "tags": [
-      "screen_time",
-      "hours",
-      "addict"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_27",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🥑",
+    "id": "fri_36",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 3,
+    "text": "Who would agree to split the bill equally after ordering the most expensive imported sizzler on the menu?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_37",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 1,
-    "text": "Who spends $14 on an overpriced matcha drink purely to take a photo holding it against a white wall?",
+    "text": "Har baat pe 'Bhai Kasam se bol raha hu' bolta hai jabki uski kasam ki value ₹2 se kam hai?",
     "tags": [
-      "matcha",
-      "prop",
-      "aesthetic"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_28",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🤝",
+    "id": "fri_38",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 2,
-    "text": "Who unfollows someone on social media and considers it the ultimate form of psychological warfare?",
+    "text": "Group me sabse pehle daru ya party ka hype banata hai aur party shuru hote hi 10 baje so jata hai?",
     "tags": [
-      "unfollow",
-      "warfare",
-      "passive"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_29",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🎤",
+    "id": "fri_39",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 3,
+    "text": "Who would borrow your charger at 2% battery and return it to you when your phone is dead and theirs is 100%?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "fri_40",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 1,
-    "text": "Who lip-syncs to TikTok sounds while walking down the street thinking nobody can see them?",
+    "text": "Dost ke breakup ke 2 din baad hi unke ex ke story pe heart react karne wala gaddaar?",
     "tags": [
-      "lipsync",
-      "public",
-      "caught"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_30",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🔐",
+    "id": "fri_41",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
     "spiceLevel": 2,
-    "text": "Who has their close friends list curated like a top-secret VIP nightclub guest list?",
+    "text": "Arey bhau, group chya sarv plan madhye 'Yes' bolun shevat chya 10 min aadhi 'Mummy ne mana kela' bolnara kon?",
     "tags": [
-      "close_friends",
-      "vip",
-      "exclusive"
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_31",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🌴",
+    "id": "fri_42",
+    "category": "friend_group_roast",
+    "categoryName": "Group Ka Asli Namoona 🤡",
+    "icon": "🤡",
+    "spiceLevel": 3,
+    "text": "Who sends 15 voice notes of 4 seconds each instead of just typing two simple words?",
+    "tags": [
+      "friend_group_roast",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_1",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
     "spiceLevel": 1,
-    "text": "Who posts photos from a vacation two months after they came home with caption 'Take me back'?",
+    "text": "Who deserves a Filmfare Award for overacting jab injection lagta hai ya chhota sa paper cut hota hai?",
     "tags": [
-      "throwback",
-      "vacation",
-      "delayed"
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_32",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "💬",
-    "spiceLevel": 1,
-    "text": "Who leaves whole paragraphs in the comments section of celebrity Instagram accounts?",
-    "tags": [
-      "celebrity",
-      "comments",
-      "delusion"
-    ]
-  },
-  {
-    "id": "sma_33",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🍕",
-    "spiceLevel": 1,
-    "text": "Who asks for the restaurant Wi-Fi password before they even glance at the food menu?",
-    "tags": [
-      "wifi",
-      "priorities",
-      "phone"
-    ]
-  },
-  {
-    "id": "sma_34",
-    "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🤦‍♀️",
+    "id": "dra_2",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
     "spiceLevel": 2,
-    "text": "Who gets genuine FOMO from seeing people they don't even like having fun at an event they didn't want to attend?",
+    "text": "Chhoti si problem (jaise phone ki battery 10%) pe 3-season Netflix tragedy drama create karne wala?",
     "tags": [
-      "fomo",
-      "jealousy",
-      "irrational"
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_35",
+    "id": "dra_3",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 3,
+    "text": "Arey bhau, rickshaw wale ne ₹10 extra maagle tar 'Tumhi aamcha shoshan kartaay' mhanun rada karnara kon?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_4",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 1,
+    "text": "Who enters an empty room with full Bollywood slow-motion background music in their head?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_5",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 2,
+    "text": "Thoda sa daant padte hi WhatsApp pe black DP lagakar 'Nobody cares about me' status daalne wala?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_6",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 3,
+    "text": "Who would dramatically drop to their knees and scream 'KYUN BHAGWAN KYUN' when Wi-Fi stops working?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_7",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 1,
+    "text": "Group me achanak 'Maine sab notice kiya hai, sab badal gaye hain' bolke 2 din tak ghost karne wala?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_8",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 2,
+    "text": "Restaurant me waiter soup 2 minute late laaye toh manager ko 'Mera dignity hurt hua hai' bolne wala?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_9",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 3,
+    "text": "Who gives a 20-minute Oscar acceptance speech after winning a free ₹10 scratch card on Google Pay?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_10",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 1,
+    "text": "Ghar pe mummy ne baingan ki sabzi banayi toh aisi shakal banata hai jaise poison de diya ho?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_11",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 2,
+    "text": "Arey shaanpana, haircut thoda chhota zhaala tar 2 aathwade topi ghalun gharat basnara drama master kon?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_12",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 3,
+    "text": "Who would dramatically look out of a rain-soaked car window while imagining an Arijit Singh sad song?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_13",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 1,
+    "text": "Ek breakup ke baad agle 4 saal tak shayari likhne wala certified Devdas?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_14",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 2,
+    "text": "Who puts 'Feeling heartbroken and betrayed 💔' story on Instagram and when asked says 'DM me mat poocho plz'?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_15",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 3,
+    "text": "Exam hall me question paper dekhke itni zor se aah bharta hai ki invigilator ko pani lana padta hai?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_16",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 1,
+    "text": "Dost ne call miss kar diya toh seedha 'Lagta hai ab hamari dosti pehle jaisi nahi rahi' bolne wala psycho?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_17",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 2,
+    "text": "Who pretends to faint in morning assembly or college event just to escape standing in the sun?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_18",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 3,
+    "text": "Group chat me 'I am leaving this group forever, bye' bolke agle 10 minute me wapas add hone wala attention seeker?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_19",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 1,
+    "text": "Arey bhau, selfie kadhtana achanak aisi serious 'deep thinker' pose denara jyaat kiti tari dukh dista?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_20",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 2,
+    "text": "Who would gaslight the entire friend circle into believing that everyone forgot their birthday?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_21",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 3,
+    "text": "Phone me 1% charging bachi ho toh aisi saansein leta hai jaise ventilator pe ho?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_22",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 1,
+    "text": "Who dramatically sighs every 30 seconds until someone finally asks 'Arey kya hua bhai bata na'?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_23",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 2,
+    "text": "Movie theater me aisi overacting karke rota hai ki aaju-baaju wale tissue paper offer karne lagte hain?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_24",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 3,
+    "text": "Who claims 'Main bohot simple aur low-maintenance person hu' while having a 45-step morning routine?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_25",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 1,
+    "text": "Traffic jam me phaske aisi gaaliyan deta hai jaise traffic police ne uske khilaaf personal sazish rachi ho?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_26",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 2,
+    "text": "Who would wear sunglasses inside an air-conditioned dark cinema hall just for the aesthetic drama?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_27",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 3,
+    "text": "Dost ke normal mazak pe 'Tumne meri aatma ko chot pahunchayi hai' bolke rone wala snowflake?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_28",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 1,
+    "text": "Arey bhau, thoda sa fever aala tar 'Maza shevat cha divas ahe vat-ta' bolun saglyanna bye bolnara?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_29",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 2,
+    "text": "Who practiced their Bollywood crying scene in front of the bathroom mirror multiple times?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_30",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 3,
+    "text": "Birthday party pe cake ka pehla piece dost ko na milne pe achanak 'Mera mood kharab ho gaya' bolne wala?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_31",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 1,
+    "text": "Who gives a dramatic monologue about loyalty and brotherhood over a disputed 50 rupee cab fare?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_32",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 2,
+    "text": "Coffee shop me galat naam likha cup milne pe barista ko existence of universe samjhane wala?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_33",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 3,
+    "text": "Who would turn down the music in the car just so everyone can hear how deeply they are sighing?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_34",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 1,
+    "text": "College fest me stage pe anchor banne ke liye faculty ke pair padne wala overacting ka badshah?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_35",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 2,
+    "text": "Who texts in ALL CAPS WITH 50 EXCLAMATION MARKS FOR AN ABSOLUTELY TRIVIAL PIECE OF GOSSIP?!",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_36",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 3,
+    "text": "Arey bhau, selfie angle chukla tar 'Maza poora divas kharaab zhaala' bolun 50 photos delete karnara?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_37",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 1,
+    "text": "Who packs 4 suitcases for a 2-day weekend trip to Alibaug or Lonavala?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_38",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 2,
+    "text": "Barish aate hi balcony me aake cup pakadke aisi video banata hai jaise Mohabbatein ka Shah Rukh Khan ho?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_39",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 3,
+    "text": "Who takes off their glasses very slowly and dramatically before saying something completely obvious?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "dra_40",
+    "category": "drama_king_queen",
+    "categoryName": "Drama Queen & Overacting 👑",
+    "icon": "👑",
+    "spiceLevel": 1,
+    "text": "Group me jab koi naya couple banta hai, sabse pehle 'Hume toh bhool hi jaoge ab' bolke rone wala?",
+    "tags": [
+      "drama_king_queen",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_1",
     "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
     "icon": "📱",
     "spiceLevel": 1,
-    "text": "Who checks their phone while crossing the street and relies on intuition to not get hit by traffic?",
+    "text": "Khana table pe aate hi sabko rokta hai 'Ruko koi hath mat lagana, pehle photo kheenchne do aesthetic ke liye'?",
     "tags": [
-      "jaywalking",
-      "danger",
-      "phone"
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_36",
+    "id": "soc_2",
     "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🎉",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
     "spiceLevel": 2,
-    "text": "Who throws an entire themed party just because they had an aesthetic photo concept in mind?",
+    "text": "Arey bhau, ek photo sathi 45 angles madhye pose deun shevati ek pan photo upload na karnara kon?",
     "tags": [
-      "party",
-      "photoshoot",
-      "concept"
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_37",
+    "id": "soc_3",
     "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🕶️",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 3,
+    "text": "Instagram pe 12 ghante active rehke 'Digital detox chal raha hai guys' bolne wala hypocrite?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_4",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 1,
+    "text": "Who checks their own Instagram story 85 times a day just to see who viewed it?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_5",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
     "spiceLevel": 2,
-    "text": "Who uses three different photo editing apps to subtly edit out a single photobombing stranger?",
+    "text": "Road pe chalte waqt phone me Reel scroll karte karte khambe ya kutte se takrane wala zombie?",
     "tags": [
-      "photoshop",
-      "editing",
-      "perfection"
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_38",
+    "id": "soc_6",
     "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "💌",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 3,
+    "text": "Who takes an aesthetically pleasing photo of black coffee, takes one sip, makes a puking face, and throws it away?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_7",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 1,
+    "text": "Crush ke 7 saal purane Facebook aur LinkedIn profile tak stalk karke unke mama ke gaon ka naam nikalne wala CBI?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_8",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
     "spiceLevel": 2,
-    "text": "Who screenshotted a private chat and almost accidentally sent the screenshot back to the same person?",
+    "text": "Arey bhau, 'Candids only re' bolun 20 minute tak fake hasnyachi acting karnara kon?",
     "tags": [
-      "close_call",
-      "screenshot",
-      "panic"
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_39",
+    "id": "soc_9",
     "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🐶",
-    "spiceLevel": 1,
-    "text": "Who creates a dedicated Instagram profile for their pet and writes captions in first-person pet voice?",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 3,
+    "text": "Who sends 65 Reels every single day in the DMs without ever replying to an actual question?",
     "tags": [
-      "pet",
-      "instagram",
-      "cringe"
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_40",
+    "id": "soc_10",
     "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "💡",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
     "spiceLevel": 1,
-    "text": "Who knows all the latest internet slang 10 minutes after it's born and uses it non-stop in offline life?",
+    "text": "Starbucks me sirf naam ke sath cup ka photo dalne ke liye ₹400 ki faltu bitter cold brew lene wala?",
     "tags": [
-      "slang",
-      "gen_z",
-      "lingo"
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_41",
+    "id": "soc_11",
     "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "📸",
-    "spiceLevel": 1,
-    "text": "Who has 28,000 photos in their camera roll and 95% of them are blurry screenshots of recipes they will never cook?",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 2,
+    "text": "Har 2 din me naya 'Dump 📸' daalne wala jisme 8 photos blurry aur 2 floor tiles ki hoti hain?",
     "tags": [
-      "camera_roll",
-      "storage",
-      "recipes"
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "sma_42",
+    "id": "soc_12",
     "category": "social_media_addict",
-    "categoryName": "Social Media Addict",
-    "icon": "🏆",
-    "spiceLevel": 1,
-    "text": "Who will post a screenshot of winning this game on their story within 60 seconds of it ending?",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 3,
+    "text": "Who would immediately re-record a spontaneous laughing moment because 'Mera angle accha nahi aaya yaar'?",
     "tags": [
-      "flex",
-      "story",
-      "winner"
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_13",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 1,
+    "text": "Phone ki battery 3% pe ho fir bhi full brightness pe Instagram Explore tab scroll karne wala psychopath?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_14",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 2,
+    "text": "Who remembers someone's exact birthday, ex-partner, and college just by stalking their Instagram highlights?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_15",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 3,
+    "text": "Arey bhau, gym madhye 2 dumbbell uthavun 50 photos aani 3 stories taknara 'No pain no gain' fitness influencer kon?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_16",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 1,
+    "text": "Who poses with someone else's car or bike in a parking lot for that 'CEO grind mindset' post?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_17",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 2,
+    "text": "WhatsApp status pe sad quote daalke monitor karta hai ki crush ne view kiya ya nahi?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_18",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 3,
+    "text": "Who spends 35 minutes editing a photo with 12 different filter apps and still looks like a potato 🥔?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_19",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 1,
+    "text": "Concert me jaakar pure 2 ghante phone screen ke through singer ko dekhne wala cameraman?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_20",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 2,
+    "text": "Who knows every single trending audio on Instagram before it even hits the algorithm?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_21",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 3,
+    "text": "Airport pe check-in se pehle 'Boarding pass + Passport aesthetic photo ✈️' daalne wala jetsetter?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_22",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 1,
+    "text": "Arey bhau, group dinner chya veles saglyansobat basun pan fakt phone madhye dole ghusun thevnara kon?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_23",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 2,
+    "text": "Who has a secret spam/finsta account where they post completely unhinged 2 AM breakdowns?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_24",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 3,
+    "text": "Instagram bio me 'Entrepreneur | Hustler | Coffee Lover | DM for collabs' likhne wala jiske paas ₹50 bhi nahi hain?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_25",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 1,
+    "text": "Who would delete a post within 7 minutes if it doesn't get at least 30 likes?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_26",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 2,
+    "text": "Dost ke saath ladai hone ke baad Instagram pe unfollow aur close friends se nikalne wala childish detective?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_27",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 3,
+    "text": "Who asks their friend 'Bhai meri latest post pe aake accha comment kar na jaldi'?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_28",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 1,
+    "text": "Sunset dekhke enjoy karne ke bajaye 'Golden hour lighting waste ho jayegi' bolke chillane wala?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_29",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 2,
+    "text": "Who has more screen time on Instagram than the total hours they slept this week?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_30",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 3,
+    "text": "Arey bhau, reel baghtana achanak zorat hasun poorya room la shantatela bhang karnara kon?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_31",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 1,
+    "text": "Who would break up with someone if they don't post them on their Instagram grid on anniversary?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_32",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 2,
+    "text": "Khane ki delivery aate hi Swiggy delivery boy ke saamne unboxing video shoot karne wala vlogger?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_33",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 3,
+    "text": "Who checks the view list of their story every 3 minutes like it's the live stock market ticker?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_34",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 1,
+    "text": "Dost ki shaadi ya party me dulha-dulhan ko chhodke mirror selfie lene me busy rehne wala?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_35",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 2,
+    "text": "Who uses hashtag #blessed and #wanderlust on a photo taken in their own building's parking terrace?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_36",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 3,
+    "text": "Arey bhau, reel banavnyachya naavaat college corridor madhye lokaanna disturb karnara cringe star?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_37",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 1,
+    "text": "Who sends you a Reel and immediately calls to ask 'Dekha kya? Kaisa laga bata na'?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_38",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 2,
+    "text": "Instagram algorithm ke mutaabiq apne mood aur personality decide karne wala NPC?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_39",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 3,
+    "text": "Who takes 10 screenshots of a conversation just to analyze 'In do emojis ka kya matlab ho sakta hai' with the group?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "soc_40",
+    "category": "social_media_addict",
+    "categoryName": "Insta Ke Kide & Reelbaaz 📱",
+    "icon": "📱",
+    "spiceLevel": 1,
+    "text": "Hospital me drip lagne ke baad pehla kaam cannula ka boomerang story daalne wala certified influencer?",
+    "tags": [
+      "social_media_addict",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_1",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "⭐",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 1,
-    "text": "Who would become unexpectedly famous for the most bizarre, random 15-second viral video?",
+    "text": "Who would start a startup, raise ₹1 crore funding from investors, and forget what product they actually sell?",
     "tags": [
-      "famous",
-      "viral",
-      "future"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_2",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "💼",
-    "spiceLevel": 1,
-    "text": "Who would start a startup company, raise funding, and forget what product they actually sell?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 2,
+    "text": "Arey bhau, 10 varshanantr achanak WhatsApp forward scam madhye 'Ghar baslyaa 50,000 kamva' post karnara kon?",
     "tags": [
-      "startup",
-      "business",
-      "clueless"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_3",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "💰",
-    "spiceLevel": 2,
-    "text": "Who would secretly become a multi-millionaire but still ask their friends to pay for their taxi ride?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 3,
+    "text": "Achanak ek din ek cringe dance video viral hoke poore desh ka national meme banne wala?",
     "tags": [
-      "millionaire",
-      "cheap",
-      "moocher"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_4",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🏡",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 1,
-    "text": "Who will end up living in a giant mansion completely alone with 14 rescue golden retrievers?",
+    "text": "Who would become a billionaire but still ask friends to pay ₹10 for their tapri cutting chai?",
     "tags": [
-      "dogs",
-      "mansion",
-      "recluse"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_5",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🗳️",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 2,
-    "text": "Who would run for local mayor as an inside joke and accidentally end up winning the election?",
+    "text": "Who is most likely to accidentally become the spiritual guru / baba of a bizarre online cult?",
     "tags": [
-      "politics",
-      "mayor",
-      "accident"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_6",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "📺",
-    "spiceLevel": 2,
-    "text": "Who is most likely to be cast as the villain on a trashy reality TV dating show?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 3,
+    "text": "Future me arrange marriage ke pehle din hi sasural walo ke aage 'Main bartan nahi dhounga' bolke bawaal karne wala?",
     "tags": [
-      "reality_tv",
-      "dating",
-      "villain"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_7",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🚀",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 1,
-    "text": "Who would sign up for a one-way commercial ticket to Mars just to avoid everyday awkward conversations?",
+    "text": "Who would accidentally buy a whole imaginary island in Metaverse and lose their life savings?",
     "tags": [
-      "mars",
-      "space",
-      "introvert"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_8",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🏰",
-    "spiceLevel": 1,
-    "text": "Who will buy a dilapidated 18th-century French castle on a whim and attempt to renovate it with zero DIY skills?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 2,
+    "text": "Arey bhau, 40 chya vayyat pan 'Arey bhava tuzha bhai ajun pan Pune cha don ahe' bolun ghumnara tapori?",
     "tags": [
-      "castle",
-      "renovation",
-      "impulse"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_9",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "📚",
-    "spiceLevel": 2,
-    "text": "Who will write a spicy tell-all memoir exposing all the secrets of this friend group in 20 years?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 3,
+    "text": "Who would get banned from entering an entire foreign country because of a silly argument at immigration?",
     "tags": [
-      "memoir",
-      "expose",
-      "secrets"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_10",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🍕",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 1,
-    "text": "Who will open a food truck selling bizarre fusion food that literally nobody asked for?",
+    "text": "Apni shaadi me baaki sab chhodke DJ wale se mike chheenke khud gaana gaane wala besura?",
     "tags": [
-      "food_truck",
-      "fusion",
-      "culinary"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_11",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🕵️",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 2,
-    "text": "Who would accidentally stumble into working for an international intelligence spy agency?",
+    "text": "Who would start an MLM pyramid scheme selling miracle herbal weight-loss water to their own relatives?",
     "tags": [
-      "spy",
-      "intelligence",
-      "accident"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_12",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🎤",
-    "spiceLevel": 1,
-    "text": "Who would start a podcast with zero listeners and record 300 episodes talking to themselves?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 3,
+    "text": "Who is most likely to get arrested for trying to sneak a live puppy or chicken inside a cinema hall?",
     "tags": [
-      "podcast",
-      "stubborn",
-      "audio"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_13",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🏖️",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 1,
-    "text": "Who will fake their own retirement at age 29 to live quietly on a tropical beach drinking coconut water?",
+    "text": "Future me corporate job me 1 hafte ke andar HR ke sath ladai karke poori company ko resignation mail bhejne wala?",
     "tags": [
-      "retirement",
-      "beach",
-      "early"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_14",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🤖",
-    "spiceLevel": 1,
-    "text": "Who will be the first person to marry an AI chatbot companion and introduce it to their parents?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 2,
+    "text": "Who would build a ₹5 crore bungalow but sleep on a floor mattress because 'Aesthetic minimalist hai bhai'?",
     "tags": [
-      "ai",
-      "chatbot",
-      "future"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_15",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "💸",
-    "spiceLevel": 2,
-    "text": "Who will lose a substantial portion of their life savings investing in a cryptocurrency named after a dog or fruit?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 3,
+    "text": "Arey bhau, 50 varshancha zhalyaavar pan WhatsApp group madhye 'Good Morning with Gulab Phool' bhejra uncle kon?",
     "tags": [
-      "crypto",
-      "investing",
-      "loss"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_16",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🧘",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 1,
-    "text": "Who will abandon all modern technology to become an enigmatic mountain meditation guru in the Himalayas?",
+    "text": "Who would accidentally marry someone just because they were too polite to say 'No' on the second date?",
     "tags": [
-      "guru",
-      "mountains",
-      "peace"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_17",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🏎️",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 2,
-    "text": "Who will buy a bright red sports car during an intense mid-life crisis at the tender age of 24?",
+    "text": "Future me shark tank pe aake bolta hai 'Mera idea hai ki hum hawa ko bottle me bechein'?",
     "tags": [
-      "crisis",
-      "sports_car",
-      "impulse"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_18",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🎭",
-    "spiceLevel": 1,
-    "text": "Who will end up on a billboard in Times Square for a product they don't even remember modeling for?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 3,
+    "text": "Who would legally change their name to something ridiculous like 'Lord Matrix Chaos'?",
     "tags": [
-      "billboard",
-      "model",
-      "surprise"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_19",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
     "icon": "🔮",
     "spiceLevel": 1,
-    "text": "Who will open an underground psychic palm-reading parlor and charge $80 to tell people obvious truths?",
+    "text": "Who is most likely to survive 30 days in Bigg Boss house purely by fighting with everyone over anda and paratha?",
     "tags": [
-      "psychic",
-      "palm_reading",
-      "hustle"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_20",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🏆",
-    "spiceLevel": 1,
-    "text": "Who will break an official Guinness World Record for the most ridiculous, pointless human achievement?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 2,
+    "text": "Apne bacchon ka homework khud na karke Google Gemini aur ChatGPT se solve karwane wala lazy parent?",
     "tags": [
-      "world_record",
-      "guinness",
-      "random"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_21",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "👩‍⚖️",
-    "spiceLevel": 2,
-    "text": "Who would sue a fast food company over a missing chicken nugget and take it all the way to the Supreme Court?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 3,
+    "text": "Who would win a lottery of 10 crores and spend 9.9 crores in the first 48 hours on useless gadgets?",
     "tags": [
-      "lawsuit",
-      "lawyer",
-      "petty"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_22",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🌴",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 1,
-    "text": "Who would buy a private island and establish their own national anthem and currency?",
+    "text": "Arey bhau, future madhye building society cha chairman banun saglyaanchya parking var rada karnara kon?",
     "tags": [
-      "island",
-      "country",
-      "leader"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_23",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "☕",
-    "spiceLevel": 1,
-    "text": "Who will open a boutique cafe that only serves one specific beverage and closes at 1:15 PM every day?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 2,
+    "text": "Who would accidentally join the Russian secret service thinking it's a high-paying BPO call center?",
     "tags": [
-      "cafe",
-      "hipster",
-      "hours"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_24",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🎩",
-    "spiceLevel": 2,
-    "text": "Who will show up to our 10-year college reunion pretending to speak with an aristocratic fake British accent?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 3,
+    "text": "Who is most likely to become a motivational life coach despite having zero direction in their own life?",
     "tags": [
-      "reunion",
-      "accent",
-      "fake"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_25",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🧼",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 1,
-    "text": "Who will launch an artisanal handmade soap business from their bathtub and sell bars for $35 each?",
+    "text": "Future me apni shaadi ke card pe QR code daalke shagun maangne wala tech-savvy bhikari?",
     "tags": [
-      "soap",
-      "artisan",
-      "business"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_26",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🎬",
-    "spiceLevel": 1,
-    "text": "Who will direct an indie film that nobody understands but wins high praise at an obscure European film festival?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 2,
+    "text": "Who would open a high-end restaurant where the only dish on the menu is 15 varieties of Maggi?",
     "tags": [
-      "indie_film",
-      "artsy",
-      "pretentious"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_27",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🎪",
-    "spiceLevel": 2,
-    "text": "Who would run away and join a circus as the enthusiastic ringmaster?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 3,
+    "text": "Who is most likely to fake their own disappearance just to avoid attending a boring family reunion?",
     "tags": [
-      "circus",
-      "ringmaster",
-      "adventure"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_28",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🛸",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 1,
-    "text": "Who will build a bunker in their backyard because they are 100% convinced aliens will land on a Tuesday?",
+    "text": "Achanak 35 ki umar me Himalayas jaakar bolta hai 'Mujhe sansaar se mukti mil gayi hai, bas Wi-Fi chahiye'?",
     "tags": [
-      "aliens",
-      "bunker",
-      "paranoia"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_29",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🧁",
-    "spiceLevel": 1,
-    "text": "Who will win a televised cooking show by total accident after messing up the original recipe?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 2,
+    "text": "Who would run for local municipal corporator / ward election with the slogan 'Har gali me tapri chai free'?",
     "tags": [
-      "cooking",
-      "tv",
-      "lucky"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_30",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "👔",
-    "spiceLevel": 2,
-    "text": "Who will accidentally become a Fortune 500 executive by nodding wisely in board meetings without knowing the topic?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 3,
+    "text": "Arey bhau, swatahchya lagnaat ghodyavarun padun rada karun ghenara hero kon?",
     "tags": [
-      "executive",
-      "corporate",
-      "nodding"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_31",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🎸",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 1,
-    "text": "Who will start an acoustic rock band at age 40 and demand their friends attend every weekly gig?",
+    "text": "Who would challenge Elon Musk on Twitter/X to a street fight over electric scooter mileage?",
     "tags": [
-      "rockband",
-      "gig",
-      "loyalty"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_32",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🐈",
-    "spiceLevel": 1,
-    "text": "Who will leave their entire future estate and assets to their favorite pet cat?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 2,
+    "text": "Future me apne pet dog ko apni saari property legal will me naam karne wala eccentric weirdo?",
     "tags": [
-      "will",
-      "cat",
-      "inheritance"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_33",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "💡",
-    "spiceLevel": 2,
-    "text": "Who will patent an invention that solves a problem that no human being has ever experienced?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 3,
+    "text": "Who would accidentally leak the company's confidential balance sheet on their personal Instagram story?",
     "tags": [
-      "invention",
-      "useless",
-      "patent"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_34",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🚢",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 1,
-    "text": "Who will spend their golden years permanently living aboard a luxury cruise ship buffets?",
+    "text": "Who is most likely to get scammed by an email saying 'You have inherited 5 million dollars from an African Prince'?",
     "tags": [
-      "cruise",
-      "buffet",
-      "retirement"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_35",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🗺️",
-    "spiceLevel": 1,
-    "text": "Who will go backpacking across South America and forget to ever come back home?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 2,
+    "text": "Future me parenting karte waqt bache ko bolta hai 'Beta zara Swiggy se do roti order kar do'?",
     "tags": [
-      "backpacking",
-      "wanderlust",
-      "vanish"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_36",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🕵️",
-    "spiceLevel": 2,
-    "text": "Who will become a private investigator specializing solely in catching cheating boyfriends?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 3,
+    "text": "Arey bhau, 60 varshacha zhalyaavar pan college katta var basun 'Aamchya kaalat...' bolun pakaavnara?",
     "tags": [
-      "private_eye",
-      "investigator",
-      "scandal"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_37",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🧳",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 1,
-    "text": "Who will accidentally pack someone else's identical suitcase at the airport baggage carousel and keep it?",
+    "text": "Who would become famous on TikTok/Reels for doing absolutely nothing except staring silently at the camera?",
     "tags": [
-      "airport",
-      "suitcase",
-      "mishap"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_38",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🏢",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
     "spiceLevel": 2,
-    "text": "Who will be the boss that sends company-wide emails in all-caps at 3:15 AM on a Saturday?",
+    "text": "Who is most likely to build a bunker under their bed because they believe aliens are coming next Tuesday?",
     "tags": [
-      "boss",
-      "emails",
-      "workaholic"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_39",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🏆",
-    "spiceLevel": 1,
-    "text": "Who will win a lifetime supply of something completely useless like dental floss or canned beans?",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 3,
+    "text": "Future me apne college reunion pe aisi rented luxury car me aayega jiska petrol bharne ke paise nahi honge?",
     "tags": [
-      "sweepstakes",
-      "supply",
-      "beans"
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
     "id": "fut_40",
     "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "🎉",
+    "categoryName": "Aage Jaake Kya Kand Karega 🔮",
+    "icon": "🔮",
+    "spiceLevel": 1,
+    "text": "Who would get kicked out of a luxury casino in Las Vegas for arguing over a ₹50 bet?",
+    "tags": [
+      "future_predictions",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_1",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 1,
+    "text": "Google Maps bol raha hai 'Turn Left', fir bhi bolta hai 'Google chutiya hai, mujhe shortcut pata hai' aur khet me gadi phasa deta hai?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_2",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 2,
-    "text": "Who will crash a celebrity wedding in Europe and end up in the official family album photo?",
+    "text": "Arey bhau, police checking dislyavar achanak bina kaaran bhityane helmet thik karun shaanpana karnara kon?",
     "tags": [
-      "wedding_crasher",
-      "celebrity",
-      "bold"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "fut_41",
-    "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "📜",
+    "id": "ran_3",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 3,
+    "text": "Deserted island pe survive karne ke bajaye pehle din hi nariyal todne ke chakkar me sir phod lene wala?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_4",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 1,
-    "text": "Who will be that person who enters a spelling bee competition as an adult just to win a plastic trophy?",
+    "text": "Who would argue with an automatic vending machine when the chips packet gets stuck on the spiral?",
     "tags": [
-      "trophy",
-      "petty",
-      "contest"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "fut_42",
-    "category": "future_predictions",
-    "categoryName": "Future Predictions",
-    "icon": "👑",
+    "id": "ran_5",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 2,
-    "text": "Who will be the first in the group to have their own dedicated Wikipedia controversies section?",
+    "text": "Lift me achanak sabke saamne aisi ajeeb si aawaz nikaalke dusre ke upar blame daalne wala shaatir?",
     "tags": [
-      "wikipedia",
-      "scandal",
-      "infamous"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_1",
+    "id": "ran_6",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🗺️",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 3,
+    "text": "Who tries to push a door that clearly has a giant red sign saying 'PULL' with maximum confidence?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_7",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 1,
-    "text": "Who would genuinely argue with the Google Maps automated GPS voice and miss four straight turns?",
+    "text": "Arey bhau, rastyavar kutra bhonktana baghun unchyavar double speed madhye bhonknara pagal kon?",
     "tags": [
-      "gps",
-      "driving",
-      "argument"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_2",
+    "id": "ran_8",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🏝️",
-    "spiceLevel": 1,
-    "text": "Who would survive the longest on a deserted island purely by befriending a volleyball or coconut?",
-    "tags": [
-      "island",
-      "survival",
-      "castaway"
-    ]
-  },
-  {
-    "id": "rc_3",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "👑",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 2,
-    "text": "Who would accidentally become the supreme leader of a completely imaginary made-up country?",
+    "text": "Who would accidentally lock themselves inside an ATM cabin and start panicking like it's a submarine?",
     "tags": [
-      "leader",
-      "imaginary",
-      "chaos"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_4",
+    "id": "ran_9",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🧟‍♂️",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 3,
+    "text": "Ek random pigeon ya sparrow ke sath 10 minute tak eye contact banakar baat karne wala psycho?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_10",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 1,
+    "text": "Who smells their own socks or shirt before deciding 'Arey abhi do din aur chal jayegi bhai'?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_11",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 2,
-    "text": "Who would survive less than 90 seconds in a zombie apocalypse because they stopped to find their phone?",
+    "text": "Microwave me steel ka bartan ya foil rakhke diwali ke patakhe phodane wala scientist?",
     "tags": [
-      "zombie",
-      "apocalypse",
-      "survival"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_5",
+    "id": "ran_12",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🛗",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 3,
+    "text": "Arey bhau, shopping mall madhye escalator var ulta chalnyacha try karun tondavar padnara kon?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_13",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 1,
-    "text": "Who presses the elevator button 16 times as if the elevator will travel 16 times faster?",
+    "text": "Who panics and starts sweating profusely when the cashier at the grocery store scans items too quickly?",
     "tags": [
-      "elevator",
-      "impatience",
-      "habit"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_6",
+    "id": "ran_14",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "👻",
-    "spiceLevel": 1,
-    "text": "Who would be the first person to get spooked by their own coat hanging on a door in the dark?",
-    "tags": [
-      "scared",
-      "shadow",
-      "spooky"
-    ]
-  },
-  {
-    "id": "rc_7",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🛒",
-    "spiceLevel": 1,
-    "text": "Who rides on the back of the grocery shopping cart down the supermarket aisle when nobody is looking?",
-    "tags": [
-      "shopping_cart",
-      "childish",
-      "fun"
-    ]
-  },
-  {
-    "id": "rc_8",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🐕",
-    "spiceLevel": 1,
-    "text": "Who stops mid-sentence in an important conversation to enthusiastically wave at a stranger's dog?",
-    "tags": [
-      "dog",
-      "distracted",
-      "wholesome"
-    ]
-  },
-  {
-    "id": "rc_9",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🧦",
-    "spiceLevel": 1,
-    "text": "Who has a drawer containing 30 single socks and refuses to throw any out because 'the partner might return'?",
-    "tags": [
-      "socks",
-      "optimism",
-      "clutter"
-    ]
-  },
-  {
-    "id": "rc_10",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "📦",
-    "spiceLevel": 1,
-    "text": "Who hoards empty cardboard delivery boxes in their room because 'this is an exceptionally sturdy box'?",
-    "tags": [
-      "boxes",
-      "hoarder",
-      "relatable"
-    ]
-  },
-  {
-    "id": "rc_11",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🚪",
-    "spiceLevel": 1,
-    "text": "Who consistently pushes doors that clearly say 'PULL' in bold red capital letters?",
-    "tags": [
-      "push_pull",
-      "reading",
-      "clumsy"
-    ]
-  },
-  {
-    "id": "rc_12",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🎤",
-    "spiceLevel": 1,
-    "text": "Who sings along with 100% emotional conviction to songs when they clearly don't know the lyrics?",
-    "tags": [
-      "singing",
-      "lyrics",
-      "passion"
-    ]
-  },
-  {
-    "id": "rc_13",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🍳",
-    "spiceLevel": 1,
-    "text": "Who would manage to trigger a smoke alarm while heating up water in a kettle?",
-    "tags": [
-      "cooking",
-      "disaster",
-      "smoke_alarm"
-    ]
-  },
-  {
-    "id": "rc_14",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🐜",
-    "spiceLevel": 1,
-    "text": "Who gets physically invested in watching two ants carry a breadcrumb across the kitchen floor?",
-    "tags": [
-      "ants",
-      "distracted",
-      "nature"
-    ]
-  },
-  {
-    "id": "rc_15",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🔍",
-    "spiceLevel": 1,
-    "text": "Who searches everywhere for their phone while talking on their phone using that phone's flashlight?",
-    "tags": [
-      "phone",
-      "oblivious",
-      "peak_chaos"
-    ]
-  },
-  {
-    "id": "rc_16",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🧼",
-    "spiceLevel": 1,
-    "text": "Who leaves 47 browser tabs open on their laptop and claims 'every single one is vital to my life'?",
-    "tags": [
-      "browser_tabs",
-      "ram",
-      "digital_hoarder"
-    ]
-  },
-  {
-    "id": "rc_17",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "✈️",
-    "spiceLevel": 1,
-    "text": "Who gets nervous at airport security even though they are carrying literally only a toothbrush and sweatpants?",
-    "tags": [
-      "airport",
-      "security",
-      "anxiety"
-    ]
-  },
-  {
-    "id": "rc_18",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🍕",
-    "spiceLevel": 1,
-    "text": "Who would eat leftover pizza straight out of the fridge at 6:45 AM before brushing their teeth?",
-    "tags": [
-      "pizza",
-      "breakfast",
-      "unhinged"
-    ]
-  },
-  {
-    "id": "rc_19",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "⚡",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 2,
-    "text": "Who would accidentally join an underground fight club thinking it was a friendly fitness bootcamp?",
+    "text": "Water bottle ka dhakkan aise band karta hai ki agle din kholne ke liye plumber aur JCB bulani pade?",
     "tags": [
-      "fight_club",
-      "misunderstanding"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_20",
+    "id": "ran_15",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🧩",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 3,
+    "text": "Who would try to pay with a metro card or driving license at a roadside panipuri stall?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_16",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 1,
-    "text": "Who buys a 1,000-piece jigsaw puzzle, does the outer border in 20 minutes, and leaves it on the table for 7 months?",
+    "text": "Movie me horror scene aane se 5 second pehle hi aisi cheekh maarta hai ki poora theater darr jaye?",
     "tags": [
-      "puzzle",
-      "unfinished",
-      "abandoned"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_21",
+    "id": "ran_17",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🚗",
-    "spiceLevel": 1,
-    "text": "Who forgets where their car is parked in a shopping mall parking lot and wanders clicking the key fob like a metal detector?",
-    "tags": [
-      "parking",
-      "lost_car",
-      "beeping"
-    ]
-  },
-  {
-    "id": "rc_22",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🕶️",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 2,
-    "text": "Who would negotiate intensely with a vending machine when their snack gets stuck on the spiral hook?",
+    "text": "Who walks into a spider web and instantly starts dancing breakdance in the middle of the street?",
     "tags": [
-      "vending_machine",
-      "snack",
-      "rage"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_23",
+    "id": "ran_18",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🌧️",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 3,
+    "text": "Arey bhau, bike chya side mirror madhye baaghun kes set kartana samorun yeun gadi thokanara kon?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_19",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 1,
-    "text": "Who checks the weather forecast, sees 100% rain, and still leaves home without an umbrella?",
+    "text": "Who would accidentally call 112/100 emergency number and say 'Arey galti se pocket dial ho gaya bhaiya'?",
     "tags": [
-      "rain",
-      "umbrella",
-      "defiance"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_24",
+    "id": "ran_20",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "📱",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 2,
-    "text": "Who has 14,892 unread emails on their phone icon and feels absolutely zero psychological burden?",
+    "text": "Public restroom me jaakar dekhta hai ki toilet paper nahi hai aur fir existential crisis me chala jata hai?",
     "tags": [
-      "emails",
-      "notifications",
-      "psychopath"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_25",
+    "id": "ran_21",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "💡",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 3,
+    "text": "Who forgets which side of their car has the petrol tank every single time they pull into a petrol pump?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_22",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 1,
-    "text": "Who would try to plug a USB cable in the wrong way three consecutive times before getting it right?",
+    "text": "Arey bhau, dukaanatun 'Bhaiya ek chewing gum dena' bolun ₹500 chi note kadhnara ameer bhikari?",
     "tags": [
-      "usb",
-      "physics",
-      "struggle"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_26",
+    "id": "ran_23",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🧯",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 2,
-    "text": "Who would accidentally set off the fire sprinkler in a hotel room while playing with a pillow?",
+    "text": "Who would accidentally drop their phone into the gap between the bed and the wall and consider moving houses?",
     "tags": [
-      "hotel",
-      "sprinkler",
-      "disaster"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_27",
+    "id": "ran_24",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🥪",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 3,
+    "text": "Bina kisi music ke achanak road pe chalte-chalte background beat imagine karke funky walk karne wala?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_25",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 1,
-    "text": "Who puts strange snack combinations together like potato chips inside a chocolate peanut butter sandwich?",
+    "text": "Who would try to swat a fly on their computer screen by using the mouse cursor?",
     "tags": [
-      "snacks",
-      "food_combos",
-      "chaotic"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_28",
+    "id": "ran_26",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🎲",
-    "spiceLevel": 1,
-    "text": "Who makes life-altering decisions using 'Rock, Paper, Scissors' or flipping a coin?",
-    "tags": [
-      "decisions",
-      "coin_toss",
-      "gambler"
-    ]
-  },
-  {
-    "id": "rc_29",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🧼",
-    "spiceLevel": 1,
-    "text": "Who has completely walked into a spotless, crystal-clear glass sliding door in broad daylight?",
-    "tags": [
-      "glass_door",
-      "collision",
-      "classic"
-    ]
-  },
-  {
-    "id": "rc_30",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🛑",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 2,
-    "text": "Who would accidentally agree to buy a vacuum cleaner from a door-to-door salesman because they felt bad saying no?",
+    "text": "Sleep me bolta hai 'Arey 2 plate momos parcel karna' aur jab koi uthata hai bolta hai 'Main toh jag raha tha'?",
     "tags": [
-      "salesman",
-      "pushover",
-      "polite"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_31",
+    "id": "ran_27",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🎳",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 3,
+    "text": "Arey bhau, automatic sensor glass door samor ubha rahun 'Khul ja sim sim' bolnara namoona kon?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_28",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 1,
-    "text": "Who lets go of the bowling ball and slips completely onto their back like a cartoon character?",
+    "text": "Who would look for their sunglasses for 25 minutes while wearing them directly on their forehead?",
     "tags": [
-      "bowling",
-      "slip",
-      "cartoon"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_32",
+    "id": "ran_29",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🍿",
-    "spiceLevel": 1,
-    "text": "Who drops a piece of popcorn onto the floor and applies the '7-minute rule' to eat it anyway?",
-    "tags": [
-      "popcorn",
-      "floor",
-      "hygiene"
-    ]
-  },
-  {
-    "id": "rc_33",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🎤",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 2,
-    "text": "Who would get lost in their own neighborhood if GPS service went down for 15 minutes?",
+    "text": "Chalti train me washroom jaate waqt balance kho kar random passenger ki god me baithne wala clumsy king?",
     "tags": [
-      "direction",
-      "lost",
-      "gps"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_34",
+    "id": "ran_30",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🧳",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 3,
+    "text": "Who would confidently give completely wrong driving directions to a stranger on the road?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_31",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 1,
-    "text": "Who packs their suitcase by aggressively rolling everything into a chaotic cylinder and sitting on it to zip it?",
+    "text": "Raincoat pehenke chata kholne wala aur fir bhi puddle me jump maar ke poora bheegne wala genius?",
     "tags": [
-      "packing",
-      "suitcase",
-      "force"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_35",
+    "id": "ran_32",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "⚡",
-    "spiceLevel": 1,
-    "text": "Who laughs so hard that no sound comes out, just silent clapping like a bewildered sea lion?",
-    "tags": [
-      "laughing",
-      "seal",
-      "silent"
-    ]
-  },
-  {
-    "id": "rc_36",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "☕",
-    "spiceLevel": 1,
-    "text": "Who burns their tongue on hot soup or coffee, and immediately takes another burning bite 3 seconds later?",
-    "tags": [
-      "soup",
-      "burn",
-      "stubborn"
-    ]
-  },
-  {
-    "id": "rc_37",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🎧",
-    "spiceLevel": 1,
-    "text": "Who walks with headphones in and starts loudly answering imaginary questions out loud?",
-    "tags": [
-      "headphones",
-      "talking",
-      "street"
-    ]
-  },
-  {
-    "id": "rc_38",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🍕",
-    "spiceLevel": 1,
-    "text": "Who would order food on an app, fall asleep, and find the cold bag outside their door at 11 AM the next day?",
-    "tags": [
-      "delivery",
-      "asleep",
-      "breakfast"
-    ]
-  },
-  {
-    "id": "rc_39",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🐕",
-    "spiceLevel": 1,
-    "text": "Who has had a 10-minute full-blown conversation with their pet dog or cat and felt understood?",
-    "tags": [
-      "pets",
-      "conversation",
-      "bonding"
-    ]
-  },
-  {
-    "id": "rc_40",
-    "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "💡",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 2,
-    "text": "Who would build an entire spreadsheet to compare $4 items before purchasing?",
+    "text": "Arey bhau, exam chya front page var 'Roll Number' chya jagevar swatahcha mobile number lihinaara kon?",
     "tags": [
-      "spreadsheet",
-      "overthinking",
-      "shopping"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_41",
+    "id": "ran_33",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "🎪",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 3,
+    "text": "Who tries to blow air on ice cream because they subconsciously think it's hot food?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_34",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 1,
-    "text": "Who accidentally wears two socks that are completely different colors and acts like it was intentional high fashion?",
+    "text": "Phone flashlight on karke usi flashlight ki roshni me apna phone dhoondhne wala scientist?",
     "tags": [
-      "socks",
-      "mismatch",
-      "fashion"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "rc_42",
+    "id": "ran_35",
     "category": "random_chaos",
-    "categoryName": "Random Chaos",
-    "icon": "👑",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
     "spiceLevel": 2,
-    "text": "Who would somehow find a way to break an unbreakable Nokia 3310 phone?",
+    "text": "Who would wave enthusiastically at a stranger on the road thinking it's their friend, and then pretend to stretch?",
     "tags": [
-      "nokia",
-      "destruction",
-      "impossible"
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "lnv_1",
+    "id": "ran_36",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 3,
+    "text": "Arey bhau, barber la 'Thoda thoda trim kar' bolun shevati military cut ghevun radnaara kon?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_37",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 1,
+    "text": "Who would try to scroll up a physical printed paper magazine with their index finger?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_38",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 2,
+    "text": "Fridge ka door 5 second baad dobara khol ke dekhta hai ki achanak kuch naya khana spawn hua ya nahi?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_39",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 3,
+    "text": "Who gets into an intense argument with Siri or Google Assistant and ends up getting roasted by the AI?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "ran_40",
+    "category": "random_chaos",
+    "categoryName": "Full Toofan & Dimaag Ka Dahi 🌪️",
+    "icon": "🌪️",
+    "spiceLevel": 1,
+    "text": "Road pe chalte waqt tiles ki lines pe paav na rakhne ka secret mission khelne wala child-at-heart?",
+    "tags": [
+      "random_chaos",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_1",
     "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
     "icon": "🌙",
     "spiceLevel": 1,
-    "text": "Who starts cooking instant ramen or Maggi at 3:15 AM while having an existential crisis?",
+    "text": "Raat ko 3 baje achanak 'Bhai chal Maggi banate hain' bolke hostel ka poora floor jagaane wala cook?",
     "tags": [
-      "ramen",
-      "3am",
-      "crisis"
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "lnv_2",
+    "id": "lat_2",
     "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🛒",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
     "spiceLevel": 2,
-    "text": "Who makes chaotic online shopping purchases at 2 AM that they completely regret when the delivery arrives?",
+    "text": "Arey bhau, 2 AM la Instagram var ex chi profile stalk kartana galti ne 4 varshan purvi chya photo var like karnara?",
     "tags": [
-      "shopping",
-      "impulse",
-      "regret"
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "lnv_3",
+    "id": "lat_3",
     "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🧠",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 3,
+    "text": "Raat ko 2:30 AM aisi philosophical baatein karta hai jaise agle 20 minute me dharti khatam hone wali ho?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_4",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
     "spiceLevel": 1,
-    "text": "Who lies in bed at night remembering a mildly embarrassing thing they did in 6th grade and cringing?",
+    "text": "Who drunk-calls or texts their high school crush at 3:15 AM saying 'I always respected your vibe'?",
     "tags": [
-      "cringe",
-      "memories",
-      "insomnia"
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "lnv_4",
+    "id": "lat_5",
     "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "📖",
-    "spiceLevel": 1,
-    "text": "Who falls into a 4-hour Wikipedia rabbit hole reading about the history of elevator doors until 4 AM?",
-    "tags": [
-      "wikipedia",
-      "rabbit_hole",
-      "nerd"
-    ]
-  },
-  {
-    "id": "lnv_5",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🎤",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
     "spiceLevel": 2,
-    "text": "Who sends emotional 7-minute voice notes at 2:30 AM expressing deep appreciation for their friends?",
+    "text": "Raat ko 1 baje Amazon ya Flipkart pe aisi bekaar cheez order karta hai jo delivery aane pe khud samajh nahi aati?",
     "tags": [
-      "voice_note",
-      "emotional",
-      "wholesome"
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "lnv_6",
+    "id": "lat_6",
     "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "📺",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 3,
+    "text": "Who watches 4-hour YouTube documentaries on 'Primitive technology mud house building' at 3:45 AM?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_7",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
     "spiceLevel": 1,
-    "text": "Who watches 14 episodes of a new crime documentary series in one sitting because 'the next one solves it'?",
+    "text": "Arey bhau, raat chya 3 vajta tapri var cigarette aani cutting chai sathi 15 km bike chalavnara kon?",
     "tags": [
-      "binge",
-      "documentary",
-      "crime"
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "lnv_7",
+    "id": "lat_8",
     "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 2,
+    "text": "Raat ko horror movie dekhne ke baad 2 baje washroom jaane ke liye roommate ke pair padne wala fattu?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_9",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 3,
+    "text": "Who plans their entire 10-year multi-millionaire corporate career plan between 2:00 AM and 2:30 AM?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_10",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 1,
+    "text": "Raat ke 3 baje kitchen me bina chappal ke stealth mode me fridge se mithaai chori karne wala ninja?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_11",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 2,
+    "text": "Who says 'Bas ye ek aakhri Reel dekhke so jaunga' at 11:30 PM and is still scrolling at 4:15 AM?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_12",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 3,
+    "text": "Arey shaanpana, 3 AM la group call lavun saglyanna vicharto 'Arey tula aapan kashasathi jagat aaloy mahitey ka'?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_13",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 1,
+    "text": "Raat ko achanak aisi guilt trip me chala jata hai jaise 2012 me class me jo pencil chori ki thi uski wajah se karma kharab hai?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_14",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 2,
+    "text": "Who listens to sad Arijit Singh or Prateek Kuhad songs at 2 AM despite having literally zero relationship history?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_15",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 3,
+    "text": "Raat ko room me andhere me charging wire dhoondhte waqt apne pair ki ungli bed ke corner se thokanara?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_16",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 1,
+    "text": "Who wakes up at 3:30 AM to drink water from the bottle and accidentally pours half the water on their own chest?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_17",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 2,
+    "text": "Arey bhau, 4 AM la 'Bhai bhook lagi hai kuch order karein kya' bolun Zomato var 40 min menu baghnara?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_18",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 3,
+    "text": "Raat ko andhere me bathroom ke mirror me apni shakal dekhke khud hi darr ke cheekhne wala legend?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_19",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 1,
+    "text": "Who sends completely unhinged voice notes at 3 AM that sound like an ancient cursed ritual?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_20",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 2,
+    "text": "Raat ke 2 baje Google pe ajeeb bimari ke lakshan dhoondhke decide kar leta hai ki uske paas bas 2 din bache hain?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_21",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 3,
+    "text": "Who starts deep cleaning their room, organizing wardrobe, and rearranging furniture only after midnight?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_22",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 1,
+    "text": "Arey bhau, raat chya 3 vajta 'Kal se pakka 6 AM uthun jogging la janar' bolun 12 PM la uthnara athlete kon?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_23",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 2,
+    "text": "Who stares at the ceiling at 2:45 AM remembering that one embarrassing thing they said in 6th standard?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_24",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 3,
+    "text": "Raat ke 1:30 AM group me achanak 'Are you guys awake?' bhejta hai aur sabke reply aate hi khud so jata hai?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_25",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 1,
+    "text": "Who eats dry raw uncooked Maggi with masala sprinkled on top in the middle of the night?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_26",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 2,
+    "text": "Arey bhau, andharat bed varun khali padun bolto 'Kahi nahi zhaala, aapan neat aahot'?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_27",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 3,
+    "text": "Raat ko terrace pe aake romantic hawa enjoy karne ka drama karta hai aur machharon se katwa ke wapas bhaagta hai?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_28",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 1,
+    "text": "Who texts their best friend at 2 AM 'Bhai agar main kal mar jau toh mera browser history delete kar dena'?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_29",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 2,
+    "text": "Raat ko 3 baje YouTube shorts pe 'How to escape a bear attack' dekhne wala jabki gaon me kutta bhi nahi dikhta?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_30",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 3,
+    "text": "Who leaves the bathroom door slightly open at night because they think the monster will trap them inside?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_31",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 1,
+    "text": "Arey bhau, 2 AM la Swiggy Instamart varun 2 packets Chips aani 1 ice cream order karnara midnight criminal?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_32",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 2,
+    "text": "Raat ko bed pe baithke calculation karta hai 'Agar main abhi 3:17 pe so jaun toh mujhe exact 3 ghante 43 minute ki neend milegi'?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_33",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 3,
+    "text": "Who texts 'Goodnight guys, sleep well' at 11 PM and is actively watching memes till 5 AM?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_34",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 1,
+    "text": "Raat ke 3 baje achanak guitar nikaalke aisi besuri awaaz me bajaata hai ki aaju-baaju wale police ko phone karne sochein?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_35",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 2,
+    "text": "Who wakes up the entire hostel room at 3 AM because they thought they saw a shadow moving near the curtain?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_36",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 3,
+    "text": "Arey bhau, late night drive var jaaun petrol samplyavar 3 km bike dhakalnara adventurer kon?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_37",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 1,
+    "text": "Raat ko 2 baje existential crisis me aakar decide karta hai ki wo kal subah se vegan aur yogi ban jayega?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_38",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 2,
+    "text": "Who sends long emotional appreciation voice notes to friends at 3 AM and pretends nothing happened next morning?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_39",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 3,
+    "text": "Raat ko pillow ko flip karke cold side dhoondhne ke chakkar me 45 minute neend barbaad karne wala?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "lat_40",
+    "category": "late_night_vibes",
+    "categoryName": "3 AM Bakchodi & Raat Ke Kide 🌙",
+    "icon": "🌙",
+    "spiceLevel": 1,
+    "text": "Raat ke 3:30 baje WhatsApp pe crush ka 'Online' status dekhke 50 tarah ke conspiracy theories banane wala FBI agent?",
+    "tags": [
+      "late_night_vibes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_1",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
     "icon": "🍕",
     "spiceLevel": 1,
-    "text": "Who suggests ordering midnight pizza at 1:45 AM when everyone else was actually about to fall asleep?",
+    "text": "Dost ke plate se 'Bhai bas ek fry de na' bolke 80% French fries akele chat kar jaane wala daaku?",
     "tags": [
-      "pizza",
-      "midnight",
-      "temptation"
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "lnv_8",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🚗",
-    "spiceLevel": 1,
-    "text": "Who is always ready for a spontaneous 1 AM car drive with music blasted on the highway?",
-    "tags": [
-      "drive",
-      "music",
-      "night"
-    ]
-  },
-  {
-    "id": "lnv_9",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "💬",
-    "spiceLevel": 2,
-    "text": "Who texts 'Are you awake?' at 2:40 AM and then immediately calls you when you reply?",
-    "tags": [
-      "texts",
-      "late_call",
-      "clingy"
-    ]
-  },
-  {
-    "id": "lnv_10",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🧹",
-    "spiceLevel": 1,
-    "text": "Who gets a sudden uncontrollable surge of motivation to deep clean and reorganize their entire bedroom at midnight?",
-    "tags": [
-      "cleaning",
-      "midnight",
-      "burst"
-    ]
-  },
-  {
-    "id": "lnv_11",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🍦",
-    "spiceLevel": 1,
-    "text": "Who eats ice cream straight out of the tub with a serving spoon while standing in front of the open freezer light?",
-    "tags": [
-      "ice_cream",
-      "freezer",
-      "snack"
-    ]
-  },
-  {
-    "id": "lnv_12",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🛸",
-    "spiceLevel": 1,
-    "text": "Who starts deep conspiracy theory conversations about alien pyramids at 3 AM?",
-    "tags": [
-      "aliens",
-      "conspiracy",
-      "deep"
-    ]
-  },
-  {
-    "id": "lnv_13",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "📱",
-    "spiceLevel": 1,
-    "text": "Who falls asleep with their phone playing YouTube tutorials and wakes up to a 6-hour video of whale sounds?",
-    "tags": [
-      "youtube",
-      "whales",
-      "sleep"
-    ]
-  },
-  {
-    "id": "lnv_14",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🍿",
-    "spiceLevel": 1,
-    "text": "Who will eat an entire bag of tortilla chips in bed and wake up surrounded by crumb debris?",
-    "tags": [
-      "crumbs",
-      "bed",
-      "chips"
-    ]
-  },
-  {
-    "id": "lnv_15",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🎶",
-    "spiceLevel": 1,
-    "text": "Who listens to sad songs at night specifically to feel heartbroken over a relationship that never happened?",
-    "tags": [
-      "sad_songs",
-      "imaginary",
-      "heartbreak"
-    ]
-  },
-  {
-    "id": "lnv_16",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "💡",
-    "spiceLevel": 2,
-    "text": "Who invents a groundbreaking million-dollar business idea at 2 AM and forgets it completely by morning?",
-    "tags": [
-      "idea",
-      "business",
-      "forgotten"
-    ]
-  },
-  {
-    "id": "lnv_17",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🛌",
-    "spiceLevel": 1,
-    "text": "Who says 'Goodnight' to the group chat and stays active liking memes for the next two and a half hours?",
-    "tags": [
-      "goodnight",
-      "liar",
-      "awake"
-    ]
-  },
-  {
-    "id": "lnv_18",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🤫",
-    "spiceLevel": 1,
-    "text": "Who tries to creep quietly into the kitchen at night and accidentally drops a heavy stainless steel saucepan?",
-    "tags": [
-      "kitchen",
-      "loud",
-      "stealth"
-    ]
-  },
-  {
-    "id": "lnv_19",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🍫",
-    "spiceLevel": 1,
-    "text": "Who will scavenge the pantry at 1 AM and eat chocolate chips meant for baking because there is no other candy?",
-    "tags": [
-      "baking_chips",
-      "desperate",
-      "candy"
-    ]
-  },
-  {
-    "id": "lnv_20",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "👻",
-    "spiceLevel": 1,
-    "text": "Who refuses to dangle a foot off the edge of the bed at night because of imaginary floor monsters?",
-    "tags": [
-      "bed_monsters",
-      "feet",
-      "childish"
-    ]
-  },
-  {
-    "id": "lnv_21",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "📱",
-    "spiceLevel": 1,
-    "text": "Who checks their alarm clock 7 times before sleeping just to make sure AM and PM are correct?",
-    "tags": [
-      "alarm",
-      "paranoia",
-      "routine"
-    ]
-  },
-  {
-    "id": "lnv_22",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "☕",
-    "spiceLevel": 2,
-    "text": "Who drinks a cup of strong coffee at 10 PM and wonders aloud why their eyes are wide open at 3 AM?",
-    "tags": [
-      "coffee",
-      "caffeine",
-      "regret"
-    ]
-  },
-  {
-    "id": "lnv_23",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🎧",
-    "spiceLevel": 1,
-    "text": "Who has an entire separate playlist of songs that they would be deeply embarrassed to play in the daytime?",
-    "tags": [
-      "guilty_pleasures",
-      "playlist",
-      "night"
-    ]
-  },
-  {
-    "id": "lnv_24",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "💬",
-    "spiceLevel": 2,
-    "text": "Who spills their deepest, most confidential life lore only between the hours of 1 AM and 4 AM?",
-    "tags": [
-      "lore",
-      "secrets",
-      "vulnerable"
-    ]
-  },
-  {
-    "id": "lnv_25",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🎮",
-    "spiceLevel": 1,
-    "text": "Who says 'one last match and I sleep' at 11:30 PM and is still raging on voice chat at 4:15 AM?",
-    "tags": [
-      "gaming",
-      "one_more",
-      "rage"
-    ]
-  },
-  {
-    "id": "lnv_26",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🥪",
-    "spiceLevel": 1,
-    "text": "Who constructs a four-story gourmet sandwich with bizarre ingredients at 2:30 in the morning?",
-    "tags": [
-      "sandwich",
-      "chef",
-      "night"
-    ]
-  },
-  {
-    "id": "lnv_27",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "📺",
-    "spiceLevel": 1,
-    "text": "Who watches primitive building or restoration videos at 3 AM with pure hypnotic fascination?",
-    "tags": [
-      "restoration",
-      "satisfying",
-      "trance"
-    ]
-  },
-  {
-    "id": "lnv_28",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🕯️",
-    "spiceLevel": 1,
-    "text": "Who will sit in the dark listening to ambient lo-fi beats feeling like the main character in an anime?",
-    "tags": [
-      "lofi",
-      "aesthetic",
-      "chilling"
-    ]
-  },
-  {
-    "id": "lnv_29",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "✈️",
-    "spiceLevel": 2,
-    "text": "Who plans an entire luxury dream trip to Japan or Iceland at 2 AM with zero actual funds in their bank?",
-    "tags": [
-      "travel_booking",
-      "fantasy",
-      "broke"
-    ]
-  },
-  {
-    "id": "lnv_30",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🥤",
-    "spiceLevel": 1,
-    "text": "Who wakes up at 3:45 AM craving water so cold that it feels like drinking straight from an Antarctic glacier?",
-    "tags": [
-      "water",
-      "glacier",
-      "night_thirst"
-    ]
-  },
-  {
-    "id": "lnv_31",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🧘",
-    "spiceLevel": 1,
-    "text": "Who tries a 10-minute guided sleep meditation and gets so annoyed by the speaker's voice that they can't sleep?",
-    "tags": [
-      "meditation",
-      "annoyed",
-      "insomnia"
-    ]
-  },
-  {
-    "id": "lnv_32",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "📝",
-    "spiceLevel": 1,
-    "text": "Who writes an ambitious 12-item to-do list for tomorrow at 1 AM and accomplishes zero items?",
-    "tags": [
-      "todolist",
-      "procrastination",
-      "intentions"
-    ]
-  },
-  {
-    "id": "lnv_33",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🍜",
-    "spiceLevel": 1,
-    "text": "Who burns the roof of their mouth on midnight instant noodles because they refused to wait 20 seconds?",
-    "tags": [
-      "noodles",
-      "burn",
-      "impatience"
-    ]
-  },
-  {
-    "id": "lnv_34",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🔦",
-    "spiceLevel": 1,
-    "text": "Who navigates their house in pitch-black darkness by muscle memory and brutally stubs their pinky toe?",
-    "tags": [
-      "stubbed_toe",
-      "dark",
-      "pain"
-    ]
-  },
-  {
-    "id": "lnv_35",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "😴",
-    "spiceLevel": 2,
-    "text": "Who can sleep through thunderstorm sirens and construction but wakes up if someone gently closes a door?",
-    "tags": [
-      "sleep",
-      "light_sleeper",
-      "selective"
-    ]
-  },
-  {
-    "id": "lnv_36",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "⚡",
-    "spiceLevel": 1,
-    "text": "Who sends hilarious unhinged memes into dead group chats at 3 AM with zero context?",
-    "tags": [
-      "memes",
-      "late_drop",
-      "chaos"
-    ]
-  },
-  {
-    "id": "lnv_37",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "📱",
-    "spiceLevel": 1,
-    "text": "Who wakes up in the middle of the night, checks the time, calculates 'I have 3 hours and 22 minutes left', and smiles?",
-    "tags": [
-      "math",
-      "sleep_time",
-      "satisfaction"
-    ]
-  },
-  {
-    "id": "lnv_38",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🥶",
-    "spiceLevel": 1,
-    "text": "Who sets the air conditioning to arctic freezing temperatures and then wraps themselves in four heavy duvets?",
-    "tags": [
-      "ac",
-      "freezing",
-      "blankets"
-    ]
-  },
-  {
-    "id": "lnv_39",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "🍞",
-    "spiceLevel": 1,
-    "text": "Who has stood in front of a toaster at 2 AM waiting with butter knife in hand ready to strike?",
-    "tags": [
-      "toast",
-      "late_snack",
-      "butter"
-    ]
-  },
-  {
-    "id": "lnv_40",
-    "category": "late_night_vibes",
-    "categoryName": "Late Night Vibes",
-    "icon": "⭐",
-    "spiceLevel": 1,
-    "text": "Who would stay awake until 5 AM on a rooftop stargazing and debating the meaning of the universe?",
-    "tags": [
-      "stargazing",
-      "universe",
-      "vibe"
-    ]
-  },
-  {
-    "id": "fdc_1",
+    "id": "foo_2",
     "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
     "icon": "🍕",
     "spiceLevel": 2,
-    "text": "Who claims 'I'm not in the mood for pizza' and then eats three slices as soon as the box is opened?",
+    "text": "Arey bhau, restaurant madhye bill aalyanantar galti ne pan 'Maza wallet room var rahila' bolnara kanjoos kon?",
     "tags": [
-      "pizza",
-      "liar",
-      "appetite"
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "fdc_2",
+    "id": "foo_3",
     "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍟",
-    "spiceLevel": 2,
-    "text": "Who takes the single largest crispy fry from someone else's plate without asking permission?",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 3,
+    "text": "Burger khate waqt surgery karke pyaaz, tamatar, pickle sab bahar nikaalke table pe kachra banane wala picky eater?",
     "tags": [
-      "fry_thief",
-      "audacity",
-      "crimes"
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "fdc_3",
+    "id": "foo_4",
     "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🥫",
-    "spiceLevel": 1,
-    "text": "Who drowns their entire plate of food in tomato ketchup or hot sauce before taking a single bite?",
-    "tags": [
-      "ketchup",
-      "sauce",
-      "criminal"
-    ]
-  },
-  {
-    "id": "fdc_4",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍫",
-    "spiceLevel": 2,
-    "text": "Who leaves exactly 1.5 chips or half an inch of juice in the container so they don't have to throw it away?",
-    "tags": [
-      "crumbs",
-      "lazy",
-      "guilt_free"
-    ]
-  },
-  {
-    "id": "fdc_5",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "☕",
-    "spiceLevel": 1,
-    "text": "Who orders a coffee with nine customized modifications and sends it back if it's slightly not lukewarm?",
-    "tags": [
-      "coffee",
-      "picky",
-      "barista"
-    ]
-  },
-  {
-    "id": "fdc_6",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍔",
-    "spiceLevel": 1,
-    "text": "Who disassembles a burger like an engineer, eats each ingredient separately, and leaves the bun behind?",
-    "tags": [
-      "burger",
-      "weird",
-      "habit"
-    ]
-  },
-  {
-    "id": "fdc_7",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍰",
-    "spiceLevel": 2,
-    "text": "Who says 'I'll just take a tiny sliver of cake' and ends up trimming off six 'slivers' that equal half the cake?",
-    "tags": [
-      "cake",
-      "slivers",
-      "denial"
-    ]
-  },
-  {
-    "id": "fdc_8",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🌶️",
-    "spiceLevel": 2,
-    "text": "Who boldly claims 'I love extremely spicy food' and ends up crying and sweating over mild salsa?",
-    "tags": [
-      "spicy",
-      "bragging",
-      "tears"
-    ]
-  },
-  {
-    "id": "fdc_9",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍣",
-    "spiceLevel": 1,
-    "text": "Who goes to a high-end sushi restaurant and orders chicken nuggets or plain french fries?",
-    "tags": [
-      "sushi",
-      "toddler_palate",
-      "unrefined"
-    ]
-  },
-  {
-    "id": "fdc_10",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍿",
-    "spiceLevel": 1,
-    "text": "Who licks the flavor dust off potato chips and puts the plain soggy chip back in the bowl?",
-    "tags": [
-      "chips",
-      "gross",
-      "flavor_thief"
-    ]
-  },
-  {
-    "id": "fdc_11",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🥤",
-    "spiceLevel": 1,
-    "text": "Who finishes their cold drink and then aggressively chews on the ice cubes loudly for 20 minutes?",
-    "tags": [
-      "ice",
-      "chewing",
-      "crunch"
-    ]
-  },
-  {
-    "id": "fdc_12",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍽️",
-    "spiceLevel": 2,
-    "text": "Who leaves one microscopic bite of food on their plate because 'it's impolite to clean the plate completely'?",
-    "tags": [
-      "etiquette",
-      "waste",
-      "pretentious"
-    ]
-  },
-  {
-    "id": "fdc_13",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
     "icon": "🍕",
     "spiceLevel": 1,
-    "text": "Who eats only the cheese and toppings off a pizza slice and leaves the naked crust abandoned like bone?",
+    "text": "Pizza ke slices me se sabse bada aur loaded slice pehle se hi haath maar ke lock karne wala selfish bhukkad?",
     "tags": [
-      "pizza_crust",
-      "waste",
-      "crimes"
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "fdc_14",
+    "id": "foo_5",
     "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🥑",
-    "spiceLevel": 1,
-    "text": "Who pays $22 for avocado toast at a hipster brunch spot and claims it 'changed their spiritual aura'?",
-    "tags": [
-      "brunch",
-      "avocado",
-      "pretentious"
-    ]
-  },
-  {
-    "id": "fdc_15",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍜",
-    "spiceLevel": 1,
-    "text": "Who breaks instant noodles into 50 microscopic crushed pieces before boiling them?",
-    "tags": [
-      "noodles",
-      "crushed",
-      "sacrilege"
-    ]
-  },
-  {
-    "id": "fdc_16",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🥪",
-    "spiceLevel": 1,
-    "text": "Who cuts sandwiches vertically instead of diagonally and acts like geometry doesn't matter?",
-    "tags": [
-      "sandwich",
-      "diagonal",
-      "geometry"
-    ]
-  },
-  {
-    "id": "fdc_17",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🥟",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
     "spiceLevel": 2,
-    "text": "Who snatches the last remaining dumpling or piece of garlic bread while pretending to offer it to others?",
+    "text": "Who puts ketchup over literally EVERYTHING — Maggi, Biryani, Poha, yaha tak ki Samosa aur Paratha pe bhi?",
     "tags": [
-      "last_piece",
-      "dumpling",
-      "sneaky"
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "fdc_18",
+    "id": "foo_6",
     "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🥗",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 3,
+    "text": "Arey bhau, party madhye jevan shuru honyachya aadhi ch starters chya plate var dharak padnara bhukkad kon?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_7",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
     "spiceLevel": 1,
-    "text": "Who orders a healthy salad at a restaurant and asks for 4 cups of ranch dressing and bacon bits?",
+    "text": "Cold drink me aisi aawaz karke straw se aakhri boond tak sip karta hai jaise petrol pump ka vacuum cleaner ho?",
     "tags": [
-      "salad",
-      "ranch",
-      "health"
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "fdc_19",
+    "id": "foo_8",
     "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🥖",
-    "spiceLevel": 1,
-    "text": "Who eats the entire complimentary restaurant bread basket before ordering their main meal?",
-    "tags": [
-      "bread_basket",
-      "butter",
-      "full"
-    ]
-  },
-  {
-    "id": "fdc_20",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍪",
-    "spiceLevel": 1,
-    "text": "Who dunks a cookie in milk for 0.4 seconds too long and loses the submerged soggy half to the milk abyss?",
-    "tags": [
-      "cookie",
-      "milk",
-      "tragedy"
-    ]
-  },
-  {
-    "id": "fdc_21",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🧀",
-    "spiceLevel": 1,
-    "text": "Who puts shredded cheese on literally everything they cook, including breakfast oatmeal?",
-    "tags": [
-      "cheese",
-      "addiction",
-      "culinary"
-    ]
-  },
-  {
-    "id": "fdc_22",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍦",
-    "spiceLevel": 1,
-    "text": "Who bites directly into an ice cream popsicle with their front teeth like a fearless monster?",
-    "tags": [
-      "ice_cream",
-      "teeth",
-      "psychopath"
-    ]
-  },
-  {
-    "id": "fdc_23",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🌮",
-    "spiceLevel": 1,
-    "text": "Who takes one bite of a taco and lets the entire back half explode across the table and their lap?",
-    "tags": [
-      "taco",
-      "explosion",
-      "messy"
-    ]
-  },
-  {
-    "id": "fdc_24",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍍",
-    "spiceLevel": 1,
-    "text": "Who will passionately defend pineapple on pizza like their family honor depends on it?",
-    "tags": [
-      "pineapple_pizza",
-      "debate",
-      "honor"
-    ]
-  },
-  {
-    "id": "fdc_25",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍝",
-    "spiceLevel": 1,
-    "text": "Who cuts spaghetti with a spoon and fork instead of twirling it like a civilized human?",
-    "tags": [
-      "spaghetti",
-      "cutting",
-      "italy_crying"
-    ]
-  },
-  {
-    "id": "fdc_26",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🧁",
-    "spiceLevel": 1,
-    "text": "Who licks the frosting completely off a cupcake and throws the sponge cake in the bin?",
-    "tags": [
-      "cupcake",
-      "frosting",
-      "waste"
-    ]
-  },
-  {
-    "id": "fdc_27",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🥩",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
     "spiceLevel": 2,
-    "text": "Who orders an expensive steak well-done and asks for barbecue sauce to dip it in?",
+    "text": "Who says 'Main diet pe hu, main kuch nahi khaunga' and then eats half of everyone else's meal?",
     "tags": [
-      "steak",
-      "well_done",
-      "blasphemy"
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "fdc_28",
+    "id": "foo_9",
     "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍩",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 3,
+    "text": "Pani puri wale bhaiya ke saamne 'Bhaiya thoda teekha kam, meetha zyada, suji puri dena' bolke 50 nakhre karne wala?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_10",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
     "spiceLevel": 1,
-    "text": "Who opens a box of a dozen donuts, takes a small bite of three different donuts, and walks away?",
+    "text": "Who steals chocolate from the shared fridge, leaves the empty wrapper inside the fridge, and blames the ghost?",
     "tags": [
-      "donuts",
-      "bites",
-      "outlaw"
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "fdc_29",
+    "id": "foo_11",
     "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🧃",
-    "spiceLevel": 1,
-    "text": "Who drinks milk or orange juice directly from the family carton when nobody is in the kitchen?",
-    "tags": [
-      "carton",
-      "germs",
-      "caught"
-    ]
-  },
-  {
-    "id": "fdc_30",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🥘",
-    "spiceLevel": 1,
-    "text": "Who claims to have a secret family recipe when it's literally just a standard store-bought packet sauce?",
-    "tags": [
-      "secret_recipe",
-      "fraud",
-      "packet"
-    ]
-  },
-  {
-    "id": "fdc_31",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍟",
-    "spiceLevel": 1,
-    "text": "Who dips their hot french fries into chocolate milkshake or soft-serve ice cream?",
-    "tags": [
-      "fries_icecream",
-      "weird",
-      "sweet_salty"
-    ]
-  },
-  {
-    "id": "fdc_32",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🥞",
-    "spiceLevel": 1,
-    "text": "Who drowns their pancakes in maple syrup until they are physically swimming in a sugar lake?",
-    "tags": [
-      "pancakes",
-      "syrup",
-      "sugar"
-    ]
-  },
-  {
-    "id": "fdc_33",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍉",
-    "spiceLevel": 1,
-    "text": "Who eats watermelon with a spoon directly from the sliced rind like a savage animal?",
-    "tags": [
-      "watermelon",
-      "spoon",
-      "messy"
-    ]
-  },
-  {
-    "id": "fdc_34",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍿",
-    "spiceLevel": 1,
-    "text": "Who mixes M&Ms or gummy bears directly into hot movie butter popcorn?",
-    "tags": [
-      "popcorn",
-      "candy",
-      "combo"
-    ]
-  },
-  {
-    "id": "fdc_35",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🥣",
-    "spiceLevel": 1,
-    "text": "Who pours the milk into the cereal bowl BEFORE pouring the cereal?",
-    "tags": [
-      "milk_first",
-      "cereal",
-      "unforgivable"
-    ]
-  },
-  {
-    "id": "fdc_36",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🧀",
-    "spiceLevel": 1,
-    "text": "Who eats cheese slices straight from the plastic wrapper standing in the kitchen at 1 AM?",
-    "tags": [
-      "cheese_slice",
-      "night",
-      "goblin"
-    ]
-  },
-  {
-    "id": "fdc_37",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍯",
-    "spiceLevel": 1,
-    "text": "Who leaves the peanut butter jar with breadcrumbs contaminated inside the peanut butter?",
-    "tags": [
-      "peanut_butter",
-      "contamination",
-      "crimes"
-    ]
-  },
-  {
-    "id": "fdc_38",
-    "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍔",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
     "spiceLevel": 2,
-    "text": "Who offers you 'a bite' of their burger and leaves only a thumbnail of crust behind?",
+    "text": "Buffet me aisi plate bharta hai jaise Titanic ke doobne se pehle aakhri baar khana mil raha ho?",
     "tags": [
-      "shark_bite",
-      "burger",
-      "betrayal"
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "fdc_39",
+    "id": "foo_12",
     "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🥤",
-    "spiceLevel": 1,
-    "text": "Who uses three paper straws in one drink because they keep chewing through them?",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 3,
+    "text": "Arey bhau, cutting chai madhye biscuit budvun to biscuit chai madhye ch padlyavar botane kaadhnara legend kon?",
     "tags": [
-      "paper_straw",
-      "chewing",
-      "habit"
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   },
   {
-    "id": "fdc_40",
+    "id": "foo_13",
     "category": "foodie_crimes",
-    "categoryName": "Foodie Crimes",
-    "icon": "🍫",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
     "spiceLevel": 1,
-    "text": "Who bites into a Kit-Kat across all four bars at once instead of breaking off individual fingers?",
+    "text": "Who orders food on Zomato, tracks the delivery boy on GPS every 4 seconds, and calls him 15 times?",
     "tags": [
-      "kitkat",
-      "anarchy",
-      "blasphemy"
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_14",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 2,
+    "text": "Restaurant me free ka saunf aur mishri dono pocket me mutthi bhar ke bharne wala dacoit?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_15",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 3,
+    "text": "Who eats the filling inside the Oreo biscuit and leaves the black dry biscuits for the rest of the world?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_16",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 1,
+    "text": "Dost ki ice cream cone me se 'Bas ek chhota bite le raha hu' bolke top scoop pura swallow karne wala monster?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_17",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 2,
+    "text": "Arey bhau, biryani madhye achanak elaichi aalyavar aisi shakal banavto jaise cyanide kha gela?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_18",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 3,
+    "text": "Who licks the Maggi masala packet clean with their tongue before putting it in boiling water?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_19",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 1,
+    "text": "Dosa khate waqt sambhar aur chutney 4 baar extra maangta hai aur dosa aadha chhod deta hai?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_20",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 2,
+    "text": "Who would fight to the death over who gets the crispy corner piece of the garlic bread?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_21",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 3,
+    "text": "Dost ke birthday treat me sabse mehnga imported dessert order karke bolta hai 'Bhai birthday toh saal me ek baar aata hai na'?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_22",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 1,
+    "text": "Arey bhau, tapri var vadapav khaataana sukha chutney aani mirchi extra maangun poora paper bag bharun ghenara?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_23",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 2,
+    "text": "Who eats chips by tipping the bag directly into their mouth like a human trash can?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_24",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 3,
+    "text": "Shared pizza box khulte hi pehle cheese pull check karta hai aur sabse zyada cheese wala slice kheench leta hai?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_25",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 1,
+    "text": "Who drinks the leftover milk from the cereal bowl by lifting the entire ceramic bowl with both hands in public?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_26",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 2,
+    "text": "Arey bhau, 'Diet chal raha hai' bolun salad madhye 4 spoonful mayonnaise aani cheese taknara health freak kon?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_27",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 3,
+    "text": "Who asks for an extra bowl just to mix 7 different curries together into an unholy cement paste?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_28",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 1,
+    "text": "Fast food center me tissue paper ka pura bundle utha ke apne backpack me daalne wala kleptomaniac?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_29",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 2,
+    "text": "Who checks the bill calculation 4 times with phone calculator just to save ₹3.50 on GST?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_30",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 3,
+    "text": "Arey bhau, gulab jamun garma-garam aslyavar pan aakhaa tondat takun poora tond bhaajnara impatient bhukkad?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_31",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 1,
+    "text": "Who dips French fries directly into vanilla soft-serve ice cream and calls it 'haute cuisine'?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_32",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 2,
+    "text": "Dost ke tiffin me mummy ne banaya paratha dekhte hi uspe cheel-giddh jaise toot padne wala tiffin chor?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_33",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 3,
+    "text": "Who orders water bottle in an expensive cafe and then complains about ₹150 charge for 45 minutes?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_34",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 1,
+    "text": "Arey bhau, samosa cha khalachya tukda (chhota crispy kone) sathi dosti daavavar lavnara kon?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_35",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 2,
+    "text": "Who licks the plate clean at a wedding buffet when nobody is looking?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_36",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 3,
+    "text": "Bhookh lagne pe aisi shakal banata hai jaise 14 din se Sahara desert me bina paani ke bhatak raha ho?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_37",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 1,
+    "text": "Who eats peanuts at a bar or party so fast that the bowl looks like a black hole sucked it in?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_38",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 2,
+    "text": "Arey bhau, ice cream cup cha cover pan poora jeebhene chaatun saaf karnara middle-class icon kon?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_39",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 3,
+    "text": "Who takes one sip of tea, says 'Adrak thoda kam hai', and pretends to be an international Michelin tea taster?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
+    ]
+  },
+  {
+    "id": "foo_40",
+    "category": "foodie_crimes",
+    "categoryName": "Foodie Chor & Tapri Criminals 🍕",
+    "icon": "🍕",
+    "spiceLevel": 1,
+    "text": "Dost ka cold drink ka can kholte waqt aadha fizz uske upar spray karne wala mischievous culprit?",
+    "tags": [
+      "foodie_crimes",
+      "roast",
+      "hinglish",
+      "maranglish"
     ]
   }
 ];
 
-/**
- * Question Service - Advanced filtering, spice levels, reporting, custom questions & random pickers
- */
 class QuestionServiceClass {
   constructor() {
     this.questions = [...QUESTION_DATABASE];
