@@ -1218,18 +1218,36 @@ class AppController {
 
     // Spotlight: The Problem
     const heroCard = document.getElementById('problem-hero-card');
+    const tagBannerEl = document.getElementById('problem-tag-banner');
+    const scorePillEl = document.getElementById('problem-score-pill');
+
     if (mostVotedId && roomData.players[mostVotedId]) {
       heroCard.style.display = 'block';
       const problemPlayer = roomData.players[mostVotedId];
       const votesReceived = voteTally[mostVotedId] || 0;
       const totalVotes = Object.values(voteTally).reduce((a, b) => a + b, 0);
       const pct = totalVotes > 0 ? Math.round((votesReceived / totalVotes) * 100) : 0;
+      const isTie = state.tiedWinners && state.tiedWinners.length > 1;
+
+      if (isTie) {
+        if (tagBannerEl) tagBannerEl.textContent = "🤝 IT'S A TIE - ROUND WINNERS! 🤝";
+        const tiedNames = state.tiedWinners.map(id => roomData.players[id]?.name || 'Player').join(' & ');
+        const tiedAvatars = state.tiedWinners.map(id => roomData.players[id]?.avatar || '👑').join(' ');
+        document.getElementById('problem-winner-name').textContent = tiedNames;
+        document.getElementById('problem-avatar').textContent = tiedAvatars;
+      } else {
+        if (tagBannerEl) tagBannerEl.textContent = "👑 ROUND WINNER 👑";
+        document.getElementById('problem-winner-name').textContent = problemPlayer.name;
+        document.getElementById('problem-avatar').textContent = problemPlayer.avatar;
+      }
 
       const title = state.problemTitle || "CHIEF CHAOS OFFICER 🌪️";
       document.getElementById('problem-award-title').textContent = title;
-      document.getElementById('problem-avatar').textContent = problemPlayer.avatar;
-      document.getElementById('problem-winner-name').textContent = problemPlayer.name;
-      document.getElementById('problem-vote-stats').textContent = `Received ${votesReceived} vote${votesReceived === 1 ? '' : 's'} (${pct}%)!`;
+      document.getElementById('problem-vote-stats').textContent = `Majority Choice with ${votesReceived} vote${votesReceived === 1 ? '' : 's'} (${pct}%)!`;
+      
+      if (scorePillEl) {
+        scorePillEl.textContent = `+1 Point Awarded • Total: ${problemPlayer.score || 0} pts`;
+      }
     } else {
       heroCard.style.display = 'none';
     }
