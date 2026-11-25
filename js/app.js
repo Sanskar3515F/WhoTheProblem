@@ -444,10 +444,46 @@ class AppController {
     }
   }
 
-  checkAutoReconnect() {
-    const savedRoom = localStorage.getItem('wtp_active_room_code');
-    if (savedRoom && !window.location.search.includes('room=')) {
-      console.info(`Found ongoing match session in room ${savedRoom}`);
+  async checkAutoReconnect() {
+    const savedRoom = sessionStorage.getItem('wtp_active_room_code') || localStorage.getItem('wtp_active_room_code');
+    if (!savedRoom) return;
+    if (window.location.search.includes('room=') && !window.location.search.includes(savedRoom)) {
+      return;
+    }
+
+    try {
+      const uid = window.firebaseService.getUserId();
+      const localStr = localStorage.getItem(`wtp_room_${savedRoom}`);
+      let playerProfile = null;
+
+      if (localStr) {
+        try {
+          const parsed = JSON.parse(localStr);
+          if (parsed && parsed.players && parsed.players[uid]) {
+            playerProfile = parsed.players[uid];
+          }
+        } catch (e) {}
+      }
+
+      if (!playerProfile) {
+        const storedName = sessionStorage.getItem('wtp_player_name');
+        const storedAvatar = sessionStorage.getItem('wtp_player_avatar');
+        if (storedName) {
+          playerProfile = { name: storedName, avatar: storedAvatar || '😎' };
+        }
+      }
+
+      if (playerProfile) {
+        console.info(`Auto-reconnecting to match in room ${savedRoom}...`);
+        const roomData = await window.firebaseService.reconnectRoom(savedRoom, playerProfile);
+        if (roomData) {
+          this.connectToRoom(savedRoom);
+          const isHost = roomData.config && roomData.config.hostId === uid;
+          window.visualEffects.showToast(`Reconnected to room ${savedRoom} as ${isHost ? 'Host 👑' : 'Player 🚀'}!`, "success", 4000);
+        }
+      }
+    } catch (e) {
+      console.warn("Auto-reconnect notice:", e);
     }
   }
 
@@ -651,6 +687,11 @@ class AppController {
       avatar: this.selectedCreateAvatar
     };
 
+    try {
+      sessionStorage.setItem('wtp_player_name', hostName);
+      sessionStorage.setItem('wtp_player_avatar', this.selectedCreateAvatar);
+    } catch (e) {}
+
     const roomConfig = {
       maxPlayers: 15,
       rounds,
@@ -693,6 +734,11 @@ class AppController {
       name: playerName,
       avatar: this.selectedJoinAvatar
     };
+
+    try {
+      sessionStorage.setItem('wtp_player_name', playerName);
+      sessionStorage.setItem('wtp_player_avatar', this.selectedJoinAvatar);
+    } catch (e) {}
 
     try {
       await window.firebaseService.joinRoom(roomCode, playerData);
@@ -1455,6 +1501,12 @@ class AppController {
     this.lastObservedPhase = null;
     const headerBadge = document.getElementById('header-room-badge');
     if (headerBadge) headerBadge.style.display = 'none';
+
+    try {
+      localStorage.removeItem('wtp_active_room_code');
+      sessionStorage.removeItem('wtp_active_room_code');
+    } catch (e) {}
+
     this.showScreen('screen-home');
   }
 

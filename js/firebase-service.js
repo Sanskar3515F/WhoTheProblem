@@ -1,11 +1,12 @@
 /**
  * WHO'S THE PROBLEM? 😂 - Universal Multiplayer Service
  * Supports:
- * 1. Firebase Realtime Database + Anonymous Auth (when configured)
- * 2. Real-time Cloud Relay (WebRTC PeerJS + Public MQTT WebSocket Fallback) for instant cross-city mobile multiplayer with zero setup
+ * 1. Hybrid Real-time Cloud Relay (Public WSS MQTT WebSocket + WebRTC PeerJS)
+ *    Connects phones across different cities and cellular networks with ZERO configuration!
+ * 2. Firebase Realtime Database + Anonymous Auth (when custom keys configured)
  * 3. BroadcastChannel & LocalStorage fallback for local multi-tab testing
- * 4. Anonymous voting & confidential ballot validation
- * 5. Presence detection, automatic host migration, and reconnection support
+ * 4. Anonymous voting & confidential ballot validation (votes never exposed)
+ * 5. Presence detection, automatic host reconnection, host migration, and seamless session resume
  */
 
 class FirebaseService {
@@ -15,7 +16,7 @@ class FirebaseService {
     this.db = null;
     this.user = null;
     this.isFirebaseReady = false;
-    this.connectionMode = 'local'; // 'firebase' | 'cloud_webrtc' | 'cloud_mqtt' | 'local'
+    this.connectionMode = 'cloud_relay'; // 'firebase' | 'cloud_relay' | 'local'
     this.connectionStatusText = 'Connecting...';
     
     this.roomListeners = {};
@@ -26,8 +27,9 @@ class FirebaseService {
 
     // WebRTC / Cloud Relay state
     this.peer = null;
-    this.peerConnections = {}; // host: map of playerId -> DataConnection; client: single host connection
+    this.peerConnections = {}; // host: map of peerId -> DataConnection; client: single host connection
     this.mqttClient = null;
+    this.mqttConnected = false;
     this.isHost = false;
 
     // Secret storage for anonymous votes (kept confidential by host, never exposed to other clients)
@@ -65,7 +67,7 @@ class FirebaseService {
   async init() {
     this.initLocalUser();
 
-    // Check for custom Firebase credentials in localStorage first, then window.FIREBASE_CONFIG
+    // Check for custom Firebase credentials
     let fbConfig = window.FIREBASE_CONFIG;
     try {
       const customConfigStr = localStorage.getItem('wtp_custom_firebase_config');
@@ -97,24 +99,22 @@ class FirebaseService {
         this.connectionStatusText = 'Firebase Realtime Database';
         console.info("Multiplayer: Connected via Firebase Realtime Database (UID:", this.currentPlayerId, ")");
         this.notifyConnectionChange();
-        return;
       } catch (err) {
-        console.warn("Firebase initialization failed, initializing Cloud Relay transport...", err);
+        console.warn("Firebase initialization failed, using Cloud Relay transport...", err);
       }
     }
 
-    // Fallback: Initialize WebRTC / Cloud Relay
+    // Always initialize Cloud Relay (MQTT WebSocket + WebRTC) for seamless cross-city & zero-config multiplayer
     this.initCloudRelay();
   }
 
-  // Fallback unique player ID generation with persistence
+  // Session-isolated unique player ID generation (preserves player on refresh, unique per tab)
   initLocalUser() {
-    let localUid = sessionStorage.getItem('wtp_player_uid') || localStorage.getItem('wtp_player_uid');
+    let localUid = sessionStorage.getItem('wtp_player_uid');
     if (!localUid) {
-      localUid = 'user_' + Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
+      localUid = 'user_' + Math.random().toString(36).substr(2, 7) + '_' + Date.now().toString(36).substr(-4);
       try {
         sessionStorage.setItem('wtp_player_uid', localUid);
-        localStorage.setItem('wtp_player_uid', localUid);
       } catch (e) {}
     }
     this.currentPlayerId = localUid;
@@ -141,51 +141,95 @@ class FirebaseService {
   }
 
   // ==========================================
-  // CLOUD WEBRTC & MQTT RELAY ENGINE
+  // CLOUD MQTT & WEBRTC HYBRID RELAY
   // Connects phones across cities with ZERO setup!
   // ==========================================
   initCloudRelay() {
-    this.connectionMode = 'cloud_webrtc';
+    this.connectionMode = 'cloud_relay';
     this.connectionStatusText = 'Real-time Cloud Relay';
     this.notifyConnectionChange();
 
-    // Check if PeerJS is loaded
-    if (typeof Peer !== 'undefined') {
-      console.info("Multiplayer: Cloud WebRTC Relay Ready (PeerJS active)");
-    } else {
-      console.info("Multiplayer: Fallback to Local + MQTT channel");
-      this.initMqttRelay();
+    // Start MQTT WebSocket Client
+    this.initMqttRelay();
+  }
+
+  initMqttRelay(retryWithFallback = false) {
+    if (typeof Paho === 'undefined' || !Paho.MQTT) {
+      console.warn("Paho MQTT library not loaded in page");
+      return;
+    }
+
+    try {
+      const clientId = 'wtp_' + Math.random().toString(36).substr(2, 8) + '_' + Date.now().toString(36).substr(-4);
+      
+      // Primary: HiveMQ Public Secure WebSocket Broker (port 8884)
+      // Fallback: EMQX Public Secure WebSocket Broker (port 8084)
+      const host = retryWithFallback ? 'broker.emqx.io' : 'broker.hivemq.com';
+      const port = retryWithFallback ? 8084 : 8884;
+      const path = '/mqtt';
+
+      console.info(`Connecting to Realtime Cloud Broker (${host}:${port})...`);
+      this.mqttClient = new Paho.MQTT.Client(host, port, path, clientId);
+
+      this.mqttClient.onMessageArrived = (message) => {
+        try {
+          const payload = JSON.parse(message.payloadString);
+          this.handleIncomingCloudMessage(payload);
+        } catch (e) {
+          console.warn("MQTT parse message error", e);
+        }
+      };
+
+      this.mqttClient.onConnectionLost = (responseObject) => {
+        this.mqttConnected = false;
+        if (responseObject.errorCode !== 0) {
+          console.warn("MQTT connection lost:", responseObject.errorMessage);
+          // Auto-reconnect after 2 seconds
+          setTimeout(() => {
+            if (this.currentRoomCode) {
+              this.initMqttRelay(!retryWithFallback);
+            }
+          }, 2000);
+        }
+      };
+
+      this.mqttClient.connect({
+        useSSL: true,
+        timeout: 6,
+        keepAliveInterval: 30,
+        cleanSession: true,
+        onSuccess: () => {
+          this.mqttConnected = true;
+          this.connectionStatusText = 'Online (Cloud Relay Active)';
+          this.notifyConnectionChange();
+          console.info(`Multiplayer: Connected to Real-time Cloud Broker (${host})`);
+
+          // Re-subscribe if we are already in a room
+          if (this.currentRoomCode) {
+            this.subscribeMqttRoom(this.currentRoomCode);
+          }
+        },
+        onFailure: (err) => {
+          console.warn(`MQTT connection to ${host} failed:`, err);
+          if (!retryWithFallback) {
+            // Try fallback broker
+            setTimeout(() => this.initMqttRelay(true), 1500);
+          }
+        }
+      });
+    } catch (e) {
+      console.warn("initMqttRelay exception", e);
     }
   }
 
-  initMqttRelay() {
-    if (typeof Paho !== 'undefined' && Paho.MQTT) {
-      try {
-        const clientId = 'wtp_client_' + this.getUserId();
-        // Public secure WebSocket broker
-        this.mqttClient = new Paho.MQTT.Client('broker.hivemq.com', 8884, '/mqtt', clientId);
-        this.mqttClient.onMessageArrived = (message) => {
-          try {
-            const payload = JSON.parse(message.payloadString);
-            this.handleIncomingCloudMessage(payload);
-          } catch (e) {}
-        };
-        this.mqttClient.connect({
-          useSSL: true,
-          timeout: 5,
-          onSuccess: () => {
-            console.info("Multiplayer: Connected to MQTT Public Cloud Relay");
-            if (this.currentRoomCode) {
-              this.mqttClient.subscribe(`wtp/rooms/${this.currentRoomCode}/#`);
-            }
-          },
-          onFailure: (err) => {
-            console.warn("MQTT connection failed, local sync active", err);
-          }
-        });
-      } catch (e) {
-        console.warn("MQTT relay init failed", e);
-      }
+  subscribeMqttRoom(roomCode) {
+    if (!this.mqttClient || !this.mqttConnected || !roomCode) return;
+    try {
+      const topic = `wtp/rooms/${roomCode.toUpperCase()}/#`;
+      this.mqttClient.subscribe(topic);
+      console.info(`Subscribed to Cloud topic: ${topic}`);
+    } catch (e) {
+      console.warn("MQTT subscribe error", e);
     }
   }
 
@@ -205,6 +249,12 @@ class FirebaseService {
       name: hostPlayer.name,
       avatar: hostPlayer.avatar
     };
+
+    // Cache profile in sessionStorage
+    try {
+      sessionStorage.setItem('wtp_player_name', hostPlayer.name);
+      sessionStorage.setItem('wtp_player_avatar', hostPlayer.avatar);
+    } catch (e) {}
 
     const initialRoomData = {
       code: roomCode,
@@ -227,7 +277,7 @@ class FirebaseService {
         customQuestions: roomConfig.customQuestions || []
       },
       state: {
-        phase: 'lobby', // 'lobby' | 'prediction' | 'voting' | 'results' | 'leaderboard' | 'gameover'
+        phase: 'lobby',
         currentRound: 0,
         currentQuestion: null,
         mode: 'normal',
@@ -255,12 +305,12 @@ class FirebaseService {
         }
       },
       predictions: {},
-      votes: {} // Publicly sanitized votes (only tallies or completion indicators)
+      votes: {}
     };
 
     this.cachedRoomData = initialRoomData;
 
-    // 1. Firebase Write
+    // 1. Firebase Write (if configured)
     if (this.isFirebaseReady && this.db) {
       try {
         const roomRef = this.db.ref(`rooms/${roomCode}`);
@@ -271,21 +321,17 @@ class FirebaseService {
       }
     }
 
-    // 2. PeerJS WebRTC Host setup
+    // 2. Subscribe to Cloud MQTT Topic
+    this.subscribeMqttRoom(roomCode);
+
+    // 3. WebRTC Peer Host setup
     this.setupPeerHost(roomCode);
 
-    // 3. MQTT Relay setup
-    if (this.mqttClient && this.mqttClient.isConnected()) {
-      try {
-        this.mqttClient.subscribe(`wtp/rooms/${roomCode}/#`);
-      } catch (e) {}
-    }
-
-    // 4. Local storage & broadcast
+    // 4. Save local storage & broadcast channel
     this.saveRoomLocally(roomCode, initialRoomData);
     this.broadcastMessage({ type: 'ROOM_CREATED', roomCode, data: initialRoomData });
 
-    // Start heartbeat
+    // 5. Start Heartbeat
     this.startHeartbeat(roomCode);
 
     return { roomCode, hostId, roomData: initialRoomData };
@@ -303,6 +349,15 @@ class FirebaseService {
       avatar: playerData.avatar
     };
 
+    // Cache profile in sessionStorage
+    try {
+      sessionStorage.setItem('wtp_player_name', playerData.name);
+      sessionStorage.setItem('wtp_player_avatar', playerData.avatar);
+    } catch (e) {}
+
+    // Ensure MQTT topic is subscribed
+    this.subscribeMqttRoom(roomCode);
+
     let roomData = null;
 
     // 1. Fetch from Firebase
@@ -315,7 +370,7 @@ class FirebaseService {
       }
     }
 
-    // 2. Fetch from Local Storage / Peer Cache if Firebase had no data
+    // 2. Fetch from Local Storage / Session Cache
     if (!roomData) {
       const localStr = localStorage.getItem(`wtp_room_${roomCode}`);
       if (localStr) {
@@ -323,13 +378,9 @@ class FirebaseService {
       }
     }
 
-    // If still null, attempt peer connect before failing
-    if (!roomData && typeof Peer !== 'undefined') {
-      try {
-        roomData = await this.connectPeerClient(roomCode, playerData);
-      } catch (e) {
-        console.warn("Peer connection fallback failed", e);
-      }
+    // 3. If room data not present locally (different phone/browser), discover over Cloud Relay (MQTT + Peer)
+    if (!roomData) {
+      roomData = await this.discoverRoomOverCloud(roomCode, playerData);
     }
 
     if (!roomData) {
@@ -351,7 +402,6 @@ class FirebaseService {
     const isHost = roomData.config.hostId === playerId;
     this.isHost = isHost;
 
-    // Preserve existing player's score and stats if reconnecting
     const existing = roomData.players ? roomData.players[playerId] : null;
     const playerRecord = {
       id: playerId,
@@ -381,17 +431,93 @@ class FirebaseService {
     this.cachedRoomData = roomData;
     this.saveRoomLocally(roomCode, roomData);
 
-    // Send join message via Cloud Relay / Peer
-    this.sendCloudMessage({
-      type: 'PLAYER_JOINED',
+    // Send join message via Cloud Relay (MQTT + WebRTC + BroadcastChannel)
+    const joinMsg = {
+      type: 'CLIENT_REQUEST_JOIN',
       roomCode,
-      player: playerRecord
-    });
+      senderId: playerId,
+      playerId,
+      playerData: playerRecord
+    };
+    this.sendCloudMessage(joinMsg);
+    this.broadcastMessage(joinMsg);
 
-    this.broadcastMessage({ type: 'PLAYER_JOINED', roomCode, player: playerRecord });
+    // Connect PeerJS client in background for direct P2P data channels
+    this.connectPeerClient(roomCode, playerData).catch(() => {});
+
     this.startHeartbeat(roomCode);
 
     return { roomCode, playerId, roomData };
+  }
+
+  /**
+   * Reconnect to an ongoing match session (e.g. on host or player page refresh)
+   */
+  async reconnectRoom(roomCode, playerData) {
+    roomCode = roomCode.toUpperCase().trim();
+    const playerId = this.getUserId();
+    this.currentRoomCode = roomCode;
+
+    // Subscribe to Cloud topic
+    this.subscribeMqttRoom(roomCode);
+
+    // Restore cached room data
+    let roomData = null;
+    const localStr = localStorage.getItem(`wtp_room_${roomCode}`);
+    if (localStr) {
+      try { roomData = JSON.parse(localStr); } catch (e) {}
+    }
+
+    if (this.isFirebaseReady && this.db) {
+      try {
+        const snap = await this.db.ref(`rooms/${roomCode}`).once('value');
+        if (snap.val()) roomData = snap.val();
+      } catch (e) {}
+    }
+
+    if (!roomData) return null;
+
+    this.cachedRoomData = roomData;
+    const isHost = roomData.config && roomData.config.hostId === playerId;
+    this.isHost = isHost;
+
+    if (playerData) {
+      this.currentPlayerData = {
+        name: playerData.name,
+        avatar: playerData.avatar
+      };
+    }
+
+    if (isHost) {
+      this.setupPeerHost(roomCode);
+      const hostReconMsg = {
+        type: 'HOST_RECONNECTED',
+        roomCode,
+        senderId: playerId,
+        hostId: playerId,
+        data: this.sanitizeRoomDataForClient(roomData)
+      };
+      this.sendCloudMessage(hostReconMsg);
+      this.broadcastMessage(hostReconMsg);
+    } else {
+      const playerReconMsg = {
+        type: 'PLAYER_RECONNECTED',
+        roomCode,
+        senderId: playerId,
+        playerId: playerId
+      };
+      this.sendCloudMessage(playerReconMsg);
+      this.broadcastMessage(playerReconMsg);
+      this.connectPeerClient(roomCode, playerData).catch(() => {});
+    }
+
+    this.startHeartbeat(roomCode);
+
+    if (this.roomListeners[roomCode]) {
+      this.roomListeners[roomCode](this.sanitizeRoomDataForClient(roomData));
+    }
+
+    return roomData;
   }
 
   /**
@@ -401,6 +527,8 @@ class FirebaseService {
     roomCode = roomCode.toUpperCase().trim();
     this.currentRoomCode = roomCode;
     this.roomListeners[roomCode] = callback;
+
+    this.subscribeMqttRoom(roomCode);
 
     // Firebase realtime listener
     if (this.isFirebaseReady && this.db) {
@@ -464,8 +592,14 @@ class FirebaseService {
         this.cachedRoomData = data;
         
         // Broadcast across tabs and Cloud Relay
-        this.broadcastMessage({ type: 'STATE_UPDATED', roomCode, state: data.state });
-        this.sendCloudMessage({ type: 'STATE_UPDATED', roomCode, state: data.state });
+        const updateMsg = { 
+          type: 'STATE_UPDATED', 
+          roomCode, 
+          senderId: this.getUserId(),
+          state: data.state 
+        };
+        this.broadcastMessage(updateMsg);
+        this.sendCloudMessage(updateMsg);
 
         if (this.roomListeners[roomCode]) {
           this.roomListeners[roomCode](this.sanitizeRoomDataForClient(data));
@@ -481,9 +615,12 @@ class FirebaseService {
     const voterId = this.getUserId();
     const roundKey = `round_${round}`;
 
-    // Reject self-voting
-    if (targetPlayerId === voterId) {
+    // Reject self-voting (unless double_trouble which is checked separately)
+    if (typeof targetPlayerId === 'string' && targetPlayerId === voterId) {
       throw new Error("Self-voting is not allowed! Pick a friend.");
+    }
+    if (Array.isArray(targetPlayerId) && targetPlayerId.includes(voterId)) {
+      throw new Error("You cannot include yourself in Double Trouble! Pick two friends.");
     }
 
     const votePayload = {
@@ -529,10 +666,11 @@ class FirebaseService {
         this.saveRoomLocally(roomCode, data);
         this.cachedRoomData = data;
 
-        // Broadcast vote confirmation (CONFIDENTIAL: target is omitted from broadcast!)
+        // Broadcast public vote progress (CONFIDENTIAL: target is omitted!)
         const sanitizedMsg = {
           type: 'VOTE_SUBMITTED',
           roomCode,
+          senderId: voterId,
           round,
           voterId,
           votedPlayerIds: data.state.votedPlayerIds
@@ -546,11 +684,12 @@ class FirebaseService {
       } catch (e) {}
     }
 
-    // If client is not host, forward secret vote directly to host over peer/cloud
+    // If client is not host, forward secret vote directly to host over secure cloud channel
     if (!this.isHost) {
       this.sendDirectMessageToHost({
         type: 'HOST_RECEIVE_SECRET_VOTE',
         roomCode,
+        senderId: voterId,
         round,
         voterId,
         targetId: targetPlayerId
@@ -586,8 +725,16 @@ class FirebaseService {
         this.saveRoomLocally(roomCode, data);
         this.cachedRoomData = data;
 
-        this.broadcastMessage({ type: 'PREDICTION_SUBMITTED', roomCode, round, voterId, predData });
-        this.sendCloudMessage({ type: 'PREDICTION_SUBMITTED', roomCode, round, voterId, predData });
+        const predMsg = { 
+          type: 'PREDICTION_SUBMITTED', 
+          roomCode, 
+          senderId: voterId,
+          round, 
+          voterId, 
+          predData 
+        };
+        this.broadcastMessage(predMsg);
+        this.sendCloudMessage(predMsg);
 
         if (this.roomListeners[roomCode]) {
           this.roomListeners[roomCode](this.sanitizeRoomDataForClient(data));
@@ -618,8 +765,14 @@ class FirebaseService {
         this.saveRoomLocally(roomCode, data);
         this.cachedRoomData = data;
 
-        this.broadcastMessage({ type: 'PLAYERS_UPDATED', roomCode, players: playersData });
-        this.sendCloudMessage({ type: 'PLAYERS_UPDATED', roomCode, players: playersData });
+        const updateMsg = { 
+          type: 'PLAYERS_UPDATED', 
+          roomCode, 
+          senderId: this.getUserId(),
+          players: playersData 
+        };
+        this.broadcastMessage(updateMsg);
+        this.sendCloudMessage(updateMsg);
 
         if (this.roomListeners[roomCode]) {
           this.roomListeners[roomCode](this.sanitizeRoomDataForClient(data));
@@ -654,6 +807,7 @@ class FirebaseService {
               data.players[newHostId].isHost = true;
               if (newHostId === this.getUserId()) {
                 this.isHost = true;
+                this.setupPeerHost(roomCode);
               }
             }
           }
@@ -661,8 +815,14 @@ class FirebaseService {
           this.saveRoomLocally(roomCode, data);
           this.cachedRoomData = data;
 
-          this.broadcastMessage({ type: 'PLAYER_REMOVED', roomCode, playerId });
-          this.sendCloudMessage({ type: 'PLAYER_REMOVED', roomCode, playerId });
+          const removeMsg = { 
+            type: 'PLAYER_REMOVED', 
+            roomCode, 
+            senderId: this.getUserId(),
+            playerId 
+          };
+          this.broadcastMessage(removeMsg);
+          this.sendCloudMessage(removeMsg);
 
           if (this.roomListeners[roomCode]) {
             this.roomListeners[roomCode](this.sanitizeRoomDataForClient(data));
@@ -681,7 +841,7 @@ class FirebaseService {
 
     // During voting phase, never disclose individual target votes
     if (cloned.state && cloned.state.phase === 'voting') {
-      cloned.votes = {}; // Empty out raw vote mappings
+      cloned.votes = {};
     }
 
     return cloned;
@@ -699,14 +859,66 @@ class FirebaseService {
   }
 
   // ==========================================
+  // DISCOVER ROOM OVER CLOUD (FOR NEW DEVICES)
+  // ==========================================
+  discoverRoomOverCloud(roomCode, playerData) {
+    return new Promise((resolve) => {
+      let resolved = false;
+
+      // 1. Send Discover Request via MQTT
+      const reqPayload = {
+        type: 'REQUEST_ROOM_STATE',
+        roomCode,
+        senderId: this.getUserId(),
+        playerData
+      };
+
+      const handler = (data) => {
+        if (!resolved && data && data.code === roomCode) {
+          resolved = true;
+          resolve(data);
+        }
+      };
+
+      this.roomListeners[roomCode] = handler;
+      this.sendCloudMessage(reqPayload);
+
+      // 2. Also try WebRTC peer client connect
+      this.connectPeerClient(roomCode, playerData).then((peerData) => {
+        if (!resolved && peerData) {
+          resolved = true;
+          resolve(peerData);
+        }
+      }).catch(() => {});
+
+      // Timeout fallback (5 seconds)
+      setTimeout(() => {
+        if (!resolved) {
+          resolved = true;
+          // Check if local cache has it now
+          const check = localStorage.getItem(`wtp_room_${roomCode}`);
+          if (check) {
+            try { return resolve(JSON.parse(check)); } catch (e) {}
+          }
+          resolve(null);
+        }
+      }, 5000);
+    });
+  }
+
+  // ==========================================
   // PEERJS WEBRTC CONNECTION HANDLING
   // ==========================================
   setupPeerHost(roomCode) {
     if (typeof Peer === 'undefined') return;
     try {
+      if (this.peer && !this.peer.destroyed) {
+        try { this.peer.destroy(); } catch (e) {}
+      }
+
       const peerId = `wtp-host-${roomCode.toLowerCase()}`;
       this.peer = new Peer(peerId, {
-        debug: 1,
+        debug: 0,
         config: {
           iceServers: [
             { urls: 'stun:stun.l.google.com:19302' },
@@ -717,8 +929,7 @@ class FirebaseService {
 
       this.peer.on('open', (id) => {
         console.info(`WebRTC Host connected with Peer ID: ${id}`);
-        this.connectionMode = 'cloud_webrtc';
-        this.connectionStatusText = 'Online (WebRTC Cloud Host)';
+        this.connectionStatusText = 'Online (Host Relay Active)';
         this.notifyConnectionChange();
       });
 
@@ -729,6 +940,7 @@ class FirebaseService {
           if (this.cachedRoomData) {
             conn.send({
               type: 'SYNC_ROOM_STATE',
+              roomCode: this.cachedRoomData.code,
               data: this.sanitizeRoomDataForClient(this.cachedRoomData)
             });
           }
@@ -744,7 +956,8 @@ class FirebaseService {
       });
 
       this.peer.on('error', (err) => {
-        console.warn("PeerHost error:", err.type, err);
+        // If peer ID is unavailable because previous tab held it, MQTT handles transport
+        console.warn("PeerHost notice:", err.type || err.message);
       });
     } catch (e) {
       console.warn("setupPeerHost exception", e);
@@ -756,7 +969,7 @@ class FirebaseService {
       if (typeof Peer === 'undefined') return resolve(null);
       try {
         const clientPeer = new Peer(undefined, {
-          debug: 1,
+          debug: 0,
           config: {
             iceServers: [
               { urls: 'stun:stun.l.google.com:19302' },
@@ -771,16 +984,11 @@ class FirebaseService {
           const conn = clientPeer.connect(hostPeerId, { reliable: true });
 
           conn.on('open', () => {
-            console.info(`WebRTC Connected to Host ${hostPeerId}`);
             this.peerConnections['host'] = conn;
-            this.connectionMode = 'cloud_webrtc';
-            this.connectionStatusText = 'Online (WebRTC Client)';
-            this.notifyConnectionChange();
-
-            // Send Join Intent
             conn.send({
               type: 'CLIENT_REQUEST_JOIN',
               roomCode,
+              senderId: this.getUserId(),
               playerId: this.getUserId(),
               playerData
             });
@@ -799,14 +1007,12 @@ class FirebaseService {
             }
           });
 
-          conn.on('error', (err) => {
-            console.warn("Client peer connection error", err);
+          conn.on('error', () => {
             resolve(null);
           });
         });
 
-        // Timeout fallback
-        setTimeout(() => resolve(null), 3500);
+        setTimeout(() => resolve(null), 3000);
       } catch (e) {
         resolve(null);
       }
@@ -814,10 +1020,24 @@ class FirebaseService {
   }
 
   // ==========================================
-  // CLOUD MESSAGE ROUTING
+  // CLOUD MESSAGE ROUTING (MQTT + PEER DATA CHANNELS)
   // ==========================================
   sendCloudMessage(payload) {
-    // 1. Send via WebRTC peer data channels
+    if (!payload.senderId) payload.senderId = this.getUserId();
+    const jsonStr = JSON.stringify(payload);
+
+    // 1. Send via MQTT WebSocket
+    if (this.mqttClient && this.mqttConnected && payload.roomCode) {
+      try {
+        const msg = new Paho.MQTT.Message(jsonStr);
+        msg.destinationName = `wtp/rooms/${payload.roomCode}/events`;
+        this.mqttClient.send(msg);
+      } catch (e) {
+        console.warn("MQTT send error", e);
+      }
+    }
+
+    // 2. Send via WebRTC peer data channels
     if (this.isHost) {
       Object.values(this.peerConnections).forEach(conn => {
         if (conn && conn.open) {
@@ -826,15 +1046,6 @@ class FirebaseService {
       });
     } else if (this.peerConnections['host'] && this.peerConnections['host'].open) {
       try { this.peerConnections['host'].send(payload); } catch (e) {}
-    }
-
-    // 2. Send via MQTT if active
-    if (this.mqttClient && this.mqttClient.isConnected() && payload.roomCode) {
-      try {
-        const msg = new Paho.MQTT.Message(JSON.stringify(payload));
-        msg.destinationName = `wtp/rooms/${payload.roomCode}/events`;
-        this.mqttClient.send(msg);
-      } catch (e) {}
     }
   }
 
@@ -848,9 +1059,15 @@ class FirebaseService {
 
   handleIncomingCloudMessage(payload) {
     if (!payload || !payload.roomCode) return;
-    const roomCode = payload.roomCode;
+    const roomCode = payload.roomCode.toUpperCase();
+    if (this.currentRoomCode && this.currentRoomCode !== roomCode) return;
 
-    // Handle secret vote received by Host
+    // Ignore echoes of self-published messages
+    if (payload.senderId && payload.senderId === this.getUserId()) {
+      return;
+    }
+
+    // 1. Host receives secret confidential vote from a player
     if (payload.type === 'HOST_RECEIVE_SECRET_VOTE' && this.isHost) {
       const roundKey = `round_${payload.round}`;
       if (!this.secretRoundVotes[roundKey]) this.secretRoundVotes[roundKey] = {};
@@ -861,7 +1078,7 @@ class FirebaseService {
       return;
     }
 
-    // Handle Client Request Join received by Host
+    // 2. Host receives join request from a new player
     if (payload.type === 'CLIENT_REQUEST_JOIN' && this.isHost) {
       if (this.cachedRoomData) {
         const newPlayer = {
@@ -874,23 +1091,137 @@ class FirebaseService {
           joinedAt: Date.now(),
           stats: { timesProblem: 0, correctPredictions: 0, fastestVotes: 0, longestVotes: 0 }
         };
+
+        if (!this.cachedRoomData.players) this.cachedRoomData.players = {};
         this.cachedRoomData.players[payload.playerId] = newPlayer;
         this.saveRoomLocally(roomCode, this.cachedRoomData);
+
+        // Notify Host's own UI listener immediately!
+        if (this.roomListeners[roomCode]) {
+          this.roomListeners[roomCode](this.sanitizeRoomDataForClient(this.cachedRoomData));
+        }
+
+        // Broadcast updated room state to ALL players
         this.sendCloudMessage({
           type: 'SYNC_ROOM_STATE',
           roomCode,
+          senderId: this.getUserId(),
           data: this.sanitizeRoomDataForClient(this.cachedRoomData)
         });
+
+        if (window.visualEffects) {
+          window.visualEffects.showToast(`${newPlayer.name} joined the room! 👋`, "join");
+        }
+        if (window.soundEngine) {
+          window.soundEngine.playPop();
+        }
       }
       return;
     }
 
-    // Update local state if received
+    // 3. Request Room State (when a new device joins and needs full room data)
+    if (payload.type === 'REQUEST_ROOM_STATE' && this.isHost && this.cachedRoomData) {
+      this.sendCloudMessage({
+        type: 'SYNC_ROOM_STATE',
+        roomCode,
+        senderId: this.getUserId(),
+        data: this.sanitizeRoomDataForClient(this.cachedRoomData)
+      });
+      return;
+    }
+
+    // 4. Synchronize Full Room State
     if (payload.type === 'SYNC_ROOM_STATE' && payload.data) {
       this.cachedRoomData = payload.data;
       this.saveRoomLocally(roomCode, payload.data);
       if (this.roomListeners[roomCode]) {
         this.roomListeners[roomCode](payload.data);
+      }
+      return;
+    }
+
+    // 5. State Updated (Phase, Round, Question, Timer changes)
+    if (payload.type === 'STATE_UPDATED' && payload.state && this.cachedRoomData) {
+      this.cachedRoomData.state = { ...this.cachedRoomData.state, ...payload.state };
+      this.saveRoomLocally(roomCode, this.cachedRoomData);
+      if (this.roomListeners[roomCode]) {
+        this.roomListeners[roomCode](this.sanitizeRoomDataForClient(this.cachedRoomData));
+      }
+      return;
+    }
+
+    // 6. Players Updated (Scores, stats, bots)
+    if (payload.type === 'PLAYERS_UPDATED' && payload.players && this.cachedRoomData) {
+      this.cachedRoomData.players = payload.players;
+      this.saveRoomLocally(roomCode, this.cachedRoomData);
+      if (this.roomListeners[roomCode]) {
+        this.roomListeners[roomCode](this.sanitizeRoomDataForClient(this.cachedRoomData));
+      }
+      return;
+    }
+
+    // 7. Player Removed / Kicked
+    if (payload.type === 'PLAYER_REMOVED' && payload.playerId && this.cachedRoomData?.players) {
+      delete this.cachedRoomData.players[payload.playerId];
+      this.saveRoomLocally(roomCode, this.cachedRoomData);
+      if (this.roomListeners[roomCode]) {
+        this.roomListeners[roomCode](this.sanitizeRoomDataForClient(this.cachedRoomData));
+      }
+      return;
+    }
+
+    // 8. Public Vote Submitted Progress Indicator
+    if (payload.type === 'VOTE_SUBMITTED' && this.cachedRoomData?.state) {
+      if (!this.cachedRoomData.state.votedPlayerIds) {
+        this.cachedRoomData.state.votedPlayerIds = [];
+      }
+      if (payload.voterId && !this.cachedRoomData.state.votedPlayerIds.includes(payload.voterId)) {
+        this.cachedRoomData.state.votedPlayerIds.push(payload.voterId);
+      }
+      if (payload.votedPlayerIds) {
+        this.cachedRoomData.state.votedPlayerIds = payload.votedPlayerIds;
+      }
+      this.saveRoomLocally(roomCode, this.cachedRoomData);
+      if (this.roomListeners[roomCode]) {
+        this.roomListeners[roomCode](this.sanitizeRoomDataForClient(this.cachedRoomData));
+      }
+      return;
+    }
+
+    // 9. Prediction Submitted
+    if (payload.type === 'PREDICTION_SUBMITTED' && this.cachedRoomData) {
+      const roundKey = `round_${payload.round}`;
+      if (!this.cachedRoomData.predictions) this.cachedRoomData.predictions = {};
+      if (!this.cachedRoomData.predictions[roundKey]) this.cachedRoomData.predictions[roundKey] = {};
+      this.cachedRoomData.predictions[roundKey][payload.voterId] = payload.predData;
+      this.saveRoomLocally(roomCode, this.cachedRoomData);
+      if (this.roomListeners[roomCode]) {
+        this.roomListeners[roomCode](this.sanitizeRoomDataForClient(this.cachedRoomData));
+      }
+      return;
+    }
+
+    // 10. Lobby Live Reaction Emoji Burst
+    if (payload.type === 'LOBBY_REACTION' && payload.emoji) {
+      if (window.visualEffects) {
+        const x = window.innerWidth * (0.25 + Math.random() * 0.5);
+        const y = window.innerHeight * 0.55;
+        window.visualEffects.spawnEmojiReaction(payload.emoji, x, y);
+      }
+      return;
+    }
+
+    // 11. Host Reconnected
+    if (payload.type === 'HOST_RECONNECTED') {
+      if (window.visualEffects) {
+        window.visualEffects.showToast("Host reconnected! 👑", "info");
+      }
+      if (payload.data) {
+        this.cachedRoomData = payload.data;
+        this.saveRoomLocally(roomCode, payload.data);
+        if (this.roomListeners[roomCode]) {
+          this.roomListeners[roomCode](payload.data);
+        }
       }
     }
   }
@@ -918,24 +1249,23 @@ class FirebaseService {
 
     this.heartbeatTimer = setInterval(() => {
       if (this.isHost && this.cachedRoomData) {
-        // Emit host heartbeat
         this.cachedRoomData.state.lastHeartbeat = Date.now();
         this.sendCloudMessage({
           type: 'HEARTBEAT',
           roomCode,
+          senderId: this.getUserId(),
           timestamp: Date.now()
         });
       } else {
-        // Client checks if host is alive
         const now = Date.now();
         if (this.cachedRoomData && this.cachedRoomData.state) {
           const lastSeen = this.cachedRoomData.state.lastHeartbeat || 0;
-          if (now - lastSeen > 12000 && !this.isHost) {
+          if (now - lastSeen > 16000 && !this.isHost) {
             this.handleHostDisconnect(roomCode);
           }
         }
       }
-    }, 3000);
+    }, 4000);
   }
 
   handleHostDisconnect(roomCode) {
@@ -947,11 +1277,11 @@ class FirebaseService {
     });
 
     if (playerIds.length > 0 && playerIds[0] === this.getUserId()) {
-      // Current player is the oldest connected: promote to host!
       console.info("Multiplayer: Old Host dropped. Promoting current player to Host!");
       this.isHost = true;
       this.cachedRoomData.config.hostId = this.getUserId();
       this.cachedRoomData.players[this.getUserId()].isHost = true;
+      this.setupPeerHost(roomCode);
       this.updateRoomState(roomCode, { hostMigrated: true, lastHeartbeat: Date.now() });
       if (window.visualEffects) {
         window.visualEffects.showToast("Host disconnected. You are now the host! 👑", "warning");
